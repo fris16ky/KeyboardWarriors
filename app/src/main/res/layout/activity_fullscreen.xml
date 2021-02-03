@@ -61,13 +61,8 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        android:translationX="300" />
+        android:text="Exit"
+        android:translationX="155"
+        android:translationY="350" />
 
 </FrameLayout>
