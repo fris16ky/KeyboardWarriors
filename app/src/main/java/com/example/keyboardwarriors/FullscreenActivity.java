@@ -162,7 +162,7 @@ public class FullscreenActivity extends AppCompatActivity {
         mHideHandler.removeCallbacks(mHidePart2Runnable);
         mHideHandler.postDelayed(mShowPart2Runnable, UI_ANIMATION_DELAY);
     }
-
+//bruh
     /**
      * Schedules a call to hide() in delay milliseconds, canceling any
      * previously scheduled calls.
