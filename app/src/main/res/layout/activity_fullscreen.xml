@@ -47,15 +47,16 @@
 
         </LinearLayout>
 
-    </FrameLayout>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:scaleX="1"
+            android:text="Start"
+            android:translationX="155"
+            android:translationY="270" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:translationX="155"
-        android:translationY="300" />
+    </FrameLayout>
 
     <Button
         android:id="@+id/button"
