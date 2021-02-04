@@ -23,6 +23,7 @@
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -47,23 +48,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="109dp"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:text="Start"
-            android:translationX="155"
-            android:translationY="270" />
-
     </FrameLayout>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="109dp"
-        android:layout_height="wrap_content"
-        android:text="Exit"
-        android:translationX="155"
-        android:translationY="320" />
 
 </FrameLayout>
