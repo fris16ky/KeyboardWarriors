@@ -35,35 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
             android:orientation="horizontal"
-            tools:ignore="UselessParent">
-
-            <Button
-                android:id="@+id/dummy_button"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="109dp"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:text="Start"
-            android:translationX="155"
-            android:translationY="270" />
+            tools:ignore="UselessParent"/>
 
     </FrameLayout>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Exit"
-        android:translationX="155"
-        android:translationY="350" />
 
 </FrameLayout>
