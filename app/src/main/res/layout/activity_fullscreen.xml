@@ -48,6 +48,13 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/exitbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1"
+            android:text="Exit" />
+
     </FrameLayout>
 
 </FrameLayout>
