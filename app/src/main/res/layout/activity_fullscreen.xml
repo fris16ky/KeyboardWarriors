@@ -53,18 +53,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleX="1"
-            android:text="Exit"
-            android:translationX="170"
-            android:translationY="350" />
+            android:text="@string/exit"
+            android:translationX="170dp"
+            android:translationY="350dp" />
 
         <Button
             android:id="@+id/Helpd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleX="1"
-            android:text="Help"
-            android:translationX="170"
-            android:translationY="500" />
+            android:text="@string/help"
+            android:translationX="170dp"
+            android:translationY="500dp" />
 
     </FrameLayout>
 
