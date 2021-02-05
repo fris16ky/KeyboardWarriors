@@ -57,6 +57,15 @@
             android:translationX="170"
             android:translationY="350" />
 
+        <Button
+            android:id="@+id/Helpd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1"
+            android:text="Help"
+            android:translationX="170"
+            android:translationY="500" />
+
     </FrameLayout>
 
 </FrameLayout>
