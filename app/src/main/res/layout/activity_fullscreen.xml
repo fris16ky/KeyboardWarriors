@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -38,33 +39,18 @@
             android:orientation="horizontal"
             tools:ignore="UselessParent">
 
-            <Button
-                android:id="@+id/dummy_button"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
-
         </LinearLayout>
 
-        <Button
+        <ImageButton
             android:id="@+id/exitbt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:text="@string/exit"
-            android:translationX="170dp"
-            android:translationY="350dp" />
-
-        <Button
-            android:id="@+id/Helpd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:text="@string/help"
-            android:translationX="170dp"
-            android:translationY="500dp" />
+            android:layout_width="155dp"
+            android:layout_height="115dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:text="Exit"
+            android:background="@drawable/ButtonImage"
+            android:translationX="325px"
+            android:translationY="1100px" />
 
     </FrameLayout>
 
