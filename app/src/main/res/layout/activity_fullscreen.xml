@@ -53,7 +53,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleX="1"
-            android:text="Exit" />
+            android:text="Exit"
+            android:translationX="170"
+            android:translationY="350" />
 
     </FrameLayout>
 
