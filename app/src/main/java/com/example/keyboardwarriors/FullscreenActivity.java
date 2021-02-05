@@ -15,6 +15,7 @@ import android.widget.Button;
 public class FullscreenActivity extends AppCompatActivity {
 
     Button exitbt;
+    Button helpd;
     private static final boolean AUTO_HIDE = true;
     private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
     private static final int UI_ANIMATION_DELAY = 300;
@@ -89,16 +90,8 @@ public class FullscreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fullscreen);
 
-        exitbt = (Button)findViewById(R.id.exitbt);
-        exitbt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                moveTaskToBack( true);
-                android.os.Process.killProcess(android.os.Process.myPid());
-                System.exit(1);
-            }
+            //helpd = (Button)findViewById(R.id.helpd);
 
-        });
 
 
         mVisible = true;
