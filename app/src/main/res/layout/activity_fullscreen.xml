@@ -47,8 +47,8 @@
             android:layout_height="115dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:text="Exit"
             android:background="@drawable/ButtonImage"
+            android:text="Exit"
             android:translationX="325px"
             android:translationY="1100px" />
 
