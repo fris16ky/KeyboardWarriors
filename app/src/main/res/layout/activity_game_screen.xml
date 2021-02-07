@@ -23,6 +23,7 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="ToTitleScreen"
         android:text="Back"
         app:backgroundTint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
