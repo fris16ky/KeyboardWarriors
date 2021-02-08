@@ -14,4 +14,10 @@ public class OptionScreen extends AppCompatActivity {
         setContentView(R.layout.activity_option_screen);
     }
 
+
+    public void ToTitleScreen(View view){
+        Intent game = new Intent(this, TitleScreen.class);
+        startActivity(game);
+
+    }
 }
