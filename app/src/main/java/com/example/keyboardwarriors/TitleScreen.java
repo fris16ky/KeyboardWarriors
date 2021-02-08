@@ -18,6 +18,8 @@ public class TitleScreen extends AppCompatActivity {
         setContentView(R.layout.activity_title_screen);
 
 
+
+
     }
 
     public void ToStartGame(View view){
