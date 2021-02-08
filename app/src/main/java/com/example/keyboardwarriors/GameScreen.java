@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class GameScreen extends AppCompatActivity {
-//lmfaooooo
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
