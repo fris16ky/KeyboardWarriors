@@ -27,5 +27,10 @@ public class TitleScreen extends AppCompatActivity {
         startActivity(game);
 
     }
+    public void ToOptionScreen(View view){
+        Intent game = new Intent(this, OptionScreen.class);
+        startActivity(game);
+
+    }
 
 }
