@@ -25,7 +25,7 @@ public class TitleScreen extends AppCompatActivity {
                 System.exit(0);
             }
         });
-// fsefs
+
 
     }
 
