@@ -22,6 +22,7 @@ public class GameScreen extends AppCompatActivity {
     public void ToTitleScreen(View view){
         Intent game = new Intent(this, TitleScreen.class);
         startActivity(game);
-
+//bruh
     }
 }
+//bruh
