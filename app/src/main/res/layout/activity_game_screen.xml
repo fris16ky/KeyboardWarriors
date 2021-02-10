@@ -5,54 +5,125 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0E0E0E"
+    android:background="@drawable/backdrop"
     tools:context=".GameScreen">
 
-
-    <Button
-        android:id="@+id/button3"
+    <ImageButton
+        android:id="@+id/back"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="ToTitleScreen"
-        android:text="Back"
-        app:backgroundTint="@android:color/holo_orange_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="406dp"
-        android:layout_height="558dp"
-        android:background="@drawable/background1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@drawable/finalbutton2"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="221dp"
-        android:layout_height="29dp"
-        android:background="@null"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#FFFF00"
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/back"
+        android:layout_alignStart="@+id/start"
+        android:layout_alignLeft="@+id/start"
+        android:layout_alignTop="@+id/start"
+        android:layout_alignEnd="@+id/start"
+        android:layout_alignRight="@+id/back"
+        android:fontFamily="@font/aldrich"
+        android:text="       Back"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="@+id/back"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:layout_constraintVertical_bias="0.416"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/tutorial"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.443"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintVertical_bias="0.196"
+        app:srcCompat="@drawable/tutorial"
+        tools:ignore="MissingConstraints" />
 
-        <requestFocus />
-    </EditText>
+    <ImageButton
+        android:id="@+id/easy"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="143dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@drawable/easy"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/easy"
+        android:layout_alignStart="@+id/easy"
+        android:layout_alignLeft="@+id/easy"
+        android:layout_alignTop="@+id/easy"
+        android:layout_alignEnd="@+id/easy"
+        android:layout_alignRight="@+id/back"
+        android:fontFamily="@font/aldrich"
+        android:text="         Easy"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/easy"
+        app:layout_constraintEnd_toEndOf="@+id/easy"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/easy"
+        app:layout_constraintTop_toTopOf="@+id/easy"
+        app:layout_constraintVertical_bias="0.444"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/hard"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703"
+        app:srcCompat="@drawable/hard"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/hard"
+        android:layout_alignRight="@+id/back"
+        android:fontFamily="@font/aldrich"
+        android:text="       Hard"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/hard"
+        app:layout_constraintEnd_toEndOf="@+id/hard"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/hard"
+        app:layout_constraintTop_toTopOf="@+id/hard"
+        app:layout_constraintVertical_bias="0.458"
+        tools:ignore="MissingConstraints" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
