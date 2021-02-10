@@ -12,14 +12,18 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class TitleScreen extends AppCompatActivity {
+
     MediaPlayer Song;
     ImageButton start;
     ImageButton option;
 
 
     protected void onCreate(Bundle savedInstanceState) {
-        Song = MediaPlayer.create(TitleScreen.this, R.raw.loopsong);
-        Song.start();
+            Song = MediaPlayer.create(TitleScreen.this, R.raw.loopsong);
+            Song.start();
+            Song.setLooping(true);
+            Song.start();
+
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_title_screen);
@@ -41,5 +45,8 @@ public class TitleScreen extends AppCompatActivity {
                 finish();
             }
         });
+
     }
+
+
 }
