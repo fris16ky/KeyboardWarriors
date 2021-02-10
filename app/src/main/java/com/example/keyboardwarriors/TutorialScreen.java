@@ -8,10 +8,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TutorialScreen extends AppCompatActivity {
 
-    EditText pass_text;
+    EditText text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,23 @@ public class TutorialScreen extends AppCompatActivity {
 
         final String[] MyWords = {"Final", "Way", "Exit"};
 
-        pass_text = findViewById(R.id.pass_text);
+        text = findViewById(R.id.pass_text);
+
+        final EditText  text = (EditText) findViewById(R.id.pass_text);
+        text.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_MEDIA_NEXT)) {
+                    // Perform action on key press
+                    Toast.makeText(TutorialScreen.this, text.getText(), Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+
 
 
 
