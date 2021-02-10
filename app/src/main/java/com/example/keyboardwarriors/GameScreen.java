@@ -8,9 +8,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class GameScreen extends AppCompatActivity {
 
+
+    ImageButton back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,11 +21,14 @@ public class GameScreen extends AppCompatActivity {
         setContentView(R.layout.activity_game_screen);
 
 
-    }
-    public void ToTitleScreen(View view){
-        Intent game = new Intent(this, TitleScreen.class);
-        startActivity(game);
-//bruh
+        back = (ImageButton) findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View view){
+                startActivity(new Intent(getApplicationContext(), TitleScreen.class));
+                finish();
+            }
+        });
+
     }
 }
-//bruh
