@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 public class TitleScreen extends AppCompatActivity {
 
     ImageButton start;
+    ImageButton option;
 
 
     protected void onCreate(Bundle savedInstanceState) {
