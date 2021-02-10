@@ -21,7 +21,19 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/goblin" />
+            android:background="@drawable/goblin"
+            android:translationY="350dp" />
+
+        <EditText
+            android:id="@+id/pass_text"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:inputType="textShortMessage"
+            android:translationY="340dp" />
+
+
 
 
     </FrameLayout>

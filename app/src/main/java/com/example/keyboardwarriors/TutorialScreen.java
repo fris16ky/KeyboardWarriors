@@ -3,8 +3,14 @@ package com.example.keyboardwarriors;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class TutorialScreen extends AppCompatActivity {
+
+    EditText pass_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,7 +19,13 @@ public class TutorialScreen extends AppCompatActivity {
 
         final String[] MyWords = {"Final", "Way", "Exit"};
 
+        pass_text = findViewById(R.id.pass_text);
+
+
 
 
     }
+
 }
+
+
