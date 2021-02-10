@@ -14,6 +14,7 @@ public class GameScreen extends AppCompatActivity {
 
 
     ImageButton back;
+    ImageButton tutorial;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,17 @@ public class GameScreen extends AppCompatActivity {
                 finish();
             }
         });
+
+        tutorial = (ImageButton) findViewById(R.id.tutorial);
+        tutorial.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View view){
+                startActivity(new Intent(getApplicationContext(), TutorialScreen.class));
+                finish();
+            }
+        });
+
+
 
     }
 }

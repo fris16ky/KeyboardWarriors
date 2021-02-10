@@ -7,17 +7,36 @@
     android:background="@drawable/backdrop"
     tools:context=".OptionScreen">
 
-    <Button
-        android:id="@+id/button4"
+    <ImageButton
+        android:id="@+id/back2"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="ToTitleScreen"
-        android:text="Back"
-        app:backgroundTint="@android:color/holo_orange_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.055" />
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@drawable/finalbutton2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/option"
+        android:layout_alignLeft="@+id/option"
+        android:layout_alignEnd="@+id/option"
+        android:layout_alignRight="@+id/option"
+        android:layout_alignBottom="@+id/option"
+        android:fontFamily="@font/aldrich"
+        android:text="       Back"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/back2"
+        app:layout_constraintEnd_toEndOf="@+id/back2"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="@+id/back2"
+        app:layout_constraintTop_toTopOf="@+id/back2"
+        app:layout_constraintVertical_bias="0.437"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
