@@ -38,10 +38,5 @@ public class TitleScreen extends AppCompatActivity {
                 finish();
             }
         });
-
-
-
-
     }
-
 }
