@@ -18,8 +18,7 @@ public class TitleScreen extends AppCompatActivity {
 
 
     protected void onCreate(Bundle savedInstanceState) {
-        Song = MediaPlayer.create(TitleScreen.this, R.raw.loopsong);
-        Song.start();
+
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_title_screen);
@@ -41,5 +40,12 @@ public class TitleScreen extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public void infiniteLoopUsingWhile() {
+        while (true) {
+            Song = MediaPlayer.create(TitleScreen.this, R.raw.loopsong);
+            Song.start();
+        }
     }
 }
