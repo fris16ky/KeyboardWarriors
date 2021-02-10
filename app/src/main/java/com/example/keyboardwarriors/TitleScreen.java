@@ -21,7 +21,6 @@ public class TitleScreen extends AppCompatActivity {
         setContentView(R.layout.activity_title_screen);
 
         start = (ImageButton) findViewById(R.id.start);
-
         start.setOnClickListener(new View.OnClickListener(){
             @Override
                     public  void onClick(View view){
@@ -29,6 +28,19 @@ public class TitleScreen extends AppCompatActivity {
                 finish();
             }
         });
+
+        option = (ImageButton) findViewById(R.id.option);
+        option.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View view){
+                startActivity(new Intent(getApplicationContext(), OptionScreen.class));
+                finish();
+            }
+        });
+
+
+
+
     }
 
 }
