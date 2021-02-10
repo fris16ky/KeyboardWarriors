@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/Title"
-        android:layout_width="334dp"
-        android:layout_height="54dp"
+        android:layout_width="338dp"
+        android:layout_height="67dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -30,19 +30,19 @@
 
     <ImageView
         android:id="@+id/subTitle"
-        android:layout_width="334dp"
-        android:layout_height="56dp"
+        android:layout_width="339dp"
+        android:layout_height="66dp"
         android:layout_alignStart="@+id/Title"
         android:layout_alignLeft="@+id/Title"
         android:layout_alignTop="@+id/Title"
         android:layout_alignEnd="@+id/Title"
         android:layout_alignRight="@+id/Title"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
+        android:layout_marginStart="-6dp"
+        android:layout_marginLeft="-6dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
         android:background="@drawable/war"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,8 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="446dp"
-        app:srcCompat="@drawable/finalbutton" />
+        android:layout_marginBottom="397dp"
+        app:srcCompat="@drawable/finalbutton2" />
 
 
 </RelativeLayout>
