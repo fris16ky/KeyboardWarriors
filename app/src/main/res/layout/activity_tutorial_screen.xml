@@ -6,11 +6,9 @@
     android:background="#ff98"
     android:layout_height="match_parent"
     tools:context=".TutorialScreen">
-
-
-
-
-
+    <resources>
+        <string android:name="easy">easy</string>
+    </resources>
 
 
     <FrameLayout
@@ -28,16 +26,32 @@
             android:id="@+id/pass_text"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:imeOptions="actionNext"
-            android:imeActionId="@android:integer/config_mediumAnimTime"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:inputType="textShortMessage"
-            android:translationY="340dp"
             android:fontFamily="@font/aldrich"
+            android:gravity="center"
+            android:imeActionId="@android:integer/config_mediumAnimTime"
+            android:imeOptions="actionNext"
+            android:inputType="textShortMessage"
+            android:translationY="340dp" />
 
+        <TextView
+
+            android:id="@+id/displaytext"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:clickable="false"
+            android:fontFamily="@font/aldrich"
+            android:gravity="center"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:textAllCaps="true"
+            android:translationY="150dp"
+            android:text=""
             />
+
+
 
 
     </FrameLayout>

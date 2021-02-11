@@ -10,9 +10,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Array;
+import java.text.BreakIterator;
+import java.util.ArrayList;
+import java.util.Random;
+
 public class TutorialScreen extends AppCompatActivity {
 
-    EditText text;
+    TextView text;
+    Random randomGenerator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,30 +30,9 @@ public class TutorialScreen extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        final String[] MyWords = {"Final", "Way", "Exit"};
-
-        text = findViewById(R.id.pass_text);
-
-        final EditText  text = (EditText) findViewById(R.id.pass_text);
-        text.setOnKeyListener(new View.OnKeyListener() {
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
-                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                        (keyCode == KeyEvent.KEYCODE_MEDIA_NEXT)) {
-                    // Perform action on key press
-                    Toast.makeText(TutorialScreen.this, text.getText(), Toast.LENGTH_SHORT).show();
-                    return true;
-                }
-                return false;
-            }
-        });
-
-
-
-
-
-
     }
+
+
 
 }
 

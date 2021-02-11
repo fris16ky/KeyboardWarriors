@@ -32,7 +32,7 @@
         android:layout_alignEnd="@+id/start"
         android:layout_alignRight="@+id/back"
         android:fontFamily="@font/aldrich"
-        android:text="       Back"
+        android:text="      Back"
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="@+id/back"
         app:layout_constraintEnd_toEndOf="@+id/back"
@@ -67,7 +67,7 @@
         android:layout_alignEnd="@+id/easy"
         android:layout_alignRight="@+id/back"
         android:fontFamily="@font/aldrich"
-        android:text="         Easy"
+        android:text="        Easy"
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="@+id/easy"
         app:layout_constraintEnd_toEndOf="@+id/easy"
@@ -122,6 +122,7 @@
         app:srcCompat="@drawable/tutorial"
         tools:ignore="MissingConstraints" />
 
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="100dp"
@@ -133,12 +134,11 @@
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="@+id/tutorial"
         app:layout_constraintEnd_toEndOf="@+id/tutorial"
-        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="@+id/tutorial"
         app:layout_constraintTop_toTopOf="@+id/tutorial"
-        app:layout_constraintVertical_bias="0.456"
+        app:layout_constraintVertical_bias="0.478"
         tools:ignore="MissingConstraints" />
-
 
     <ImageButton
         android:id="@+id/medium"
