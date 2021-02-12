@@ -60,7 +60,7 @@ public class TutorialScreen extends AppCompatActivity {
             "he",
             "hen",
             "here",
-            "him,",
+            "him",
             "his",
             "home",
             "hot",
