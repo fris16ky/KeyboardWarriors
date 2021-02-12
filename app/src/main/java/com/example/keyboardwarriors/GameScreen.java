@@ -1,14 +1,13 @@
 package com.example.keyboardwarriors;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class GameScreen extends AppCompatActivity {
@@ -23,6 +22,8 @@ public class GameScreen extends AppCompatActivity {
         Song.setLooping(true);
         Song.start();
         super.onCreate(savedInstanceState);
+        //ActionBar actionBar = getSupportActionBar();
+        //actionBar.hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_game_screen);
 
