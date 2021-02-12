@@ -142,7 +142,7 @@ public class TutorialScreen extends AppCompatActivity {
                 }
             }
         });
-
+//hello
         n_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
