@@ -20,8 +20,6 @@ public class OptionScreen extends AppCompatActivity {
         Song.setLooping(true);
         Song.start();
         super.onCreate(savedInstanceState);
-        //ActionBar actionBar = getSupportActionBar();
-        //actionBar.hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_option_screen);
 
