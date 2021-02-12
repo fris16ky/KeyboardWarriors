@@ -6,10 +6,6 @@
     android:background="#ff98"
     android:layout_height="match_parent"
     tools:context=".TutorialScreen">
-    <resources>
-        <string android:name="easy">easy</string>
-    </resources>
-
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,7 +19,7 @@
             android:translationY="350dp" />
 
         <EditText
-            android:id="@+id/pass_text"
+            android:id="@+id/input_text"
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
@@ -37,7 +33,7 @@
 
         <TextView
 
-            android:id="@+id/displaytext"
+            android:id="@+id/display_text"
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
@@ -46,19 +42,45 @@
             android:gravity="center"
             android:scaleX="2"
             android:scaleY="2"
-            android:textAllCaps="true"
-            android:translationY="150dp"
             android:text=""
-            />
+            android:textAllCaps="true"
+            android:translationY="150dp" />
 
+        <ImageButton
+            android:id="@+id/submit"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationX="260dp"
+            android:translationY="400dp"
+            app:srcCompat="@drawable/submit" />
+        <ImageButton
+            android:id="@+id/new_word"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationX="260dp"
+            android:translationY="0dp"
+            app:srcCompat="@drawable/submit" />
 
+        <TextView
+            android:id="@+id/submit_word"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/aldrich"
+            android:text="      Submit"
+            android:textColor="#000"
+            android:translationX="260dp"
+            android:translationY="400dp" />
 
 
     </FrameLayout>
-
-
-
-
 
 
 </LinearLayout>

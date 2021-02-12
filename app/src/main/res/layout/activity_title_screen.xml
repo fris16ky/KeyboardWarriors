@@ -4,23 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/titlebackgrounds"
+    android:background="@drawable/titleimage2"
 
     tools:context=".TitleScreen">
+
 
     <ImageView
         android:id="@+id/Title"
         android:layout_width="338dp"
         android:layout_height="67dp"
-        android:foregroundGravity="center"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="85dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="209dp"
         android:background="@drawable/preview"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.728"
@@ -33,17 +30,14 @@
         android:id="@+id/subTitle"
         android:layout_width="339dp"
         android:layout_height="66dp"
-        android:layout_alignStart="@+id/Title"
-        android:layout_alignLeft="@+id/Title"
         android:layout_alignTop="@+id/Title"
         android:layout_alignEnd="@+id/Title"
         android:layout_alignRight="@+id/Title"
+        android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="-3dp"
-        android:layout_marginLeft="-3dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginRight="-1dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="-5dp"
         android:background="@drawable/war"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,9 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="368dp"
+        android:layout_marginBottom="269dp"
         app:srcCompat="@drawable/finalbutton2" />
-
 
     <TextView
         android:layout_width="100dp"
@@ -91,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="299dp"
+        android:layout_marginBottom="206dp"
         app:srcCompat="@drawable/finalbutton2" />
 
     <TextView
@@ -107,7 +100,7 @@
         android:layout_marginLeft="21dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="27dp"
         android:fontFamily="@font/aldrich"
         android:text="     Options"
         android:textColor="#000" />
