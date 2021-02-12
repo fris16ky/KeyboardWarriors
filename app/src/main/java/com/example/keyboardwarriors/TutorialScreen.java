@@ -19,7 +19,6 @@ public class TutorialScreen extends AppCompatActivity {
     TextView d_text;
     EditText user_input;
     ImageButton s_check, n_check;
-
     String currentWord;
 
     Random r;
