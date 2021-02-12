@@ -3,20 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#ff98"
     android:layout_height="match_parent"
+    android:background="#f067"
     tools:context=".TutorialScreen">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="475dp">
+        android:layout_height="475dp"
+        android:background="@drawable/wallet_normal">
+
 
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/goblin"
-            android:translationY="350dp" />
+            android:translationY="340dp" />
 
         <EditText
             android:id="@+id/input_text"
@@ -24,12 +26,13 @@
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
+            android:background="#FEC8A7"
             android:fontFamily="@font/aldrich"
             android:gravity="center"
             android:imeActionId="@android:integer/config_mediumAnimTime"
             android:imeOptions="actionNext"
             android:inputType="textShortMessage"
-            android:translationY="340dp" />
+            android:translationY="330dp" />
 
         <TextView
 
@@ -37,11 +40,12 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
+            android:background="#FEC8A7"
             android:clickable="false"
             android:fontFamily="@font/aldrich"
             android:gravity="center"
-            android:scaleX="2"
-            android:scaleY="2"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text=""
             android:textAllCaps="true"
             android:translationY="150dp" />
@@ -54,13 +58,14 @@
             android:translationX="260dp"
             android:translationY="400dp"
             app:srcCompat="@drawable/submit" />
+
         <ImageButton
             android:id="@+id/new_word"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:translationX="260dp"
-            android:translationY="0dp"
+            android:translationX="0dp"
+            android:translationY="400dp"
             app:srcCompat="@drawable/submit" />
 
         <TextView
@@ -77,6 +82,22 @@
             android:text="      Submit"
             android:textColor="#000"
             android:translationX="260dp"
+            android:translationY="400dp" />
+
+        <TextView
+            android:id="@+id/next_word"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/aldrich"
+            android:text="        Next"
+            android:textColor="#000"
+            android:translationX="0dp"
             android:translationY="400dp" />
 
 

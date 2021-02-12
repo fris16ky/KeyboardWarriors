@@ -5,10 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.EditText;
 import android.widget.TextView;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class TutorialScreen extends AppCompatActivity {
@@ -18,101 +19,102 @@ public class TutorialScreen extends AppCompatActivity {
     EditText user_input;
     ImageButton s_check, n_check;
 
+    String currentWord;
+
     Random r;
 
-    String [] words_list = {"all\n" +
-                            "am\n" +
-                            "and\n" +
-                            "at\n" +
-                            "ball\n" +
-                            "be\n" +
-                            "bed\n" +
-                            "big\n" +
-                            "book\n" +
-                            "box\n" +
-                            "boy\n" +
-                            "but\n" +
-                            "came\n" +
-                            "can\n" +
-                            "car\n" +
-                            "cat\n" +
-                            "come\n" +
-                            "cow\n" +
-                            "dad\n" +
-                            "day\n" +
-                            "did\n" +
-                            "do\n" +
-                            "dog\n" +
-                            "fat\n" +
-                            "for\n" +
-                            "fun\n" +
-                            "get\n" +
-                            "go\n" +
-                            "good\n" +
-                            "got\n" +
-                            "had\n" +
-                            "hat\n" +
-                            "he\n" +
-                            "hen\n" +
-                            "here\n" +
-                            "him\n" +
-                            "his\n" +
-                            "home\n" +
-                            "hot\n" +
-                            "I\n" +
-                            "if\n" +
-                            "in\n" +
-                            "into\n" +
-                            "is\n" +
-                            "it\n" +
-                            "its\n" +
-                            "let\n" +
-                            "like\n" +
-                            "look\n" +
-                            "man\n" +
-                            "may\n" +
-                            "me\n" +
-                            "mom\n" +
-                            "my\n" +
-                            "no\n" +
-                            "not\n" +
-                            "of\n" +
-                            "oh\n" +
-                            "old\n" +
-                            "on\n" +
-                            "one\n" +
-                            "out\n" +
-                            "pan\n" +
-                            "pet\n" +
-                            "pig\n" +
-                            "play\n" +
-                            "ran\n" +
-                            "rat\n" +
-                            "red\n" +
-                            "ride\n" +
-                            "run\n" +
-                            "sat\n" +
-                            "see\n" +
-                            "she\n" +
-                            "sit\n" +
-                            "six\n" +
-                            "so\n" +
-                            "stop\n" +
-                            "sun\n" +
-                            "ten\n" +
-                            "the\n" +
-                            "this\n" +
-                            "to\n" +
-                            "top\n" +
-                            "toy\n" +
-                            "two\n" +
-                            "up\n" +
-                            "us\n" +
-                            "was\n" +
-                            "we\n" +
-                            "will\n" +
-                            "yes\n" +
-                            "you"};
+    String[] words_list = {"all",
+            "am",
+            "and",
+            "at",
+            "ball",
+            "be",
+            "bed",
+            "big",
+            "book",
+            "box",
+            "boy",
+            "but",
+            "came",
+            "can",
+            "car",
+            "cat",
+            "come",
+            "cow",
+            "dad",
+            "day",
+            "did",
+            "do",
+            "dog",
+            "fat",
+            "for",
+            "fun",
+            "get",
+            "go",
+            "good",
+            "got",
+            "had",
+            "hat",
+            "he",
+            "hen",
+            "here",
+            "him,",
+            "his",
+            "home",
+            "hot",
+            "if",
+            "in",
+            "into",
+            "is",
+            "it",
+            "its",
+            "let",
+            "like",
+            "look",
+            "man",
+            "may",
+            "me",
+            "mom",
+            "my",
+            "no",
+            "not",
+            "of",
+            "oh",
+            "old",
+            "on",
+            "one",
+            "out",
+            "pan",
+            "pet",
+            "pig",
+            "play",
+            "ran",
+            "rat",
+            "red",
+            "ride",
+            "run",
+            "sat",
+            "see",
+            "she",
+            "sit",
+            "six",
+            "so",
+            "stop",
+            "sun",
+            "ten",
+            "the",
+            "this",
+            "to",
+            "top",
+            "toy",
+            "two",
+            "up",
+            "us",
+            "was",
+            "we",
+            "will",
+            "yes",
+            "you"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,23 +129,46 @@ public class TutorialScreen extends AppCompatActivity {
         s_check = (ImageButton) findViewById(R.id.submit);
         n_check = (ImageButton) findViewById(R.id.new_word);
 
-       /* s_check.setOnClickListener(new View.OnClickListener() {
+        r = new Random();
+
+        tutorial_game();
+
+        s_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
+                    s_check.setEnabled(false);
+                    n_check.setEnabled(true);
+                }
             }
         });
 
         n_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                    tutorial_game();
             }
         });
-        */
 
 
+    }
 
+    private String Display(String word) {
+        List<String> letters = Arrays.asList(word.split(""));
+        String display = "";
+        for (String letter : letters) {
+            display += letter;
+        }
+        return display;
+
+    }
+
+    private void tutorial_game(){
+
+        currentWord = words_list[r.nextInt(words_list.length)];
+        d_text.setText(Display(currentWord));
+        n_check.setEnabled(false);
+        s_check.setEnabled(true);
 
     }
 }
