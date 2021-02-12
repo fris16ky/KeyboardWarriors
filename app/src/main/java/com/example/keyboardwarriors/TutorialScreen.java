@@ -24,7 +24,7 @@ import java.util.Random;
 
 public class TutorialScreen extends AppCompatActivity {
 
-    public int counter;
+    public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
 
     TextView d_text;
@@ -134,7 +134,6 @@ public class TutorialScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        countText = (TextView) findViewById(R.id.Timer);
 
         d_text = (TextView) findViewById(R.id.display_text);
 
@@ -152,7 +151,7 @@ public class TutorialScreen extends AppCompatActivity {
             @Override
             public void onTick(long millisUntilFinished) {
                 Timer.setText(String.valueOf(counter));
-                counter++;
+                counter--;
             }
 
             @Override
