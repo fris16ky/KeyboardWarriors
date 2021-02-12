@@ -19,6 +19,7 @@ public class TutorialScreen extends AppCompatActivity {
     TextView d_text;
     EditText user_input;
     ImageButton s_check, n_check;
+
     String currentWord;
 
     Random r;
@@ -119,8 +120,8 @@ public class TutorialScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        //ActionBar actionBar = getSupportActionBar();
+        //actionBar.hide();
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -171,7 +172,6 @@ public class TutorialScreen extends AppCompatActivity {
         d_text.setText(Display(currentWord));
         n_check.setEnabled(false);
         s_check.setEnabled(true);
-
     }
 }
 
