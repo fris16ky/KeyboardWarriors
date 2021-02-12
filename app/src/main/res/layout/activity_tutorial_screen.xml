@@ -100,6 +100,14 @@
             android:translationX="0dp"
             android:translationY="400dp" />
 
+        <TextView
+            android:id="@+id/Timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            tools:text="00:10"
+            android:textColor= "#FFFFFF" />
+
 
     </FrameLayout>
 

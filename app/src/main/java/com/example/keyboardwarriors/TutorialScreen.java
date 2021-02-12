@@ -1,6 +1,7 @@
 package com.example.keyboardwarriors;
 
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -147,7 +148,7 @@ public class TutorialScreen extends AppCompatActivity {
         n_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    tutorial_game();
+                tutorial_game();
             }
         });
     }
