@@ -1,6 +1,6 @@
 package com.example.keyboardwarriors;
 
-import androidx.appcompat.app.ActionBar;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -152,8 +152,6 @@ public class TutorialScreen extends AppCompatActivity {
                     tutorial_game();
             }
         });
-
-
     }
 
     private String Display(String word) {
