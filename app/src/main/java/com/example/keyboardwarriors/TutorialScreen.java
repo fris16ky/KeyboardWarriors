@@ -5,19 +5,30 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.annotation.TargetApi;
+import android.os.Build;
+import android.os.CountDownTimer;
+import android.widget.Toast;
+import android.widget.RatingBar;//end of mine
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 public class TutorialScreen extends AppCompatActivity {
 
+    public int counter;
+    @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
 
     TextView d_text;
+    TextView countText;
     EditText user_input;
     ImageButton s_check, n_check;
 
@@ -123,6 +134,7 @@ public class TutorialScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        countText = (TextView) findViewById(R.id.Timer);
 
         d_text = (TextView) findViewById(R.id.display_text);
 
@@ -135,6 +147,20 @@ public class TutorialScreen extends AppCompatActivity {
 
         tutorial_game();
 
+        final TextView Timer = findViewById(R.id.Timer);
+        new CountDownTimer(10000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Timer.setText(String.valueOf(counter));
+                counter++;
+            }
+
+            @Override
+            public void onFinish() {
+                Timer.setText("You lose a heart");
+            }
+        }.start();
+
         s_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,6 +171,7 @@ public class TutorialScreen extends AppCompatActivity {
             }
         });
 //hello
+
         n_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
