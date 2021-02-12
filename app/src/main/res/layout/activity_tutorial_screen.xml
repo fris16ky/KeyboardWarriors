@@ -44,8 +44,8 @@
             android:clickable="false"
             android:fontFamily="@font/aldrich"
             android:gravity="center"
-            android:scaleX="1"
-            android:scaleY="1"
+            android:textColor="#000"
+            android:textSize="50dp"
             android:text=""
             android:textAllCaps="true"
             android:translationY="150dp" />
