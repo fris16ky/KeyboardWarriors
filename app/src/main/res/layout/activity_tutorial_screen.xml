@@ -8,6 +8,7 @@
     tools:context=".TutorialScreen">
 
     <FrameLayout
+        android:id="@+id/Score"
         android:layout_width="match_parent"
         android:layout_height="475dp"
         android:background="@drawable/wallet_normal">
@@ -44,10 +45,10 @@
             android:clickable="false"
             android:fontFamily="@font/aldrich"
             android:gravity="center"
-            android:textColor="#000"
-            android:textSize="50dp"
             android:text=""
             android:textAllCaps="true"
+            android:textColor="#000"
+            android:textSize="50dp"
             android:translationY="150dp" />
 
         <ImageButton
@@ -107,6 +108,18 @@
             android:text="10"
             android:textColor="#FFFFFF"
             android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/Points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40sp"
+            android:layout_marginLeft="40sp"
+            android:layout_marginTop="100sp"
+            android:text="Score: "
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
 
     </FrameLayout>
 

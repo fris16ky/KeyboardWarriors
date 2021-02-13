@@ -21,6 +21,7 @@ import org.w3c.dom.Text;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.Timer;
 
 public class TutorialScreen extends AppCompatActivity {
 
