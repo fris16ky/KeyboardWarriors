@@ -1,6 +1,5 @@
 package com.example.keyboardwarriors;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -15,6 +14,9 @@ public class GameScreen extends AppCompatActivity {
     MediaPlayer Song;
     ImageButton back;
     ImageButton tutorial;
+    ImageButton easy;
+    ImageButton medium;
+    ImageButton hard;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Song = MediaPlayer.create(GameScreen.this, R.raw.loopsong);
@@ -44,7 +46,32 @@ public class GameScreen extends AppCompatActivity {
             }
         });
 
+        easy = (ImageButton) findViewById(R.id.easy);
+        easy.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view){
+                startActivity(new Intent(getApplicationContext(), EasyMode.class));
+                finish();
+            }
+        });
 
+        medium = (ImageButton) findViewById(R.id.medium);
+        medium.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent(getApplicationContext(), MediumMode.class));
+                finish();
+            }
+        });
+
+        hard = (ImageButton) findViewById(R.id.hard);
+        hard.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent(getApplicationContext(), HardMode.class));
+                finish();
+            }
+        });
 
     }
     public void onPause(){
