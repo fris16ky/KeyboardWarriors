@@ -27,7 +27,7 @@ public class TutorialScreen extends AppCompatActivity {
 
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
-
+    TextView Points_text;
     TextView d_text;
     TextView countText;
     EditText user_input;
@@ -139,7 +139,7 @@ public class TutorialScreen extends AppCompatActivity {
         d_text = (TextView) findViewById(R.id.display_text);
 
         user_input = (EditText) findViewById(R.id.input_text);
-
+        Points_text = (TextView) findViewById(R.id.display_text);
         s_check = (ImageButton) findViewById(R.id.submit);
         n_check = (ImageButton) findViewById(R.id.new_word);
 
@@ -148,7 +148,7 @@ public class TutorialScreen extends AppCompatActivity {
         tutorial_game();
 
         final TextView Timer = findViewById(R.id.Timer);
-        new CountDownTimer(10000,1000) {
+        new CountDownTimer(10000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 Timer.setText(String.valueOf(counter));
@@ -167,6 +167,8 @@ public class TutorialScreen extends AppCompatActivity {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     s_check.setEnabled(false);
                     n_check.setEnabled(true);
+
+
                 }
             }
         });
@@ -190,13 +192,15 @@ public class TutorialScreen extends AppCompatActivity {
 
     }
 
-    private void tutorial_game(){
+    private void tutorial_game() {
 
         currentWord = words_list[r.nextInt(words_list.length)];
         d_text.setText(Display(currentWord));
         n_check.setEnabled(false);
         s_check.setEnabled(true);
+        user_input.getText().clear();
+        }
     }
-}
+
 
 
