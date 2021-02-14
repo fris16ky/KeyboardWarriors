@@ -110,13 +110,24 @@
             android:textSize="40sp" />
 
         <TextView
-            android:id="@+id/Points"
+            android:id="@+id/tv_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="35sp"
             android:layout_marginLeft="35sp"
             android:layout_marginTop="100sp"
             android:text="Score: "
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/highscore"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="205sp"
+            android:layout_marginLeft="205sp"
+            android:layout_marginTop="20sp"
+            android:text="High Score: "
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
