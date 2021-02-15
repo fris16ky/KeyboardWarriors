@@ -4,7 +4,7 @@ package com.example.keyboardwarriors;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -22,23 +22,17 @@ import org.w3c.dom.Text;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.Timer;
 
 public class TutorialScreen extends AppCompatActivity {
 
-
-    TextView tv_score;
-    int score = 0;
-
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
+
     TextView d_text;
     TextView countText;
     EditText user_input;
     ImageButton s_check, n_check;
-
     String currentWord;
-
     Random r;
 
     String[] words_list = {"all",
@@ -141,16 +135,18 @@ public class TutorialScreen extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         d_text = (TextView) findViewById(R.id.display_text);
-        tv_score = (TextView) findViewById(R.id.tv_score);
+
         user_input = (EditText) findViewById(R.id.input_text);
+
         s_check = (ImageButton) findViewById(R.id.submit);
         n_check = (ImageButton) findViewById(R.id.new_word);
 
         r = new Random();
+
         tutorial_game();
 
         final TextView Timer = findViewById(R.id.Timer);
-        new CountDownTimer(10000, 1000) {
+        new CountDownTimer(10000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 Timer.setText(String.valueOf(counter));
@@ -160,6 +156,7 @@ public class TutorialScreen extends AppCompatActivity {
             @Override
             public void onFinish() {
                 Timer.setText("You lose a heart");
+                Timer.setTextColor(Color.parseColor("#FF6961"));
             }
         }.start();
 
@@ -169,20 +166,15 @@ public class TutorialScreen extends AppCompatActivity {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     s_check.setEnabled(false);
                     n_check.setEnabled(true);
-                    score++;
-                    tv_score.setText("SCORE: " + score);
-
-
                 }
             }
         });
-//hello
+
 
         n_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tutorial_game();
-
             }
         });
     }
@@ -197,18 +189,13 @@ public class TutorialScreen extends AppCompatActivity {
 
     }
 
-    private void tutorial_game() {
+    private void tutorial_game(){
 
         currentWord = words_list[r.nextInt(words_list.length)];
         d_text.setText(Display(currentWord));
         n_check.setEnabled(false);
         s_check.setEnabled(true);
-        user_input.getText().clear();
     }
 }
-
-
-
-
 
 
