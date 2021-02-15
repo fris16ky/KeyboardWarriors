@@ -4,6 +4,7 @@ package com.example.keyboardwarriors;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -155,6 +156,7 @@ public class TutorialScreen extends AppCompatActivity {
             @Override
             public void onFinish() {
                 Timer.setText("You lose a heart");
+                Timer.setTextColor(Color.parseColor("#FF6961"));
             }
         }.start();
 
