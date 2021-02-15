@@ -31,9 +31,7 @@ public class TutorialScreen extends AppCompatActivity {
     TextView countText;
     EditText user_input;
     ImageButton s_check, n_check;
-
     String currentWord;
-
     Random r;
 
     String[] words_list = {"all",
@@ -169,7 +167,7 @@ public class TutorialScreen extends AppCompatActivity {
                 }
             }
         });
-//hello
+
 
         n_check.setOnClickListener(new View.OnClickListener() {
             @Override

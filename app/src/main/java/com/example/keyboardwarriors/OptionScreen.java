@@ -31,8 +31,6 @@ public class OptionScreen extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
     public void onPause(){
         super.onPause();
