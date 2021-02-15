@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f067"
+    tools:context=".EasyMode">
+
+    <FrameLayout
+        android:id="@+id/Score"
+        android:layout_width="match_parent"
+        android:layout_height="475dp"
+        android:background="@drawable/wallet_normal">
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/goblin"
+            android:translationY="340dp" />
+
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="#FEC8A7"
+            android:fontFamily="@font/aldrich"
+            android:gravity="center"
+            android:imeActionId="@android:integer/config_mediumAnimTime"
+            android:imeOptions="actionNext"
+            android:inputType="textShortMessage"
+            android:translationY="330dp" />
+
+        <TextView
+
+            android:id="@+id/display_text"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#FEC8A7"
+            android:clickable="false"
+            android:fontFamily="@font/aldrich"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="#000"
+            android:textSize="50dp"
+            android:translationY="150dp" />
+
+        <ImageButton
+            android:id="@+id/submit"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationX="260dp"
+            android:translationY="400dp"
+            app:srcCompat="@drawable/submit" />
+
+        <ImageButton
+            android:id="@+id/new_word"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationX="0dp"
+            android:translationY="400dp"
+            app:srcCompat="@drawable/submit" />
+
+        <TextView
+            android:id="@+id/submit_word"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/aldrich"
+            android:text="      Submit"
+            android:textColor="#000"
+            android:translationX="260dp"
+            android:translationY="400dp" />
+
+        <TextView
+            android:id="@+id/next_word"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/aldrich"
+            android:text="        Next"
+            android:textColor="#000"
+            android:translationX="0dp"
+            android:translationY="400dp" />
+
+        <TextView
+            android:id="@+id/Timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35sp"
+            android:layout_marginLeft="35sp"
+            android:layout_marginTop="100sp"
+            android:text="Score: "
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/highscore"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="205sp"
+            android:layout_marginLeft="205sp"
+            android:layout_marginTop="20sp"
+            android:text="High Score: "
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
