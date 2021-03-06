@@ -1,34 +1,30 @@
 package com.example.keyboardwarriors;
 
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.CountDownTimer;
-import android.widget.Toast;
-import android.widget.RatingBar;//end of mine
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.Timer;
+
+import pl.droidsonroids.gif.GifImageView;
 
 public class TutorialScreen extends AppCompatActivity {
 
 
     TextView tv_score;
     int score = 0;
+    int health = 3;
 
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
@@ -36,6 +32,7 @@ public class TutorialScreen extends AppCompatActivity {
     TextView countText;
     EditText user_input;
     ImageButton s_check, n_check;
+    GifImageView heart1, heart2, heart3;
 
     String currentWord;
 
@@ -145,6 +142,10 @@ public class TutorialScreen extends AppCompatActivity {
         user_input = (EditText) findViewById(R.id.input_text);
         s_check = (ImageButton) findViewById(R.id.submit);
         n_check = (ImageButton) findViewById(R.id.new_word);
+        heart1 = (GifImageView) findViewById(R.id.heart1);
+        heart2 = (GifImageView) findViewById(R.id.heart2);
+        heart3 = (GifImageView) findViewById(R.id.heart3);
+
 
         r = new Random();
         tutorial_game();
@@ -171,10 +172,31 @@ public class TutorialScreen extends AppCompatActivity {
                     n_check.setEnabled(true);
                     score++;
                     tv_score.setText("SCORE: " + score);
-
-
+                } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
+                    s_check.setEnabled(false);
+                    n_check.setEnabled(true);
+                    health--;
                 }
+                if (health == 2) {
+                    heart3.setVisibility(View.INVISIBLE);
+                }
+                else if (health == 1) {
+                    heart3.setVisibility(View.INVISIBLE);
+                heart2.setVisibility(View.INVISIBLE);
             }
+                   else if (health ==0) {
+                    heart3.setVisibility(View.INVISIBLE);
+                    heart2.setVisibility(View.INVISIBLE);
+                    heart1.setVisibility(View.INVISIBLE);
+        }
+
+
+
+
+
+            }
+
+
         });
 //hello
 
