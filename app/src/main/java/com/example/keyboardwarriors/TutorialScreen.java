@@ -32,7 +32,6 @@ public class TutorialScreen extends AppCompatActivity {
     TextView countText;
     EditText user_input;
     ImageButton s_check, n_check;
-
     GifImageView heart1, heart2, heart3;
 
     String currentWord;
