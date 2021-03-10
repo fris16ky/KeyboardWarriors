@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.CountDownTimer;
+import android.os.health.TimerStat;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
@@ -161,7 +162,10 @@ public class TutorialScreen extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                Timer.setText("You lose a heart");
+                //Timer.setText("You lose a heart");
+                counter = 10;
+                Timer.setText(String.valueOf(counter));
+                counter--;
             }
         }.start();
 
