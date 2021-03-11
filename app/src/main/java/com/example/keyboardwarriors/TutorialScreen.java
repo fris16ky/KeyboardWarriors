@@ -150,6 +150,7 @@ public class TutorialScreen extends AppCompatActivity {
         heart3 = (GifImageView) findViewById(R.id.heart3);
 
 
+
         r = new Random();
         tutorial_game();
 
