@@ -7,12 +7,18 @@
     android:background="#f067"
     tools:context=".TutorialScreen">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/wallet_normal"
+        android:translationY="375dp" />
+
 
 
     <FrameLayout
         android:id="@+id/Score"
         android:layout_width="match_parent"
-        android:layout_height="750dp"
+        android:layout_height="475dp"
         android:background="@drawable/wallet_normal">
 
 
