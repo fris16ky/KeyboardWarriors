@@ -138,6 +138,8 @@ public class TutorialScreen extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+
+
         d_text = (TextView) findViewById(R.id.display_text);
         tv_score = (TextView) findViewById(R.id.tv_score);
         user_input = (EditText) findViewById(R.id.input_text);
