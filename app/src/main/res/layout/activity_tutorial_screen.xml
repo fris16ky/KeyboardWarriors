@@ -149,9 +149,11 @@
             android:layout_marginStart="300dp"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="15dp"
+            android:fontFamily="@font/aldrich"
             android:text="Score: "
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:translationX="-70dp" />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/heart1"
