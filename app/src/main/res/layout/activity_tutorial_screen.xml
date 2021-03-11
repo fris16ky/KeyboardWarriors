@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,22 @@
     android:background="#f067"
     tools:context=".TutorialScreen">
 
+
+
     <FrameLayout
         android:id="@+id/Score"
         android:layout_width="match_parent"
         android:layout_height="475dp"
         android:background="@drawable/wallet_normal">
 
+
+        <pl.droidsonroids.gif.GifImageButton
+            android:id="@+id/goblinidle"
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:layout_gravity="center"
+            android:src="@drawable/goblin1dile"
+            android:translationY="185dp" />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/heart3"
@@ -32,12 +42,8 @@
             android:layout_marginTop="70dp"
             android:src="@drawable/pixelheart" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/goblin"
-            android:translationY="340dp" />
+
+
 
         <EditText
             android:id="@+id/input_text"
@@ -152,4 +158,4 @@
     </FrameLayout>
 
 
-</LinearLayout>
+</RelativeLayout>

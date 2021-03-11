@@ -174,6 +174,8 @@ public class TutorialScreen extends AppCompatActivity {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     s_check.setEnabled(false);
                     n_check.setEnabled(true);
+
+
                     score++;
                     tv_score.setText("SCORE: " + score);
                 } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
@@ -193,16 +195,10 @@ public class TutorialScreen extends AppCompatActivity {
                     heart2.setVisibility(View.INVISIBLE);
                     heart1.setVisibility(View.INVISIBLE);
         }
-
-
-
-
-
             }
-
-
         });
-//hello
+
+
 
         n_check.setOnClickListener(new View.OnClickListener() {
             @Override
