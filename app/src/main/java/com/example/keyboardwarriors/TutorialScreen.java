@@ -182,8 +182,8 @@ public class TutorialScreen extends AppCompatActivity {
                     score++;
                     tv_score.setText("SCORE: " + score);
                 } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
-                    s_check.setEnabled(false);
-                    n_check.setEnabled(true);
+                    s_check.setEnabled(true);
+                    n_check.setEnabled(false);
                     health--;
                 }
                 if (health == 2) {

@@ -142,7 +142,7 @@
 
         <TextView
             android:id="@+id/tv_score"
-            android:layout_width="286dp"
+            android:layout_width="343dp"
             android:layout_height="73dp"
             android:layout_marginStart="300dp"
             android:layout_marginLeft="300dp"
