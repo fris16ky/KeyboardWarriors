@@ -164,10 +164,11 @@ public class TutorialScreen extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                //Timer.setText("You lose a heart");
-                counter = 10;
-                Timer.setText(String.valueOf(counter));
-                counter--;
+                if(counter == 0){
+                    counter = 10;
+                    Timer.setText(String.valueOf(counter));
+                    counter--;
+                }
             }
         }.start();
 
