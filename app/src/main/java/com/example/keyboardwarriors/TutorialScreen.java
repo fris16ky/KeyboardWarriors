@@ -3,6 +3,7 @@ package com.example.keyboardwarriors;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -156,20 +157,39 @@ public class TutorialScreen extends AppCompatActivity {
 
         final TextView Timer = findViewById(R.id.Timer);
         new CountDownTimer(10000, 1000) {
+
             @Override
             public void onTick(long millisUntilFinished) {
-                Timer.setText(String.valueOf(counter));
-                counter--;
+
+
+                        while (counter < 10){
+                do {
+                    Timer.setText(String.valueOf(counter));
+                    counter--;
+                } while (counter == 0);{
+                    counter = 10;
+                }
+                        }
+
+
+
+
+
+
+
             }
+
 
             @Override
             public void onFinish() {
-                if(counter == 0){
-                    counter = 10;
-                    Timer.setText(String.valueOf(counter));
-                    counter--;
+
+
+                        Timer.setText(String.valueOf(counter));
+                        counter--;
+
                 }
-            }
+
+
         }.start();
 
         s_check.setOnClickListener(new View.OnClickListener() {
@@ -198,6 +218,8 @@ public class TutorialScreen extends AppCompatActivity {
                     heart3.setVisibility(View.INVISIBLE);
                     heart2.setVisibility(View.INVISIBLE);
                     heart1.setVisibility(View.INVISIBLE);
+                    startActivity(new Intent(getApplicationContext(), GameOver.class));
+
         }
             }
         });

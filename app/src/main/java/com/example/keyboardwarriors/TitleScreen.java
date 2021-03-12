@@ -28,7 +28,7 @@ public class TitleScreen extends AppCompatActivity {
         start = (ImageButton) findViewById(R.id.start);
         start.setOnClickListener(new View.OnClickListener(){
             @Override
-                    public  void onClick(View view){
+                public  void onClick(View view){
                 startActivity(new Intent(getApplicationContext(), GameScreen.class));
                 finish();
             }
