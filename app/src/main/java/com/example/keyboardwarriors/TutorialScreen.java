@@ -138,33 +138,29 @@ public class TutorialScreen extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        d_text = (TextView) findViewById(R.id.display_text);
-        tv_score = (TextView) findViewById(R.id.tv_score);
-        user_input = (EditText) findViewById(R.id.input_text);
-        s_check = (ImageButton) findViewById(R.id.submit);
-        n_check = (ImageButton) findViewById(R.id.new_word);
-        heart1 = (GifImageView) findViewById(R.id.heart1);
-        heart2 = (GifImageView) findViewById(R.id.heart2);
-        heart3 = (GifImageView) findViewById(R.id.heart3);
+        d_text = findViewById(R.id.display_text);
+        tv_score = findViewById(R.id.tv_score);
+        user_input = findViewById(R.id.input_text);
+        s_check = findViewById(R.id.submit);
+        n_check = findViewById(R.id.new_word);
+        heart1 = findViewById(R.id.heart1);
+        heart2 = findViewById(R.id.heart2);
+        heart3 = findViewById(R.id.heart3);
 
 
         r = new Random();
         tutorial_game();
-
-        final TextView Timer = findViewById(R.id.Timer);
+        final TextView Timer2 = findViewById(R.id.Timer);
+        counter = 10;
         new CountDownTimer(10000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                Timer.setText(String.valueOf(counter));
+                Timer2.setText(String.valueOf(counter));
                 counter--;
             }
-
             @Override
             public void onFinish() {
-                //Timer.setText("You lose a heart");
-                counter = 10;
-                Timer.setText(String.valueOf(counter));
-                counter--;
+                Timer2.setText("Done");
             }
         }.start();
 
@@ -214,7 +210,7 @@ public class TutorialScreen extends AppCompatActivity {
     }
 
     private String Display(String word) {
-        List<String> letters = Arrays.asList(word.split(""));
+        String[] letters = word.split("");
         String display = "";
         for (String letter : letters) {
             display += letter;
