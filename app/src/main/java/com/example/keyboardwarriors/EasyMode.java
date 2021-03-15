@@ -154,7 +154,6 @@ public class EasyMode extends AppCompatActivity {
             @Override
             public void onTick(long millisUntilFinished) {
                 Timer.setText(String.valueOf(counter));
-                counter--;
             }
 
             @Override
@@ -176,7 +175,7 @@ public class EasyMode extends AppCompatActivity {
                 }
             }
         });
-//hello
+
 
         n_check.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -204,6 +203,14 @@ public class EasyMode extends AppCompatActivity {
         n_check.setEnabled(false);
         s_check.setEnabled(true);
         user_input.getText().clear();
+
+        if(user_input.getText().toString().equalsIgnoreCase(currentWord))
+        {
+            counter += counter;
+        }
+        else {
+            counter--;
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,11 +8,28 @@
     tools:context=".TutorialScreen">
 
     <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/wallet_normal"
+        android:translationY="375dp" />
+
+
+    <FrameLayout
         android:id="@+id/Score"
         android:layout_width="match_parent"
         android:layout_height="475dp"
         android:background="@drawable/wallet_normal">
 
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/goblinidle"
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:layout_gravity="center"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:src="@drawable/goblin1dile"
+            android:translationY="160dp" />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/heart3"
@@ -32,12 +49,6 @@
             android:layout_marginTop="70dp"
             android:src="@drawable/pixelheart" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/goblin"
-            android:translationY="340dp" />
 
         <EditText
             android:id="@+id/input_text"
@@ -51,7 +62,7 @@
             android:imeActionId="@android:integer/config_mediumAnimTime"
             android:imeOptions="actionNext"
             android:inputType="textShortMessage"
-            android:translationY="330dp" />
+            android:translationY="300dp" />
 
         <TextView
 
@@ -75,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:translationX="260dp"
-            android:translationY="400dp"
+            android:translationY="350dp"
             app:srcCompat="@drawable/submit" />
 
         <ImageButton
@@ -84,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:translationX="0dp"
-            android:translationY="400dp"
+            android:translationY="350dp"
             app:srcCompat="@drawable/submit" />
 
         <TextView
@@ -101,7 +112,7 @@
             android:text="      Submit"
             android:textColor="#000"
             android:translationX="260dp"
-            android:translationY="400dp" />
+            android:translationY="350dp" />
 
         <TextView
             android:id="@+id/next_word"
@@ -117,7 +128,7 @@
             android:text="        Next"
             android:textColor="#000"
             android:translationX="0dp"
-            android:translationY="400dp" />
+            android:translationY="350dp" />
 
         <TextView
             android:id="@+id/Timer"
@@ -125,18 +136,22 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/aldrich"
             android:textColor="#FFFFFF"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            android:translationX="350dp" />
 
         <TextView
             android:id="@+id/tv_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="343dp"
+            android:layout_height="73dp"
             android:layout_marginStart="300dp"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="15dp"
-            android:text="Score: "
+            android:fontFamily="@font/aldrich"
+            android:text="SCORE: "
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="40sp"
+            android:translationX="-300dp"
+            android:translationY="-15dp" />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/heart1"
@@ -151,4 +166,4 @@
     </FrameLayout>
 
 
-</LinearLayout>
+</RelativeLayout>
