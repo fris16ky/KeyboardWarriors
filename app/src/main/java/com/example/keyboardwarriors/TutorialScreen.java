@@ -151,18 +151,20 @@ public class TutorialScreen extends AppCompatActivity {
         r = new Random();
         tutorial_game();
         final TextView Timer2 = findViewById(R.id.Timer);
-        counter = 10;
+
         new CountDownTimer(10000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                counter = 10;
                 Timer2.setText(String.valueOf(counter));
                 counter--;
-                if(counter == 1)
-                    counter = 10;
+                //if(counter == 1)
+                    //counter = 10;
                     //but this must also take away a heart
             }
             @Override
             public void onFinish() {
+                Timer2.setText("Help");
                 //Timer2.start();
             }
         };

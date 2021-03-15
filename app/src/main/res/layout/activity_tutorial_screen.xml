@@ -136,6 +136,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/aldrich"
             android:textColor="#FFFFFF"
+            android:text=" "
             android:textSize="40sp"
             android:translationX="350dp" />
 
