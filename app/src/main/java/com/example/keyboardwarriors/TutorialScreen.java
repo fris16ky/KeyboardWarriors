@@ -151,11 +151,11 @@ public class TutorialScreen extends AppCompatActivity {
         r = new Random();
         tutorial_game();
         final TextView Timer2 = findViewById(R.id.Timer);
-
+        //somehow by commiting and pushing my timer it completely disappeared and was replaced by the counter
+        counter = 10;
         new CountDownTimer(10000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                counter = 10;
                 Timer2.setText(String.valueOf(counter));
                 counter--;
                 //if(counter == 1)
@@ -167,7 +167,7 @@ public class TutorialScreen extends AppCompatActivity {
                 Timer2.setText("Help");
                 //Timer2.start();
             }
-        };
+        }.start();
 
         s_check.setOnClickListener(new View.OnClickListener() {
             @Override
