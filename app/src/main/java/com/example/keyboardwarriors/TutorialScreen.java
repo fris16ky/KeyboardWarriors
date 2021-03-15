@@ -153,18 +153,18 @@ public class TutorialScreen extends AppCompatActivity {
         final TextView Timer2 = findViewById(R.id.Timer);
         //somehow by commiting and pushing my timer it completely disappeared and was replaced by the counter
         counter = 10;
-        new CountDownTimer(10000, 1000) {
+        new CountDownTimer(1000000000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 Timer2.setText(String.valueOf(counter));
-                counter--;
                 if(counter == 1)
-                    counter = 10;
+                    counter = 11;
+                counter--;
                     //but this must also take away a heart
             }
             @Override
             public void onFinish() {
-                Timer2.setText("Help");
+                //Timer2.setText("Help");
                 //Timer2.start();
             }
         }.start();
