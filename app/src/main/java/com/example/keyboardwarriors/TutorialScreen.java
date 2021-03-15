@@ -158,8 +158,8 @@ public class TutorialScreen extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 Timer2.setText(String.valueOf(counter));
                 counter--;
-                //if(counter == 1)
-                    //counter = 10;
+                if(counter == 1)
+                    counter = 10;
                     //but this must also take away a heart
             }
             @Override
