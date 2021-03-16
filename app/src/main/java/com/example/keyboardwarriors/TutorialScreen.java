@@ -224,14 +224,6 @@ public class TutorialScreen extends AppCompatActivity {
         });
 
 
-
- /*       n_check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tutorial_game();
-
-            }
-        }); */
     }
 
 
@@ -252,6 +244,7 @@ public class TutorialScreen extends AppCompatActivity {
         currentWord = words_list[r.nextInt(words_list.length)];
         d_text.setText(Display(currentWord));
         user_input.getText().clear();
+
     }
         }
 

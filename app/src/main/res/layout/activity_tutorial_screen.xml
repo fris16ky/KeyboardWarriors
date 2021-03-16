@@ -89,14 +89,7 @@
             android:translationY="350dp"
             app:srcCompat="@drawable/submit" />
 
-        <ImageButton
-            android:id="@+id/new_word"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:translationX="0dp"
-            android:translationY="350dp"
-            app:srcCompat="@drawable/submit" />
+
 
         <TextView
             android:id="@+id/submit_word"
@@ -114,21 +107,6 @@
             android:translationX="260dp"
             android:translationY="350dp" />
 
-        <TextView
-            android:id="@+id/next_word"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginLeft="21dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/aldrich"
-            android:text="        Next"
-            android:textColor="#000"
-            android:translationX="0dp"
-            android:translationY="350dp" />
 
         <TextView
             android:id="@+id/Timer"
