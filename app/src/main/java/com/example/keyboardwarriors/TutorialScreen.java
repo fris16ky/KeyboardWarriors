@@ -153,7 +153,7 @@ public class TutorialScreen extends AppCompatActivity {
 
 
         r = new Random();
-        tutorial_game();
+        //tutorial_game();
 
         final TextView Timer = findViewById(R.id.Timer);
         new CountDownTimer(10000, 1000) {
@@ -198,6 +198,17 @@ public class TutorialScreen extends AppCompatActivity {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     s_check.setEnabled(false);
                     n_check.setEnabled(true);
+                    user_input.getText().clear();
+
+                    s_check.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            currentWord = words_list[r.nextInt(words_list.length)];
+                            d_text.setText(Display(currentWord));
+
+                        }
+                    });
+
 
 
                     score++;
@@ -224,15 +235,6 @@ public class TutorialScreen extends AppCompatActivity {
             }
         });
 
-
-
-        n_check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tutorial_game();
-
-            }
-        });
     }
 
     private String Display(String word) {
@@ -245,15 +247,9 @@ public class TutorialScreen extends AppCompatActivity {
 
     }
 
-    private void tutorial_game() {
-
-        currentWord = words_list[r.nextInt(words_list.length)];
-        d_text.setText(Display(currentWord));
-        n_check.setEnabled(false);
-        s_check.setEnabled(true);
-        user_input.getText().clear();
-    }
 }
+
+
 
 
 
