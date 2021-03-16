@@ -3,6 +3,7 @@ package com.example.keyboardwarriors;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -138,35 +139,57 @@ public class TutorialScreen extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        d_text = findViewById(R.id.display_text);
-        tv_score = findViewById(R.id.tv_score);
-        user_input = findViewById(R.id.input_text);
-        s_check = findViewById(R.id.submit);
-        n_check = findViewById(R.id.new_word);
-        heart1 = findViewById(R.id.heart1);
-        heart2 = findViewById(R.id.heart2);
-        heart3 = findViewById(R.id.heart3);
+
+
+        d_text = (TextView) findViewById(R.id.display_text);
+        tv_score = (TextView) findViewById(R.id.tv_score);
+        user_input = (EditText) findViewById(R.id.input_text);
+        s_check = (ImageButton) findViewById(R.id.submit);
+        n_check = (ImageButton) findViewById(R.id.new_word);
+        heart1 = (GifImageView) findViewById(R.id.heart1);
+        heart2 = (GifImageView) findViewById(R.id.heart2);
+        heart3 = (GifImageView) findViewById(R.id.heart3);
+
 
 
         r = new Random();
-        tutorial_game();
-        final TextView Timer2 = findViewById(R.id.Timer);
-        //somehow by commiting and pushing my timer it completely disappeared and was replaced by the counter
-        counter = 10;
-        new CountDownTimer(1000000000, 1000) {
+        //tutorial_game();
+
+        final TextView Timer = findViewById(R.id.Timer);
+        new CountDownTimer(10000, 1000) {
+
             @Override
             public void onTick(long millisUntilFinished) {
-                Timer2.setText(String.valueOf(counter));
-                if(counter == 1)
-                    counter = 11;
-                counter--;
-                    //but this must also take away a heart
+
+
+                        while (counter < 10){
+                do {
+                    Timer.setText(String.valueOf(counter));
+                    counter--;
+                } while (counter == 0);{
+                    counter = 10;
+                }
+                        }
+
+
+
+
+
+
+
             }
+
+
             @Override
             public void onFinish() {
-                //Timer2.setText("Help");
-                //Timer2.start();
-            }
+
+
+                        Timer.setText(String.valueOf(counter));
+                        counter--;
+
+                }
+
+
         }.start();
 
         s_check.setOnClickListener(new View.OnClickListener() {
@@ -175,11 +198,24 @@ public class TutorialScreen extends AppCompatActivity {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     s_check.setEnabled(false);
                     n_check.setEnabled(true);
+                    user_input.getText().clear();
+
+                    s_check.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            currentWord = words_list[r.nextInt(words_list.length)];
+                            d_text.setText(Display(currentWord));
+
+                        }
+                    });
+
+
+
                     score++;
                     tv_score.setText("SCORE: " + score);
                 } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
-                    s_check.setEnabled(false);
-                    n_check.setEnabled(true);
+                    s_check.setEnabled(true);
+                    n_check.setEnabled(false);
                     health--;
                 }
                 if (health == 2) {
@@ -193,29 +229,16 @@ public class TutorialScreen extends AppCompatActivity {
                     heart3.setVisibility(View.INVISIBLE);
                     heart2.setVisibility(View.INVISIBLE);
                     heart1.setVisibility(View.INVISIBLE);
+                    startActivity(new Intent(getApplicationContext(), GameOver.class));
+
         }
-
-
-
-
-
-            }
-
-
-        });
-//hello
-
-        n_check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tutorial_game();
-
             }
         });
+
     }
 
     private String Display(String word) {
-        String[] letters = word.split("");
+        List<String> letters = Arrays.asList(word.split(""));
         String display = "";
         for (String letter : letters) {
             display += letter;
@@ -224,15 +247,9 @@ public class TutorialScreen extends AppCompatActivity {
 
     }
 
-    private void tutorial_game() {
-
-        currentWord = words_list[r.nextInt(words_list.length)];
-        d_text.setText(Display(currentWord));
-        n_check.setEnabled(false);
-        s_check.setEnabled(true);
-        user_input.getText().clear();
-    }
 }
+
+
 
 
 
