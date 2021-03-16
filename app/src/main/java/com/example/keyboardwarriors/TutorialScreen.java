@@ -150,7 +150,8 @@ public class TutorialScreen extends AppCompatActivity {
         heart1 = (GifImageView) findViewById(R.id.heart1);
         heart2 = (GifImageView) findViewById(R.id.heart2);
         heart3 = (GifImageView) findViewById(R.id.heart3);
-        Gattack = (GifImageView) findViewById(R.id.);
+        Gidle = (GifImageView) findViewById(R.id.goblinidle);
+        Gattack = (GifImageView) findViewById(R.id.goblin1attacking);
         Gattack.setVisibility(View.INVISIBLE);
 
 
@@ -209,7 +210,9 @@ public class TutorialScreen extends AppCompatActivity {
                     tv_score.setText("SCORE: " + score);
                 } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                     health--;
+                    Gidle.setVisibility(View.INVISIBLE);
                     Gattack.setVisibility(View.VISIBLE);
+
 
                 }
                 if (health == 2) {
