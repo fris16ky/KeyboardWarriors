@@ -32,6 +32,16 @@
             android:translationY="160dp" />
 
         <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/goblin1attacking"
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:layout_gravity="center"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:src="@drawable/goblin1attacking"
+            android:translationY="160dp" />
+
+        <pl.droidsonroids.gif.GifImageView
             android:id="@+id/heart3"
             android:layout_width="76dp"
             android:layout_height="74dp"
