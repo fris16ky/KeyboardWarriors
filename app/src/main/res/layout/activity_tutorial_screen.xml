@@ -28,8 +28,10 @@
             android:layout_gravity="center"
             android:scaleX="2"
             android:scaleY="2"
-            android:src="@drawable/goblin1dile"
-            android:translationY="160dp" />
+            android:src="@drawable/goblin1idle2"
+            android:translationY="160dp"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/goblin1attacking"
@@ -39,7 +41,8 @@
             android:scaleX="2"
             android:scaleY="2"
             android:src="@drawable/goblin1attacking"
-            android:translationY="160dp" />
+            android:translationY="1dp"
+             />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/heart3"
@@ -100,7 +103,6 @@
             app:srcCompat="@drawable/submit" />
 
 
-
         <TextView
             android:id="@+id/submit_word"
             android:layout_width="100dp"
@@ -123,8 +125,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/aldrich"
-            android:textColor="#FFFFFF"
             android:text=" "
+            android:textColor="#FFFFFF"
             android:textSize="40sp"
             android:translationX="350dp" />
 

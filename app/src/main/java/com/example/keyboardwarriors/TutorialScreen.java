@@ -210,17 +210,22 @@ public class TutorialScreen extends AppCompatActivity {
                     tv_score.setText("SCORE: " + score);
                 } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                     health--;
-                    Gidle.setVisibility(View.INVISIBLE);
-                    Gattack.setVisibility(View.VISIBLE);
+
+
+
 
 
                 }
                 if (health == 2) {
                     heart3.setVisibility(View.INVISIBLE);
+
+
                 }
                 else if (health == 1) {
                     heart3.setVisibility(View.INVISIBLE);
-                heart2.setVisibility(View.INVISIBLE);
+                     heart2.setVisibility(View.INVISIBLE);
+
+
             }
                    else if (health ==0) {
                     heart3.setVisibility(View.INVISIBLE);
