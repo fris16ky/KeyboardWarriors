@@ -35,6 +35,7 @@ public class TutorialScreen extends AppCompatActivity {
     EditText user_input;
     ImageButton s_check, n_check;
     GifImageView heart1, heart2, heart3;
+    GifImageView Gattack , Gidle;
 
     String currentWord;
 
@@ -149,6 +150,9 @@ public class TutorialScreen extends AppCompatActivity {
         heart1 = (GifImageView) findViewById(R.id.heart1);
         heart2 = (GifImageView) findViewById(R.id.heart2);
         heart3 = (GifImageView) findViewById(R.id.heart3);
+        Gattack = (GifImageView) findViewById(R.id.);
+        Gattack.setVisibility(View.INVISIBLE);
+
 
 
 
@@ -170,6 +174,12 @@ public class TutorialScreen extends AppCompatActivity {
                     counter = 10;
                 }
                         }
+
+
+
+
+
+
 
             }
 
@@ -199,6 +209,8 @@ public class TutorialScreen extends AppCompatActivity {
                     tv_score.setText("SCORE: " + score);
                 } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                     health--;
+                    Gattack.setVisibility(View.VISIBLE);
+
                 }
                 if (health == 2) {
                     heart3.setVisibility(View.INVISIBLE);
