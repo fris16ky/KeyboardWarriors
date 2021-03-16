@@ -153,7 +153,7 @@ public class TutorialScreen extends AppCompatActivity {
 
 
         r = new Random();
-        //tutorial_game();
+        tutorial_game();
 
         final TextView Timer = findViewById(R.id.Timer);
         new CountDownTimer(10000, 1000) {
@@ -170,6 +170,11 @@ public class TutorialScreen extends AppCompatActivity {
                     counter = 10;
                 }
                         }
+
+
+
+
+
 
 
             }
@@ -198,19 +203,15 @@ public class TutorialScreen extends AppCompatActivity {
                     s_check.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            currentWord = words_list[r.nextInt(words_list.length)];
-                            d_text.setText(Display(currentWord));
+                            tutorial_game();
 
                         }
                     });
 
 
-
                     score++;
                     tv_score.setText("SCORE: " + score);
                 } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
-                    s_check.setEnabled(true);
-                    n_check.setEnabled(false);
                     health--;
                 }
                 if (health == 2) {
@@ -230,7 +231,17 @@ public class TutorialScreen extends AppCompatActivity {
             }
         });
 
+
+
+ /*       n_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tutorial_game();
+
+            }
+        }); */
     }
+
 
     private String Display(String word) {
         List<String> letters = Arrays.asList(word.split(""));
@@ -242,7 +253,15 @@ public class TutorialScreen extends AppCompatActivity {
 
     }
 
-}
+
+
+    private void tutorial_game() {
+
+        currentWord = words_list[r.nextInt(words_list.length)];
+        d_text.setText(Display(currentWord));
+        user_input.getText().clear();
+    }
+        }
 
 
 
