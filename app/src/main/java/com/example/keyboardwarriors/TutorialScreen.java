@@ -4,6 +4,7 @@ package com.example.keyboardwarriors;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -19,6 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import pl.droidsonroids.gif.GifDrawable;
 import pl.droidsonroids.gif.GifImageView;
 
 public class TutorialScreen extends AppCompatActivity {
@@ -33,11 +35,14 @@ public class TutorialScreen extends AppCompatActivity {
     TextView d_text;
     TextView countText;
     EditText user_input;
-    ImageButton s_check, n_check;
+    ImageButton s_check;
     GifImageView heart1, heart2, heart3;
-    GifImageView Gattack , Gidle;
+    GifImageView enemies;
+    GifImageView enemies2;
+
 
     String currentWord;
+    String enemy;
 
     Random r;
 
@@ -135,6 +140,9 @@ public class TutorialScreen extends AppCompatActivity {
             "you"};
 
 
+    private Integer spawn[] = {R.drawable.goblin1idle, R.drawable.wraith1idle,};
+    private int currImage = 0;
+
 
 
     @Override
@@ -149,19 +157,20 @@ public class TutorialScreen extends AppCompatActivity {
         tv_score = (TextView) findViewById(R.id.tv_score);
         user_input = (EditText) findViewById(R.id.input_text);
         s_check = (ImageButton) findViewById(R.id.submit);
-        n_check = (ImageButton) findViewById(R.id.new_word);
         heart1 = (GifImageView) findViewById(R.id.heart1);
         heart2 = (GifImageView) findViewById(R.id.heart2);
         heart3 = (GifImageView) findViewById(R.id.heart3);
-        Gidle = (GifImageView) findViewById(R.id.goblinidle);
-        Gattack = (GifImageView) findViewById(R.id.goblin1attacking);
-        Gattack.setVisibility(View.INVISIBLE);
+        enemies = (GifImageView) findViewById(R.id.enemy);
+
+
+
 
 
 
 
         r = new Random();
         tutorial_game();
+        setInitialImage();
 
         final TextView Timer = findViewById(R.id.Timer);
         new CountDownTimer(10000, 1000) {
@@ -205,7 +214,16 @@ public class TutorialScreen extends AppCompatActivity {
             public void onClick(View v) {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     user_input.getText().clear();
-                    tutorial_game();
+
+                        currImage++;
+                        if (currImage == 2) {
+                            currImage = 0;
+                        }
+                        setCurrentImage();
+
+                        tutorial_game();
+
+
 
 
 
@@ -263,7 +281,22 @@ public class TutorialScreen extends AppCompatActivity {
         user_input.getText().clear();
 
     }
+
+
+    private void setInitialImage(){
+        setCurrentImage();
+    }
+
+        private void setCurrentImage() {
+
+            final GifImageView imageView = (GifImageView) findViewById(R.id.enemy);
+            imageView.setImageResource(spawn[currImage]);
+
         }
+
+
+
+}
 
 
 

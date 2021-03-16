@@ -14,12 +14,7 @@
         android:background="@drawable/wallet_normal">
 
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/goblin"
-            android:translationY="340dp" />
+
 
         <EditText
             android:id="@+id/input_text"

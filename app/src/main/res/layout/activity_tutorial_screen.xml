@@ -22,25 +22,15 @@
 
 
         <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/goblinidle"
+            android:id="@+id/enemy"
             android:layout_width="250px"
             android:layout_height="250px"
             android:layout_gravity="center"
             android:scaleX="2"
             android:scaleY="2"
-            android:src="@drawable/goblin1idle"
-            android:translationY="160dp"
+            android:translationY="165dp"
             />
 
-        <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/goblin1attacking"
-            android:layout_width="250px"
-            android:layout_height="250px"
-            android:layout_gravity="center"
-            android:scaleX="2"
-            android:scaleY="2"
-            android:src="@drawable/goblin1attacking"
-            android:translationY="160dp" />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/heart3"
