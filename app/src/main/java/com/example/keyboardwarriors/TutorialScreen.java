@@ -171,12 +171,6 @@ public class TutorialScreen extends AppCompatActivity {
                 }
                         }
 
-
-
-
-
-
-
             }
 
 
