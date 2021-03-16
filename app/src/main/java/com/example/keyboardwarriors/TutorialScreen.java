@@ -196,17 +196,9 @@ public class TutorialScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
-                    s_check.setEnabled(false);
-                    n_check.setEnabled(true);
                     user_input.getText().clear();
+                    tutorial_game();
 
-                    s_check.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            tutorial_game();
-
-                        }
-                    });
 
 
                     score++;
