@@ -140,7 +140,12 @@ public class TutorialScreen extends AppCompatActivity {
             "you"};
 
 
-    private Integer spawn[] = {R.drawable.goblin1idle, R.drawable.wraith1idle,};
+        private Integer spawn[] = {R.drawable.goblin1idle,
+                R.drawable.wraith1idle,
+                R.drawable.golem1idle,
+                R.drawable.golem2idle,
+
+        };
     private int currImage = 0;
 
 
@@ -217,8 +222,8 @@ public class TutorialScreen extends AppCompatActivity {
 
 
 
-                        currImage++;
-                        if (currImage == 2) {
+                        currImage = currImage + r.nextInt(4);
+                        if (currImage >= 4) {
                             currImage = 0;
                         }
                         setCurrentImage();
