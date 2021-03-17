@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -230,8 +231,10 @@ public class TutorialScreen extends AppCompatActivity {
                     score++;
                     tv_score.setText("SCORE: " + score);
                 } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
+                    MediaPlayer error;
+                    error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
+                            error.start();
                     health--;
-
 
 
 
@@ -241,13 +244,12 @@ public class TutorialScreen extends AppCompatActivity {
                 }
                 if (health == 2) {
                     heart3.setVisibility(View.INVISIBLE);
-
+                    
 
                 }
                 else if (health == 1) {
                     heart3.setVisibility(View.INVISIBLE);
-                     heart2.setVisibility(View.INVISIBLE);
-
+                heart2.setVisibility(View.INVISIBLE);
 
             }
                    else if (health ==0) {
