@@ -63,13 +63,13 @@
             android:imeActionId="@android:integer/config_mediumAnimTime"
             android:imeOptions="actionNext"
             android:inputType="textShortMessage"
-            android:translationY="300dp" />
+            android:translationY="250dp" />
 
         <TextView
 
             android:id="@+id/display_text"
             android:layout_width="350dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
             android:background="#FEC8A7"
             android:clickable="false"

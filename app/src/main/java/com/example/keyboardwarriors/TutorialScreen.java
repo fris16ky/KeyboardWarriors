@@ -215,12 +215,13 @@ public class TutorialScreen extends AppCompatActivity {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     user_input.getText().clear();
 
+
+
                         currImage++;
                         if (currImage == 2) {
                             currImage = 0;
                         }
                         setCurrentImage();
-
                         tutorial_game();
 
 
@@ -231,6 +232,8 @@ public class TutorialScreen extends AppCompatActivity {
                     tv_score.setText("SCORE: " + score);
                 } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                     health--;
+
+
 
 
 
