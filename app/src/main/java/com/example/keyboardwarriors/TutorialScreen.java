@@ -144,6 +144,10 @@ public class TutorialScreen extends AppCompatActivity {
                 R.drawable.wraith1idle,
                 R.drawable.golem1idle,
                 R.drawable.golem2idle,
+                R.drawable.golem3idle,
+                R.drawable.golem4idle,
+                R.drawable.golem5idle,
+                R.drawable.golem6idle,
 
         };
     private int currImage = 0;
@@ -192,23 +196,13 @@ public class TutorialScreen extends AppCompatActivity {
                     counter = 10;
                 }
                         }
-
-
-
-
-
-
-
             }
 
 
             @Override
             public void onFinish() {
-
-
                         Timer.setText(String.valueOf(counter));
                         counter--;
-
                 }
 
 
@@ -222,9 +216,9 @@ public class TutorialScreen extends AppCompatActivity {
 
 
 
-                        currImage = currImage + r.nextInt(4);
-                        if (currImage >= 4) {
-                            currImage = 0;
+                        currImage = r.nextInt(8);
+                        if (currImage == 8) {
+                            currImage = r.nextInt(8);;
                         }
                         setCurrentImage();
                         tutorial_game();
