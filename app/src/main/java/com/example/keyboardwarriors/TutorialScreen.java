@@ -4,6 +4,7 @@ package com.example.keyboardwarriors;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -155,11 +156,14 @@ public class TutorialScreen extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
 
 
@@ -189,13 +193,14 @@ public class TutorialScreen extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
 
 
-                        while (counter < 10){
+                while (counter < 10){
                 do {
                     Timer.setText(String.valueOf(counter));
                     counter--;
                 } while (counter == 0);{
                     counter = 10;
                 }
+
                         }
             }
 
@@ -208,6 +213,7 @@ public class TutorialScreen extends AppCompatActivity {
 
 
         }.start();
+
 
         s_check.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -235,6 +241,7 @@ public class TutorialScreen extends AppCompatActivity {
                     error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
                             error.start();
                     health--;
+
 
 
 
