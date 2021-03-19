@@ -11,7 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:background="@drawable/wallet_normal"
-        android:translationY="375dp" />
+        android:translationY="375dp" >
+
+
+    </FrameLayout>
 
 
     <FrameLayout
@@ -106,6 +109,13 @@
             android:textColor="#000"
             android:translationX="260dp"
             android:translationY="350dp" />
+
+        <ImageButton
+            android:id="@+id/tutscript"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:translationY="350dp"
+            android:text="" />
 
 
         <TextView

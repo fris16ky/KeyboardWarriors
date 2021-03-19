@@ -2,14 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.keyboardwarriors">
 
-
     <supports-screens
         android:largeScreens="true"
         android:normalScreens="true"
         android:smallScreens="true"
-        android:xlargeScreens="true"
-        />
-
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".GameOver"></activity>
+        <activity android:name=".TutorialPopup"></activity>
+        <activity android:name=".GameOver" />
         <activity android:name=".TutorialScreen" />
         <activity android:name=".SplashScreen">
             <intent-filter>

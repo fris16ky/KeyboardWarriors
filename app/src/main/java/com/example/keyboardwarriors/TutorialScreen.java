@@ -38,7 +38,7 @@ public class TutorialScreen extends AppCompatActivity {
     TextView countText;
     EditText user_input;
     ImageButton s_check;
-    ImageButton tutscript_btn;
+    ImageButton btn_tut;
     GifImageView heart1, heart2, heart3;
     GifImageView enemies;
     GifImageView enemies2;
@@ -172,12 +172,18 @@ public class TutorialScreen extends AppCompatActivity {
         tv_score = (TextView) findViewById(R.id.tv_score);
         user_input = (EditText) findViewById(R.id.input_text);
         s_check = (ImageButton) findViewById(R.id.submit);
+        btn_tut = (ImageButton) findViewById(R.id.tutscript);
         heart1 = (GifImageView) findViewById(R.id.heart1);
         heart2 = (GifImageView) findViewById(R.id.heart2);
         heart3 = (GifImageView) findViewById(R.id.heart3);
         enemies = (GifImageView) findViewById(R.id.enemy);
 
-
+    btn_tut.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent i = new Intent(getApplicationContext(), TutorialPopup.class);
+        }
+    });
 
 
 
