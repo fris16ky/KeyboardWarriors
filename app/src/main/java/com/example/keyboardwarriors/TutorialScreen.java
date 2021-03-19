@@ -143,15 +143,8 @@ public class TutorialScreen extends AppCompatActivity {
             "you"};
 
 
-        private Integer spawn[] = {R.drawable.goblin1idle,
+        private Integer spawn[] = {
                 R.drawable.wraith1idle,
-                R.drawable.golem1idle,
-                R.drawable.golem2idle,
-                R.drawable.golem3idle,
-                R.drawable.golem4idle,
-                R.drawable.golem5idle,
-                R.drawable.golem6idle,
-
         };
     private int currImage = 0;
 
@@ -230,14 +223,12 @@ public class TutorialScreen extends AppCompatActivity {
                     user_input.getText().clear();
 
 
-
-                        currImage = r.nextInt(8);
-                        if (currImage == 8) {
-                            currImage = r.nextInt(8);;
+                        currImage = r.nextInt(1);
+                        if (currImage == 1) {
+                            currImage = r.nextInt(1);;
                         }
                         setCurrentImage();
                         tutorial_game();
-
 
 
 
@@ -249,11 +240,6 @@ public class TutorialScreen extends AppCompatActivity {
                     error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
                             error.start();
                     health--;
-
-
-
-
-
 
 
                 }
