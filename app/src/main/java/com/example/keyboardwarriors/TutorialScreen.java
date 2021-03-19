@@ -172,7 +172,7 @@ public class TutorialScreen extends AppCompatActivity {
         tv_score = (TextView) findViewById(R.id.tv_score);
         user_input = (EditText) findViewById(R.id.input_text);
         s_check = (ImageButton) findViewById(R.id.submit);
-        btn_tut = (ImageButton) findViewById(R.id.tutscript);
+        btn_tut = (ImageButton) findViewById(R.id.tut_script);
         heart1 = (GifImageView) findViewById(R.id.heart1);
         heart2 = (GifImageView) findViewById(R.id.heart2);
         heart3 = (GifImageView) findViewById(R.id.heart3);
@@ -182,6 +182,7 @@ public class TutorialScreen extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent i = new Intent(getApplicationContext(), TutorialPopup.class);
+            startActivity(i);
         }
     });
 

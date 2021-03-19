@@ -111,7 +111,7 @@
             android:translationY="350dp" />
 
         <ImageButton
-            android:id="@+id/tutscript"
+            android:id="@+id/tut_script"
             android:layout_width="140dp"
             android:layout_height="60dp"
             android:translationY="350dp"
