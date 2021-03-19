@@ -27,12 +27,24 @@
         android:fontFamily="@font/aldrich"
         android:text="       Next"
         android:textColor="#000"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_close"
         app:layout_constraintEnd_toEndOf="@+id/btn_close"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="@+id/btn_close"
         app:layout_constraintTop_toTopOf="@+id/btn_close"
-        app:layout_constraintVertical_bias="0.482"
+        app:layout_constraintVertical_bias="0.4"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="355dp"
+        android:layout_height="554dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#000"
+        android:text="      Hello "
+        app:layout_constraintVertical_bias="0.18" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
