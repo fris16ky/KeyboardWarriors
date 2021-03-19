@@ -73,13 +73,12 @@
             android:layout_width="350dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
-            android:background="#FEC8A7"
             android:clickable="false"
             android:fontFamily="@font/aldrich"
             android:gravity="center"
             android:text=""
             android:textAllCaps="true"
-            android:textColor="#000"
+            android:textColor="#FEC8A7"
             android:textSize="50dp"
             android:translationY="150dp" />
 
@@ -142,6 +141,29 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="70dp"
             android:src="@drawable/pixelheart" />
+
+        <ImageView
+            android:layout_width="1200px"
+            android:layout_height="400px"
+            android:baselineAlignBottom="true"
+            android:background="@drawable/border3"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:scaleX="1.09"
+            android:translationX="-11dp"
+            android:translationY="154dp" />
+
+        <ImageView
+            android:layout_width="1200px"
+            android:layout_height="400px"
+            android:layout_gravity="center_horizontal"
+            android:baselineAlignBottom="true"
+            android:background="@drawable/border3"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:scaleX="1.09"
+            android:translationX="12dp"
+            android:translationY="73dp" />
 
 
     </FrameLayout>
