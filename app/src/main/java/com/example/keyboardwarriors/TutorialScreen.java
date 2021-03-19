@@ -9,7 +9,6 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
-import android.os.CountDownTimer;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
@@ -199,13 +198,16 @@ public class TutorialScreen extends AppCompatActivity {
                     score++;
                     tv_score.setText("SCORE: " + score);
 
-
+                    if(score == 3){
+                        startActivity(new Intent(getApplicationContext(), EasyMode.class));
+                        finish();
+                    }
 
 
                 }
                 else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                     MediaPlayer error;
-                    error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
+                    error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                             error.start();
                     health--;
 

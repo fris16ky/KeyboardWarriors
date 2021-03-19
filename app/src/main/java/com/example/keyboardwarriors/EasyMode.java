@@ -233,7 +233,7 @@ public class EasyMode extends AppCompatActivity {
                 }
                 else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                     MediaPlayer error;
-                    error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
+                    error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                     error.start();
                     health--;
 
