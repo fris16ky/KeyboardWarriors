@@ -41,11 +41,10 @@ public class TutorialScreen extends AppCompatActivity {
     ImageButton btn_tut;
     GifImageView heart1, heart2, heart3;
     GifImageView enemies;
-    GifImageView enemies2;
+
 
 
     String currentWord;
-    String enemy;
 
     Random r;
 
@@ -183,6 +182,46 @@ public class TutorialScreen extends AppCompatActivity {
         r = new Random();
         tutorial_game();
         setInitialImage();
+        final TextView Timer = findViewById(R.id.Timer);
+        counter = 10;
+        new CountDownTimer(1000000000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Timer.setText(String.valueOf(counter));
+                if(counter == 0) {
+                    counter = 11;
+                    health--;
+
+                    if (health == 2) {
+                        heart3.setVisibility(View.INVISIBLE);
+
+
+                    }
+                    else if (health == 1) {
+                        heart3.setVisibility(View.INVISIBLE);
+                        heart2.setVisibility(View.INVISIBLE);
+                    }
+                    else if (health == 0) {
+                        heart3.setVisibility(View.INVISIBLE);
+                        heart2.setVisibility(View.INVISIBLE);
+                        heart1.setVisibility(View.INVISIBLE);
+                        startActivity(new Intent(getApplicationContext(), GameOver.class));
+                    }
+
+
+                }
+                if(user_input.getText().toString().equalsIgnoreCase(currentWord)) {
+                    counter = 11;
+                }
+                counter--;
+                //but this must also take away a heart
+            }
+            @Override
+            public void onFinish() {
+                //Timer2.setText("Help");
+                //Timer2.start();
+            }
+        }.start();
 
         s_check.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -197,6 +236,7 @@ public class TutorialScreen extends AppCompatActivity {
                         tutorial_game();
                     score++;
                     tv_score.setText("SCORE: " + score);
+
 
 
 
@@ -253,8 +293,5 @@ public class TutorialScreen extends AppCompatActivity {
             imageView.setImageResource(spawn[currImage]);
         }
 
-        private void EndTutorial(){
-        
-        }
 
 }

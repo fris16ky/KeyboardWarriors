@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,12 +8,50 @@
     tools:context=".EasyMode">
 
     <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/wallet_normal"
+        android:translationY="375dp" >
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
         android:id="@+id/Score"
         android:layout_width="match_parent"
         android:layout_height="475dp"
         android:background="@drawable/wallet_normal">
 
 
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/enemy"
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:layout_gravity="center"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:translationY="165dp"
+            />
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/heart3"
+            android:layout_width="76dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="190dp"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/pixelheart" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/heart2"
+            android:layout_width="76dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/pixelheart" />
 
 
         <EditText
@@ -28,13 +66,13 @@
             android:imeActionId="@android:integer/config_mediumAnimTime"
             android:imeOptions="actionNext"
             android:inputType="textShortMessage"
-            android:translationY="330dp" />
+            android:translationY="250dp" />
 
         <TextView
 
             android:id="@+id/display_text"
             android:layout_width="350dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
             android:background="#FEC8A7"
             android:clickable="false"
@@ -52,17 +90,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:translationX="260dp"
-            android:translationY="400dp"
+            android:translationY="350dp"
             app:srcCompat="@drawable/submit" />
 
-        <ImageButton
-            android:id="@+id/new_word"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:translationX="0dp"
-            android:translationY="400dp"
-            app:srcCompat="@drawable/submit" />
 
         <TextView
             android:id="@+id/submit_word"
@@ -78,56 +108,62 @@
             android:text="      Submit"
             android:textColor="#000"
             android:translationX="260dp"
-            android:translationY="400dp" />
+            android:translationY="350dp" />
 
+        <ImageButton
+            android:id="@+id/tut_script"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="145dp"
+            android:layout_height="67dp"
+            android:scaleX="1.29"
+            android:text=""
+            android:translationY="350dp"
+            app:srcCompat="@drawable/submit" />
         <TextView
-            android:id="@+id/next_word"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginLeft="21dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:translationX="12dp"
+            android:translationY="371dp"
             android:fontFamily="@font/aldrich"
-            android:text="        Next"
-            android:textColor="#000"
-            android:translationX="0dp"
-            android:translationY="400dp" />
+            android:text="Tap For Tutorial"
+            android:textColor="#000" />
+
 
         <TextView
             android:id="@+id/Timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10"
+            android:fontFamily="@font/aldrich"
+            android:text=" "
             android:textColor="#FFFFFF"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            android:translationX="350dp" />
 
         <TextView
             android:id="@+id/tv_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35sp"
-            android:layout_marginLeft="35sp"
-            android:layout_marginTop="100sp"
-            android:text="Score: "
+            android:layout_width="343dp"
+            android:layout_height="73dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/aldrich"
+            android:text="SCORE: "
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="40sp"
+            android:translationX="-300dp"
+            android:translationY="-15dp" />
 
-        <TextView
-            android:id="@+id/highscore"
-            android:layout_width="182dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="205sp"
-            android:layout_marginLeft="205sp"
-            android:layout_marginTop="20sp"
-            android:text="High Score: "
-            android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/heart1"
+            android:layout_width="76dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/pixelheart" />
 
 
     </FrameLayout>
 
 
-</LinearLayout>
+</RelativeLayout>

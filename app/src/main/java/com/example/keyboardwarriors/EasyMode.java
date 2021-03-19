@@ -5,24 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.CountDownTimer;
-import android.os.health.TimerStat;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-
-import pl.droidsonroids.gif.GifDrawable;
 import pl.droidsonroids.gif.GifImageView;
 
 public class EasyMode extends AppCompatActivity {
@@ -164,7 +159,6 @@ public class EasyMode extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
 
 
@@ -243,9 +237,6 @@ public class EasyMode extends AppCompatActivity {
                     tutorial_game();
 
 
-
-
-
                     score++;
                     tv_score.setText("SCORE: " + score);
                 } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
@@ -253,10 +244,6 @@ public class EasyMode extends AppCompatActivity {
                     error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
                     error.start();
                     health--;
-
-
-
-
 
 
 
@@ -296,7 +283,6 @@ public class EasyMode extends AppCompatActivity {
     }
 
 
-
     private void tutorial_game() {
 
         currentWord = words_list[r.nextInt(words_list.length)];
@@ -304,7 +290,6 @@ public class EasyMode extends AppCompatActivity {
         user_input.getText().clear();
 
     }
-
 
     private void setInitialImage(){
         setCurrentImage();
@@ -316,7 +301,6 @@ public class EasyMode extends AppCompatActivity {
         imageView.setImageResource(spawn[currImage]);
 
     }
-
 
 
 }
