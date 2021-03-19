@@ -17,7 +17,8 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name=".TutorialPopup"
-            android:theme="@style/PopMe" />
+            android:theme="@style/PopMe"
+            />
         <activity android:name=".GameOver" />
         <activity android:name=".TutorialScreen" />
         <activity android:name=".SplashScreen">

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fontFamily="@font/aldrich"
     android:background="#FEC8A7"
     tools:context=".TutorialPopup">
 
@@ -21,7 +22,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/submit_word"
+        android:id="@+id/next"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aldrich"
@@ -37,14 +38,15 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:layout_width="355dp"
-        android:layout_height="554dp"
+        android:layout_width="319dp"
+        android:layout_height="379dp"
+        android:fontFamily="@font/aldrich"
+        android:text="      Hello "
+        android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="#000"
-        android:text="      Hello "
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintVertical_bias="0.203" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

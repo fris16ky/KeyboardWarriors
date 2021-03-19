@@ -36,7 +36,6 @@ public class EasyMode extends AppCompatActivity {
     GifImageView enemies;
 
 
-
     String currentWord;
 
     Random r;
@@ -202,11 +201,49 @@ public class EasyMode extends AppCompatActivity {
                     }
 
                 }
-                if(user_input.getText().toString().equalsIgnoreCase(currentWord)) {
-                    counter = 11;
-                }
+                s_check.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
+                            user_input.getText().clear();
+                            counter = 10;
+
+                            currImage = r.nextInt(8);
+                            if (currImage == 8) {
+                                currImage = r.nextInt(8);;
+                            }
+                            setCurrentImage();
+                            tutorial_game();
+                            score++;
+                            tv_score.setText("SCORE: " + score);
+
+                        }
+                        else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
+                            MediaPlayer error;
+                            error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
+                            error.start();
+                            health--;
+
+                        }
+                        if (health == 2) {
+                            heart3.setVisibility(View.INVISIBLE);
+
+
+                        }
+                        else if (health == 1) {
+                            heart3.setVisibility(View.INVISIBLE);
+                            heart2.setVisibility(View.INVISIBLE);
+                        }
+                        else if (health == 0) {
+                            heart3.setVisibility(View.INVISIBLE);
+                            heart2.setVisibility(View.INVISIBLE);
+                            heart1.setVisibility(View.INVISIBLE);
+                            startActivity(new Intent(getApplicationContext(), GameOver.class));
+                        }
+                    }
+                });
                 counter--;
-                //but this must also take away a heart
+                //but this must also take away a heart. it already does check line 232
             }
             @Override
             public void onFinish() {
@@ -215,48 +252,7 @@ public class EasyMode extends AppCompatActivity {
             }
         }.start();
 
-        s_check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
-                    user_input.getText().clear();
-                    currImage = r.nextInt(1);
-                    if (currImage == 1) {
-                        currImage = r.nextInt(1);;
-                    }
-                    setCurrentImage();
-                    tutorial_game();
-                    score++;
-                    tv_score.setText("SCORE: " + score);
 
-
-
-
-                }
-                else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
-                    MediaPlayer error;
-                    error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
-                    error.start();
-                    health--;
-
-                }
-                if (health == 2) {
-                    heart3.setVisibility(View.INVISIBLE);
-
-
-                }
-                else if (health == 1) {
-                    heart3.setVisibility(View.INVISIBLE);
-                    heart2.setVisibility(View.INVISIBLE);
-                }
-                else if (health == 0) {
-                    heart3.setVisibility(View.INVISIBLE);
-                    heart2.setVisibility(View.INVISIBLE);
-                    heart1.setVisibility(View.INVISIBLE);
-                    startActivity(new Intent(getApplicationContext(), GameOver.class));
-                }
-            }
-        });
 
     }
 
