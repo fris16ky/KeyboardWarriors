@@ -198,10 +198,7 @@ public class TutorialScreen extends AppCompatActivity {
                     score++;
                     tv_score.setText("SCORE: " + score);
 
-                    if(score == 3){
-                        startActivity(new Intent(getApplicationContext(), EasyMode.class));
-                        finish();
-                    }
+
 
                 }
                 else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
@@ -254,6 +251,10 @@ public class TutorialScreen extends AppCompatActivity {
         private void setCurrentImage() {
             final GifImageView imageView = (GifImageView) findViewById(R.id.enemy);
             imageView.setImageResource(spawn[currImage]);
+        }
+
+        private void EndTutorial(){
+        
         }
 
 }
