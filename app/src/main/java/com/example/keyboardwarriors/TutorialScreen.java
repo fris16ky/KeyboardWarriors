@@ -5,24 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.CountDownTimer;
-import android.os.health.TimerStat;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-
-import pl.droidsonroids.gif.GifDrawable;
 import pl.droidsonroids.gif.GifImageView;
 
 public class TutorialScreen extends AppCompatActivity {
@@ -142,9 +137,15 @@ public class TutorialScreen extends AppCompatActivity {
             "you"};
 
 
-        private Integer spawn[] = {
-                R.drawable.wraith1idle,
-        };
+    private Integer spawn[] = {R.drawable.goblin1idle,
+            R.drawable.wraith1idle,
+            R.drawable.golem1idle,
+            R.drawable.golem2idle,
+            R.drawable.golem3idle,
+            R.drawable.golem4idle,
+            R.drawable.golem5idle,
+            R.drawable.golem6idle,
+    };
     private int currImage = 0;
 
 
@@ -182,46 +183,7 @@ public class TutorialScreen extends AppCompatActivity {
         r = new Random();
         tutorial_game();
         setInitialImage();
-        final TextView Timer = findViewById(R.id.Timer);
-        counter = 10;
-        new CountDownTimer(1000000000, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                Timer.setText(String.valueOf(counter));
-                if(counter == 0) {
-                    counter = 11;
-                    health--;
 
-                    if (health == 2) {
-                        heart3.setVisibility(View.INVISIBLE);
-
-
-                    }
-                    else if (health == 1) {
-                        heart3.setVisibility(View.INVISIBLE);
-                        heart2.setVisibility(View.INVISIBLE);
-                    }
-                    else if (health == 0) {
-                        heart3.setVisibility(View.INVISIBLE);
-                        heart2.setVisibility(View.INVISIBLE);
-                        heart1.setVisibility(View.INVISIBLE);
-                        startActivity(new Intent(getApplicationContext(), GameOver.class));
-                    }
-
-
-                }
-                if(user_input.getText().toString().equalsIgnoreCase(currentWord)) {
-                    counter = 11;
-                }
-                counter--;
-                //but this must also take away a heart
-            }
-            @Override
-            public void onFinish() {
-                //Timer2.setText("Help");
-                //Timer2.start();
-            }
-        }.start();
 
         s_check.setOnClickListener(new View.OnClickListener() {
             @Override

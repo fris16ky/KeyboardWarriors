@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f067"
     tools:context=".EasyMode">
 
     <FrameLayout
@@ -110,24 +109,6 @@
             android:translationX="260dp"
             android:translationY="350dp" />
 
-        <ImageButton
-            android:id="@+id/tut_script"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="145dp"
-            android:layout_height="67dp"
-            android:scaleX="1.29"
-            android:text=""
-            android:translationY="350dp"
-            app:srcCompat="@drawable/submit" />
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="25dp"
-            android:translationX="12dp"
-            android:translationY="371dp"
-            android:fontFamily="@font/aldrich"
-            android:text="Tap For Tutorial"
-            android:textColor="#000" />
-
 
         <TextView
             android:id="@+id/Timer"
@@ -164,6 +145,34 @@
 
 
     </FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </RelativeLayout>

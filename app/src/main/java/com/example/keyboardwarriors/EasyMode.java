@@ -1,8 +1,6 @@
 package com.example.keyboardwarriors;
 
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
@@ -20,8 +18,9 @@ import java.util.List;
 import java.util.Random;
 import pl.droidsonroids.gif.GifImageView;
 
-public class EasyMode extends AppCompatActivity {
 
+
+public class EasyMode extends AppCompatActivity {
 
     TextView tv_score;
     int score = 0;
@@ -36,11 +35,10 @@ public class EasyMode extends AppCompatActivity {
     ImageButton btn_tut;
     GifImageView heart1, heart2, heart3;
     GifImageView enemies;
-    GifImageView enemies2;
+
 
 
     String currentWord;
-    String enemy;
 
     Random r;
 
@@ -146,7 +144,6 @@ public class EasyMode extends AppCompatActivity {
             R.drawable.golem4idle,
             R.drawable.golem5idle,
             R.drawable.golem6idle,
-
     };
     private int currImage = 0;
 
@@ -159,6 +156,7 @@ public class EasyMode extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
 
 
@@ -173,12 +171,9 @@ public class EasyMode extends AppCompatActivity {
         enemies = (GifImageView) findViewById(R.id.enemy);
 
 
-
-
         r = new Random();
         tutorial_game();
         setInitialImage();
-
         final TextView Timer = findViewById(R.id.Timer);
         counter = 10;
         new CountDownTimer(1000000000, 1000) {
@@ -220,32 +215,29 @@ public class EasyMode extends AppCompatActivity {
             }
         }.start();
 
-
         s_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     user_input.getText().clear();
-
-
-
-                    currImage = r.nextInt(8);
-                    if (currImage == 8) {
-                        currImage = r.nextInt(8);;
+                    currImage = r.nextInt(1);
+                    if (currImage == 1) {
+                        currImage = r.nextInt(1);;
                     }
                     setCurrentImage();
                     tutorial_game();
-
-
                     score++;
                     tv_score.setText("SCORE: " + score);
-                } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
+
+
+
+
+                }
+                else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                     MediaPlayer error;
                     error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
                     error.start();
                     health--;
-
-
 
                 }
                 if (health == 2) {
@@ -256,21 +248,17 @@ public class EasyMode extends AppCompatActivity {
                 else if (health == 1) {
                     heart3.setVisibility(View.INVISIBLE);
                     heart2.setVisibility(View.INVISIBLE);
-
                 }
                 else if (health ==0) {
                     heart3.setVisibility(View.INVISIBLE);
                     heart2.setVisibility(View.INVISIBLE);
                     heart1.setVisibility(View.INVISIBLE);
                     startActivity(new Intent(getApplicationContext(), GameOver.class));
-
                 }
             }
         });
 
-
     }
-
 
     private String Display(String word) {
         List<String> letters = Arrays.asList(word.split(""));
@@ -282,13 +270,10 @@ public class EasyMode extends AppCompatActivity {
 
     }
 
-
     private void tutorial_game() {
-
         currentWord = words_list[r.nextInt(words_list.length)];
         d_text.setText(Display(currentWord));
         user_input.getText().clear();
-
     }
 
     private void setInitialImage(){
@@ -296,17 +281,7 @@ public class EasyMode extends AppCompatActivity {
     }
 
     private void setCurrentImage() {
-
         final GifImageView imageView = (GifImageView) findViewById(R.id.enemy);
         imageView.setImageResource(spawn[currImage]);
-
     }
-
-
 }
-
-
-
-
-
-

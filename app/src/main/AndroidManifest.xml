@@ -15,9 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".TutorialPopup"
-            android:theme="@style/PopMe"
-            ></activity>
+        <activity
+            android:name=".EasyMode"
+            android:theme="@style/NoTitleBar"></activity>
+        <activity
+            android:name=".TutorialPopup"
+            android:theme="@style/PopMe" />
         <activity android:name=".GameOver" />
         <activity android:name=".TutorialScreen" />
         <activity android:name=".SplashScreen">
