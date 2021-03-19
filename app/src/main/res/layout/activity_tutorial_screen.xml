@@ -119,7 +119,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="145dp"
             android:layout_height="67dp"
-            android:scaleX="1.29"
+            android:scaleX="1"
             android:text=""
             android:translationY="350dp"
             app:srcCompat="@drawable/submit" />
@@ -129,7 +129,7 @@
             android:translationX="12dp"
             android:translationY="371dp"
             android:fontFamily="@font/aldrich"
-            android:text="Tap For Tutorial"
+            android:text="           Help"
             android:textColor="#000" />
 
 
