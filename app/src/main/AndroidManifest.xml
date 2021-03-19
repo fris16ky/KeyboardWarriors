@@ -16,9 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".EasyMode"
-            android:theme="@style/NoTitleBar"></activity>
-        <activity
             android:name=".TutorialPopup"
             android:theme="@style/PopMe" />
         <activity android:name=".GameOver" />
@@ -29,6 +26,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".EasyMode"
+            android:theme="@style/NoTitleBar">
         </activity>
         <activity android:name=".OptionScreen" />
         <activity android:name=".GameScreen" />
