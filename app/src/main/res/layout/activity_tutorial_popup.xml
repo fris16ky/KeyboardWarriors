@@ -7,15 +7,30 @@
     android:background="@drawable/popup_bg"
     tools:context=".TutorialPopup">
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Close"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929" />
+        app:layout_constraintVertical_bias="0.628"
+        android:background="@drawable/submit"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/submit_word"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="       Close"
+        android:fontFamily="@font/aldrich"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_close"
+        app:layout_constraintEnd_toEndOf="@+id/btn_close"
+        app:layout_constraintStart_toStartOf="@+id/btn_close"
+        app:layout_constraintTop_toTopOf="@+id/btn_close"
+        app:layout_constraintVertical_bias="0.458"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

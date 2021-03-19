@@ -18,7 +18,7 @@ public class SplashScreen extends AppCompatActivity
         setContentView(R.layout.activity_splash_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+
 
 
         Thread thread = new Thread()

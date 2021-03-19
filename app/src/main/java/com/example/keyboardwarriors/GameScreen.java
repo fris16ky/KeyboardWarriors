@@ -3,6 +3,7 @@ package com.example.keyboardwarriors;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,8 @@ public class GameScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_game_screen);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
+
 
 
         back = (ImageButton) findViewById(R.id.back);

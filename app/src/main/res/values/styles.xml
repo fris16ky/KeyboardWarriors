@@ -8,11 +8,12 @@
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
-
-    <style name="PopMe">
+    
+    <style name="PopMe" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
+
 
 
     </style>
