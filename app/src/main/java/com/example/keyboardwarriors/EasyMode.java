@@ -178,15 +178,6 @@ public class EasyMode extends AppCompatActivity {
         heart3 = (GifImageView) findViewById(R.id.heart3);
         enemies = (GifImageView) findViewById(R.id.enemy);
 
-        btn_tut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), TutorialPopup.class);
-                startActivity(i);
-            }
-        });
-
-
 
 
 

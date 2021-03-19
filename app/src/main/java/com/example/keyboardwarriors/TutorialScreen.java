@@ -193,6 +193,24 @@ public class TutorialScreen extends AppCompatActivity {
                 if(counter == 1) {
                     counter = 11;
                     health--;
+
+                    if (health == 2) {
+                        heart3.setVisibility(View.INVISIBLE);
+
+
+                    }
+                    else if (health == 1) {
+                        heart3.setVisibility(View.INVISIBLE);
+                        heart2.setVisibility(View.INVISIBLE);
+                    }
+                    else if (health == 0) {
+                        heart3.setVisibility(View.INVISIBLE);
+                        heart2.setVisibility(View.INVISIBLE);
+                        heart1.setVisibility(View.INVISIBLE);
+                        startActivity(new Intent(getApplicationContext(), GameOver.class));
+                    }
+
+
                 }
                 if(user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     counter = 11;
@@ -212,12 +230,6 @@ public class TutorialScreen extends AppCompatActivity {
             public void onClick(View v) {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     user_input.getText().clear();
-                        currImage = r.nextInt(8);
-                        if (currImage == 8) {
-                            currImage = r.nextInt(8);;
-                        }
-                        setCurrentImage();
-                        tutorial_game();
                         currImage = r.nextInt(1);
                         if (currImage == 1) {
                             currImage = r.nextInt(1);;
