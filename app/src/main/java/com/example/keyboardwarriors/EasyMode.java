@@ -32,7 +32,6 @@ public class EasyMode extends AppCompatActivity {
     TextView countText;
     EditText user_input;
     ImageButton s_check;
-    ImageButton btn_tut;
     GifImageView heart1, heart2, heart3;
     GifImageView enemies;
 
@@ -153,7 +152,7 @@ public class EasyMode extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutorial_screen);
+        setContentView(R.layout.activity_easy_mode);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
@@ -164,7 +163,6 @@ public class EasyMode extends AppCompatActivity {
         tv_score = (TextView) findViewById(R.id.tv_score);
         user_input = (EditText) findViewById(R.id.input_text);
         s_check = (ImageButton) findViewById(R.id.submit);
-        btn_tut = (ImageButton) findViewById(R.id.tut_script);
         heart1 = (GifImageView) findViewById(R.id.heart1);
         heart2 = (GifImageView) findViewById(R.id.heart2);
         heart3 = (GifImageView) findViewById(R.id.heart3);
