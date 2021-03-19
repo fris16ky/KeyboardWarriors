@@ -186,31 +186,44 @@ public class EasyMode extends AppCompatActivity {
         setInitialImage();
 
         final TextView Timer = findViewById(R.id.Timer);
-        new CountDownTimer(10000, 1000) {
-
+        counter = 10;
+        new CountDownTimer(1000000000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                Timer.setText(String.valueOf(counter));
+                if(counter == 0) {
+                    counter = 11;
+                    health--;
+
+                    if (health == 2) {
+                        heart3.setVisibility(View.INVISIBLE);
 
 
-                while (counter < 10){
-                    do {
-                        Timer.setText(String.valueOf(counter));
-                        counter--;
-                    } while (counter == 0);{
-                        counter = 10;
+                    }
+                    else if (health == 1) {
+                        heart3.setVisibility(View.INVISIBLE);
+                        heart2.setVisibility(View.INVISIBLE);
+                    }
+                    else if (health == 0) {
+                        heart3.setVisibility(View.INVISIBLE);
+                        heart2.setVisibility(View.INVISIBLE);
+                        heart1.setVisibility(View.INVISIBLE);
+                        startActivity(new Intent(getApplicationContext(), GameOver.class));
                     }
 
+
                 }
+                if(user_input.getText().toString().equalsIgnoreCase(currentWord)) {
+                    counter = 11;
+                }
+                counter--;
+                //but this must also take away a heart
             }
-
-
             @Override
             public void onFinish() {
-                Timer.setText(String.valueOf(counter));
-                counter--;
+                //Timer2.setText("Help");
+                //Timer2.start();
             }
-
-
         }.start();
 
 
