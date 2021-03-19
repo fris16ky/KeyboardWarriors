@@ -180,58 +180,50 @@ public class TutorialScreen extends AppCompatActivity {
     });
 
 
-
-
-
         r = new Random();
         tutorial_game();
         setInitialImage();
 
         final TextView Timer = findViewById(R.id.Timer);
-        new CountDownTimer(10000, 1000) {
-
+        counter = 10;
+        new CountDownTimer(1000000000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-
-
-                while (counter < 10){
-                do {
-                    Timer.setText(String.valueOf(counter));
-                    counter--;
-                } while (counter == 0);{
-                    counter = 10;
+                Timer.setText(String.valueOf(counter));
+                if(counter == 1) {
+                    counter = 11;
+                    health--;
                 }
-
-                        }
+                if(user_input.getText().toString().equalsIgnoreCase(currentWord)) {
+                    counter = 11;
+                }
+                counter--;
+                //but this must also take away a heart
             }
-
-
             @Override
             public void onFinish() {
-                        Timer.setText(String.valueOf(counter));
-                        counter--;
-                }
-
-
+                //Timer2.setText("Help");
+                //Timer2.start();
+            }
         }.start();
-
 
         s_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                     user_input.getText().clear();
-
-
+                        currImage = r.nextInt(8);
+                        if (currImage == 8) {
+                            currImage = r.nextInt(8);;
+                        }
+                        setCurrentImage();
+                        tutorial_game();
                         currImage = r.nextInt(1);
                         if (currImage == 1) {
                             currImage = r.nextInt(1);;
                         }
                         setCurrentImage();
                         tutorial_game();
-
-
-
 
                     score++;
                     tv_score.setText("SCORE: " + score);
@@ -241,31 +233,26 @@ public class TutorialScreen extends AppCompatActivity {
                             error.start();
                     health--;
 
-
                 }
                 if (health == 2) {
                     heart3.setVisibility(View.INVISIBLE);
-                    
+
 
                 }
                 else if (health == 1) {
                     heart3.setVisibility(View.INVISIBLE);
                 heart2.setVisibility(View.INVISIBLE);
-
             }
                    else if (health ==0) {
                     heart3.setVisibility(View.INVISIBLE);
                     heart2.setVisibility(View.INVISIBLE);
                     heart1.setVisibility(View.INVISIBLE);
                     startActivity(new Intent(getApplicationContext(), GameOver.class));
-
         }
             }
         });
 
-
     }
-
 
     private String Display(String word) {
         List<String> letters = Arrays.asList(word.split(""));
@@ -277,36 +264,19 @@ public class TutorialScreen extends AppCompatActivity {
 
     }
 
-
-
     private void tutorial_game() {
-
         currentWord = words_list[r.nextInt(words_list.length)];
         d_text.setText(Display(currentWord));
         user_input.getText().clear();
-
     }
-
 
     private void setInitialImage(){
         setCurrentImage();
     }
 
         private void setCurrentImage() {
-
             final GifImageView imageView = (GifImageView) findViewById(R.id.enemy);
             imageView.setImageResource(spawn[currImage]);
-
         }
 
-
-
 }
-
-
-
-
-
-
-
-
