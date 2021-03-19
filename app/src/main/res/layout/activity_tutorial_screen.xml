@@ -112,10 +112,21 @@
 
         <ImageButton
             android:id="@+id/tut_script"
-            android:layout_width="140dp"
-            android:layout_height="60dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="145dp"
+            android:layout_height="67dp"
             android:translationY="350dp"
             android:text="" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:translationX="12dp"
+            android:translationY="371dp"
+            android:fontFamily="@font/aldrich"
+            android:text="Tap For Tutorial"
+            android:textColor="#000" />
+
+
 
 
         <TextView
