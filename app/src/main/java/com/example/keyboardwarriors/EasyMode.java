@@ -184,20 +184,21 @@ public class EasyMode extends AppCompatActivity {
 
                     if (health == 2) {
                         heart3.setVisibility(View.INVISIBLE);
+                        health--;
 
 
                     }
                     else if (health == 1) {
-                        heart3.setVisibility(View.INVISIBLE);
                         heart2.setVisibility(View.INVISIBLE);
+                        health--;
                     }
                     else if (health == 0) {
-                        heart3.setVisibility(View.INVISIBLE);
-                        heart2.setVisibility(View.INVISIBLE);
+
                         heart1.setVisibility(View.INVISIBLE);
+
+                        health--;
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
                     }
-
 
                 }
                 if(user_input.getText().toString().equalsIgnoreCase(currentWord)) {
@@ -247,7 +248,7 @@ public class EasyMode extends AppCompatActivity {
                     heart3.setVisibility(View.INVISIBLE);
                     heart2.setVisibility(View.INVISIBLE);
                 }
-                else if (health ==0) {
+                else if (health == 0) {
                     heart3.setVisibility(View.INVISIBLE);
                     heart2.setVisibility(View.INVISIBLE);
                     heart1.setVisibility(View.INVISIBLE);

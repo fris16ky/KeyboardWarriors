@@ -218,12 +218,9 @@ public class TutorialScreen extends AppCompatActivity {
 
                 }
                 else if (health == 1) {
-                    heart3.setVisibility(View.INVISIBLE);
-                heart2.setVisibility(View.INVISIBLE);
-            }
-                   else if (health ==0) {
-                    heart3.setVisibility(View.INVISIBLE);
                     heart2.setVisibility(View.INVISIBLE);
+            }
+                else if (health ==0) {
                     heart1.setVisibility(View.INVISIBLE);
                     startActivity(new Intent(getApplicationContext(), GameOver.class));
         }
