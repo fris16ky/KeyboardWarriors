@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EasyMode">
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
@@ -36,7 +35,7 @@
         android:layout_marginTop="72dp"
         android:src="@drawable/pixelheart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -48,10 +47,11 @@
         android:layout_marginTop="72dp"
         android:src="@drawable/pixelheart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/heart1"
@@ -60,11 +60,10 @@
         android:layout_marginTop="72dp"
         android:src="@drawable/pixelheart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
-
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/enemy"
