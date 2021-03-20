@@ -134,8 +134,19 @@ public class EasyMode extends AppCompatActivity {
             "you"};
 
 
-    private Integer spawn[] = {R.drawable.goblin1idle,
+    private Integer spawn[] = {
+            R.drawable.goblin1idle,
+            R.drawable.goblin2idle,
+            R.drawable.goblin3idle,
+            R.drawable.reaper1idle,
+            R.drawable.reaper2idle,
+            R.drawable.reaper3idle,
+            R.drawable.satyr1idle,
+            R.drawable.satyr2idle,
+            R.drawable.satyr3idle,
             R.drawable.wraith1idle,
+            R.drawable.wraith2idle,
+            R.drawable.wraith3idle,
             R.drawable.golem1idle,
             R.drawable.golem2idle,
             R.drawable.golem3idle,
@@ -210,9 +221,9 @@ public class EasyMode extends AppCompatActivity {
                             user_input.getText().clear();
                             counter = 10;
 
-                            currImage = r.nextInt(8);
-                            if (currImage == 8) {
-                                currImage = r.nextInt(8);;
+                            currImage = r.nextInt(18);
+                            if (currImage == 18) {
+                                currImage = r.nextInt(18);;
                             }
                             setCurrentImage();
                             tutorial_game();
@@ -222,25 +233,19 @@ public class EasyMode extends AppCompatActivity {
                         }
                         else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                             health--;
-
+                            MediaPlayer error;
+                            error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
+                            error.start();
                         }
                         if (health == 2) {
                             heart3.setVisibility(View.INVISIBLE);
-                            MediaPlayer error;
-                            error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
-                            error.start();
                         }
                         else if (health == 1) {
                             heart2.setVisibility(View.INVISIBLE);
-                            MediaPlayer error;
-                            error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
-                            error.start();
                         }
                         else if (health == 0) {
                             heart1.setVisibility(View.INVISIBLE);
-                            MediaPlayer error;
-                            error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
-                            error.start();
+
                             startActivity(new Intent(getApplicationContext(), GameOver.class));
                         }
                     }
