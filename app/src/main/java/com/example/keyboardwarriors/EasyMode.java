@@ -194,16 +194,15 @@ public class EasyMode extends AppCompatActivity {
                 if(counter == 0) {
                     counter = 11;
                     health--;
+
                     if (health == 2) {
                         heart3.setVisibility(View.INVISIBLE);
-                        health--;
                         MediaPlayer error;
                         error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                         error.start();
                     }
                     else if (health == 1) {
                         heart2.setVisibility(View.INVISIBLE);
-                        health--;
                         MediaPlayer error;
                         error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                         error.start();

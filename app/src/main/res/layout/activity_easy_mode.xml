@@ -52,6 +52,15 @@
             android:layout_marginTop="70dp"
             android:src="@drawable/pixelheart" />
 
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/heart1"
+            android:layout_width="76dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/pixelheart" />
+
 
         <EditText
             android:id="@+id/input_text"
@@ -133,14 +142,6 @@
             android:translationX="-300dp"
             android:translationY="-15dp" />
 
-        <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/heart1"
-            android:layout_width="76dp"
-            android:layout_height="74dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="70dp"
-            android:src="@drawable/pixelheart" />
 
         <ImageView
             android:layout_width="1200px"
@@ -157,8 +158,8 @@
             android:layout_width="1200px"
             android:layout_height="400px"
             android:layout_gravity="center_horizontal"
-            android:baselineAlignBottom="true"
             android:background="@drawable/border3"
+            android:baselineAlignBottom="true"
             android:gravity="center"
             android:scaleType="fitXY"
             android:scaleX="1.09"
