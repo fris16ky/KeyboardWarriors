@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,15 +7,12 @@
     android:background="#f067"
     tools:context=".TutorialScreen">
 
-
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:background="@drawable/wallet_normal"
-        android:translationY="375dp" >
-
-
+        android:translationY="375dp"
+        tools:ignore="MissingConstraints">
     </FrameLayout>
 
 
@@ -24,177 +21,225 @@
         android:layout_width="match_parent"
         android:layout_height="475dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/wallet_normal">
-
-
-
-        <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/enemy"
-            android:layout_width="250px"
-            android:layout_height="250px"
-            android:layout_gravity="center"
-            android:scaleX="2"
-            android:scaleY="2"
-            android:translationY="165dp"
-            />
-
-
-        <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/heart3"
-            android:layout_width="76dp"
-            android:layout_height="74dp"
-            android:layout_marginStart="190dp"
-            android:layout_marginLeft="190dp"
-            android:layout_marginTop="70dp"
-            android:src="@drawable/pixelheart" />
-
-        <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/heart2"
-            android:layout_width="76dp"
-            android:layout_height="74dp"
-            android:layout_marginStart="110dp"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="70dp"
-            android:src="@drawable/pixelheart" />
-
-
-        <EditText
-            android:id="@+id/input_text"
-            android:layout_width="250dp"
-            android:layout_height="35dp"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:background="#FEC8A7"
-            android:fontFamily="@font/aldrich"
-            android:gravity="center"
-            android:imeActionId="@android:integer/config_mediumAnimTime"
-            android:imeOptions="actionNext"
-            android:inputType="textShortMessage"
-            android:translationY="250dp" />
-
-
-        <TextView
-
-            android:id="@+id/display_text"
-            android:layout_width="350dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
-            android:clickable="false"
-            android:fontFamily="@font/aldrich"
-            android:gravity="center"
-            android:text=""
-            android:textAllCaps="true"
-            android:textColor="#FEC8A7"
-            android:textSize="50dp"
-            android:translationY="150dp" />
-
-        <ImageButton
-            android:id="@+id/submit"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:translationX="260dp"
-            android:translationY="350dp"
-            app:srcCompat="@drawable/submit" />
-
-
-        <TextView
-            android:id="@+id/next"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginLeft="21dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/aldrich"
-            android:text="      Submit"
-            android:textColor="#000"
-            android:translationX="260dp"
-            android:translationY="350dp" />
-
-        <ImageButton
-            android:id="@+id/tut_script"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="145dp"
-            android:layout_height="67dp"
-            android:scaleX="1"
-            android:text=""
-            android:translationY="350dp"
-            app:srcCompat="@drawable/submit" />
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="25dp"
-            android:translationX="12dp"
-            android:translationY="371dp"
-            android:fontFamily="@font/aldrich"
-            android:text="           Help"
-            android:textColor="#000" />
-
-
-
-
-        <TextView
-            android:id="@+id/Timer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/aldrich"
-            android:text=" "
-            android:textColor="#FFFFFF"
-            android:textSize="40sp"
-            android:translationX="350dp" />
-
-        <TextView
-            android:id="@+id/tv_score"
-            android:layout_width="343dp"
-            android:layout_height="73dp"
-            android:layout_marginStart="300dp"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/aldrich"
-            android:text="SCORE: "
-            android:textColor="#FFFFFF"
-            android:textSize="40sp"
-            android:translationX="-300dp"
-            android:translationY="-15dp" />
-
-        <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/heart1"
-            android:layout_width="76dp"
-            android:layout_height="74dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="70dp"
-            android:src="@drawable/pixelheart" />
-
-        <ImageView
-            android:layout_width="1200px"
-            android:layout_height="400px"
-            android:baselineAlignBottom="true"
-            android:background="@drawable/border3"
-            android:gravity="center"
-            android:scaleType="fitXY"
-            android:scaleX="1.09"
-            android:translationX="-11dp"
-            android:translationY="154dp" />
-
-        <ImageView
-            android:layout_width="1200px"
-            android:layout_height="400px"
-            android:layout_gravity="center_horizontal"
-            android:baselineAlignBottom="true"
-            android:background="@drawable/border3"
-            android:gravity="center"
-            android:scaleType="fitXY"
-            android:scaleX="1.09"
-            android:translationX="12dp"
-            android:translationY="73dp" />
-
-
-
-
+        android:background="@drawable/wallet_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
     </FrameLayout>
 
 
-</RelativeLayout>
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/heart3"
+        android:layout_width="76dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/pixelheart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/heart2"
+        android:layout_width="76dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/pixelheart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/heart1"
+        android:layout_width="76dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/pixelheart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/enemy"
+        android:layout_width="250px"
+        android:layout_height="250px"
+        android:layout_gravity="center"
+        android:layout_marginTop="324dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="@+id/Score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="276dp"
+        android:background="#FEC8A7"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:imeActionId="@android:integer/config_mediumAnimTime"
+        android:imeOptions="actionNext"
+        android:inputType="textShortMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+
+        android:id="@+id/display_text"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="152dp"
+        android:clickable="false"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:text=""
+        android:textAllCaps="true"
+        android:textColor="#FEC8A7"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/submit"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="348dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/submit"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aldrich"
+        android:text="      Submit"
+        android:textColor="#000"
+        android:translationY="-4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="@+id/submit"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="@+id/submit"
+        app:layout_constraintTop_toTopOf="@+id/submit"
+        app:layout_constraintVertical_bias="0.562"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageButton
+        android:id="@+id/tut_script"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="348dp"
+        android:scaleX="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/submit"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/aldrich"
+        android:text="          Help"
+        android:textColor="#000"
+
+        app:layout_constraintBottom_toBottomOf="@+id/tut_script"
+        app:layout_constraintEnd_toEndOf="@+id/tut_script"
+        app:layout_constraintStart_toStartOf="@+id/tut_script"
+        app:layout_constraintTop_toTopOf="@+id/tut_script"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aldrich"
+        android:text=" "
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="343dp"
+        android:layout_height="73dp"
+        android:fontFamily="@font/aldrich"
+        android:text="SCORE: "
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="246dp"
+        android:layout_height="143dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/border3"
+        android:baselineAlignBottom="true"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="246dp"
+        android:layout_height="143dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/border3"
+        android:baselineAlignBottom="true"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
