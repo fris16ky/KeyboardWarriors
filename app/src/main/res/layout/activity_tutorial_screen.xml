@@ -218,6 +218,7 @@
         android:gravity="center"
         android:scaleType="fitXY"
         android:scaleX="2"
+        android:translationY="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.587"
         app:layout_constraintStart_toStartOf="parent"
