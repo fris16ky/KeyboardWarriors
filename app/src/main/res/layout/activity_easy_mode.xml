@@ -148,32 +148,6 @@
         tools:ignore="MissingConstraints" />
 
 
-    <ImageButton
-        android:id="@+id/tut_script"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="348dp"
-        android:scaleX="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/submit"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="25dp"
-        android:fontFamily="@font/aldrich"
-        android:text="          Help"
-        android:textColor="#000"
-
-        app:layout_constraintBottom_toBottomOf="@+id/tut_script"
-        app:layout_constraintEnd_toEndOf="@+id/tut_script"
-        app:layout_constraintStart_toStartOf="@+id/tut_script"
-        app:layout_constraintTop_toTopOf="@+id/tut_script"
-        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/Timer"
