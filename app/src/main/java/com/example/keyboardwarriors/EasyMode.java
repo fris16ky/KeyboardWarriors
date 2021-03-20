@@ -224,9 +224,9 @@ public class EasyMode extends AppCompatActivity {
                             user_input.getText().clear();
                             counter = 10;
 
-                            currImage = r.nextInt(18);
-                            if (currImage == 18) {
-                                currImage = r.nextInt(18);;
+                            currImage = r.nextInt(21);
+                            if (currImage == 21) {
+                                currImage = r.nextInt(21);;
                             }
                             setCurrentImage();
                             tutorial_game();
