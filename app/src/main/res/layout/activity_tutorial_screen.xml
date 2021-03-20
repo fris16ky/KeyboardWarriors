@@ -8,12 +8,23 @@
     tools:context=".TutorialScreen">
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:background="@drawable/wallet_normal"
-        android:translationY="375dp"
-        tools:ignore="MissingConstraints">
-    </FrameLayout>
+        android:layout_height="0dp"
+        android:background="@drawable/floor_candle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Score"
+        tools:ignore="MissingConstraints"></FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/floor_candle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        tools:ignore="MissingConstraints"></FrameLayout>
 
 
     <FrameLayout
