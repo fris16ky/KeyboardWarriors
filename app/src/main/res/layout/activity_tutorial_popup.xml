@@ -38,29 +38,26 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/textView5"
         android:layout_width="320dp"
-        android:layout_height="379dp"
+        android:layout_height="120dp"
         android:fontFamily="@font/aldrich"
-        android:text="Welcome to Keyboard Warriors!
-                           You are a Knight destined to fight and defeat a slew of enemies. ----------------------------
-                            Type out the displayed word correctly within the time frame to defeat each enemy!
-
-                                    If you don’t type fast enough, or type the word incorrectly, the enemy will attack you!
-                        Each enemy attack will take away your heart, defeat 10 enemies before you lose 3 hearts or it’s GAME OVER!"
+        android:text=" Welcome to Keyboard Warriors!
+                            You are a Knight destined to fight and defeat a slew of enemies."
         android:textColor="#000"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.824"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.366" />
+        app:layout_constraintVertical_bias="0.238" />
 
     <TextView
         android:id="@+id/howtoplay"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:text="    How To Play"
+        android:text="      How To Play"
         android:textSize="55sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,5 +65,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.004" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:fontFamily="@font/aldrich"
+        android:text=" Type out the displayed word correctly within the time frame to defeat each enemy!
+If you don’t type fast enough, or type the word incorrectly, the enemy will attack you! "
+        android:textColor="#000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.824"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="320dp"
+        android:layout_height="120dp"
+        android:text=" Each enemy attack will take away your heart, defeat 10 enemies before you lose 3 hearts or it’s GAME OVER!"
+        android:textColor="#000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.824"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
