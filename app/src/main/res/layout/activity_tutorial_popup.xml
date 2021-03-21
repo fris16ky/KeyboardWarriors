@@ -60,7 +60,7 @@
         android:id="@+id/howtoplay"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:text=" How To Play"
+        android:text="    How To Play"
         android:textSize="55sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
