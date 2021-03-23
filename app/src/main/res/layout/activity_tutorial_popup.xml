@@ -21,7 +21,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="333dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
@@ -30,8 +30,51 @@
         android:fontFamily="@font/aldrich"
         android:textAlignment="center"
         android:textSize="20dp"
-        android:text="Welcome to Keyboard Warriors! You are a Knight destined to fight and defeat a slew of enemies."
+        android:text="Welcome to Keyboard Warriors! You are a Knight destined to type and defeat enemies.
+        ----------------------------"
         android:layout_marginTop="77dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="77dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Type out the displayed word correctly within the time frame to defeat each enemy!
+
+                                    If you don’t type fast enough, or type the word incorrectly, the enemy will attack you!
+                                    ------------------------------"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:translationY="100dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="77dp"
+        android:fontFamily="@font/aldrich"
+        android:text="You only have 3         so be
+wary. "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:translationY="250dp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/heart1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/pixelheart"
+        android:translationX="163dp"
+        android:translationY="320dp" />
 
     <ImageButton
         android:id="@+id/btn_next"
