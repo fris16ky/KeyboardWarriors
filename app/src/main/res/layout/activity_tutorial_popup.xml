@@ -7,41 +7,44 @@
     >
 
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="14dp"
         android:fontFamily="@font/aldrich"
         android:text="How to Play"
-        android:textSize="40dp"
         android:textAlignment="center"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="40dp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="700px"
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="1dp"
-        android:textColor="@color/black"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="7dp"
         android:fontFamily="@font/aldrich"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:text="Welcome to Keyboard Warriors! You are a Knight destined to type and defeat enemies.
+        android:text="  Welcome to Keyboard Warriors! You are a Knight destined to type and defeat enemies.
         ----------------------------"
-        android:layout_marginTop="77dp" />
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_width="700px"
+        android:layout_height="183dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="77dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="184dp"
         android:fontFamily="@font/aldrich"
         android:text="Type out the displayed word correctly within the time frame to defeat each enemy!
 
@@ -49,32 +52,33 @@
                                     ------------------------------"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        android:translationY="100dp" />
+        android:textSize="20dp" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_width="600px"
+        android:layout_height="109dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="77dp"
+        android:layout_alignParentEnd="true"
+
+        android:layout_centerInParent="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="377dp"
+        android:layout_marginEnd="32dp"
         android:fontFamily="@font/aldrich"
         android:text="You only have 3         so be
 wary. "
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        android:translationY="250dp" />
+        android:textSize="20dp" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/heart1"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:src="@drawable/pixelheart"
-        android:translationX="163dp"
-        android:translationY="320dp" />
+        android:translationX="525px"
+        android:translationY="1000px" />
 
     <ImageButton
         android:id="@+id/btn_next"
@@ -87,5 +91,66 @@ wary. "
         android:layout_marginBottom="9dp"
         android:background="@drawable/butnext"
          />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="500px"
+        android:layout_height="400px"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="-76dp"
+        android:background="@drawable/border3"
+        android:baselineAlignBottom="true"
+        android:gravity="center"
+        android:rotation="-90"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        android:translationX="15px"
+        android:translationY="150px" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="500px"
+        android:layout_height="400px"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="-77dp"
+        android:background="@drawable/border3"
+        android:baselineAlignBottom="true"
+        android:gravity="center"
+        android:rotation="-90"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        android:translationX="15px"
+        android:translationY="900px" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="500px"
+        android:layout_height="400px"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border3"
+        android:baselineAlignBottom="true"
+        android:gravity="center"
+        android:rotation="-90"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        android:translationX="-225px"
+        android:translationY="150px" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="500px"
+        android:layout_height="400px"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border3"
+        android:baselineAlignBottom="true"
+        android:gravity="center"
+        android:rotation="-90"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        android:translationX="-225px"
+        android:translationY="900px" />
+
 
 </RelativeLayout>

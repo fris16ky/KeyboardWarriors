@@ -18,32 +18,35 @@
         android:textAlignment="center"
         android:textColor="@color/black" />
 
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="93dp"
-        android:background="@drawable/angel3idle" />
-
     <TextView
-        android:layout_width="342dp"
-        android:layout_height="160dp"
+        android:layout_width="259dp"
+        android:layout_height="151dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="106dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="305dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="303dp"
         android:fontFamily="@font/aldrich"
-        android:text=" Each enemy                attack will   take away
-          your heart, defeat 10 enemies before you lose 3 hearts or it’s GAME OVER! "
+        android:text=" Each enemy attack will take away your heart, defeat 10 enemies before you lose 3 hearts or it’s GAME OVER! "
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="259dp"
+        android:layout_height="151dp"
+        android:fontFamily="@font/aldrich"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="236dp"
+        android:layout_marginBottom="185dp" />
 
     <ImageButton
         android:id="@+id/btn_close"
@@ -56,6 +59,66 @@
         android:layout_marginBottom="9dp"
         android:background="@drawable/butclose"
         tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="500px"
+        android:layout_height="400px"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="-76dp"
+        android:background="@drawable/border3"
+        android:baselineAlignBottom="true"
+        android:gravity="center"
+        android:rotation="-90"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        android:translationX="15px"
+        android:translationY="150px" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="500px"
+        android:layout_height="400px"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="-77dp"
+        android:background="@drawable/border3"
+        android:baselineAlignBottom="true"
+        android:gravity="center"
+        android:rotation="-90"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        android:translationX="15px"
+        android:translationY="900px" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="500px"
+        android:layout_height="400px"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border3"
+        android:baselineAlignBottom="true"
+        android:gravity="center"
+        android:rotation="-90"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        android:translationX="-225px"
+        android:translationY="150px" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="500px"
+        android:layout_height="400px"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border3"
+        android:baselineAlignBottom="true"
+        android:gravity="center"
+        android:rotation="-90"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        android:translationX="-225px"
+        android:translationY="900px" />
+
 
 
 
