@@ -39,7 +39,7 @@ public class EasyMode extends AppCompatActivity {
     String currentWord;
 
     Random r;
-
+//s
     String[] words_list = {"all",
             "am",
             "and",

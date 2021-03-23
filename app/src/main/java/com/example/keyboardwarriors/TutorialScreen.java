@@ -156,7 +156,6 @@ public class TutorialScreen extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
 
 
@@ -178,7 +177,6 @@ public class TutorialScreen extends AppCompatActivity {
         }
     });
 
-
         r = new Random();
         tutorial_game();
         setInitialImage();
@@ -199,7 +197,7 @@ public class TutorialScreen extends AppCompatActivity {
                     tv_score.setText("SCORE: " + score);
 
                     if(score == 3){
-                        startActivity(new Intent(getApplicationContext(), EasyMode.class));
+                        startActivity(new Intent(getApplicationContext(), OnToEasyMode.class));
                         finish();
                     }
 

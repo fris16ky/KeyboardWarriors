@@ -7,25 +7,18 @@
     android:background="#f067"
     tools:context=".TutorialScreen">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@drawable/floor_candle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Score"
-        tools:ignore="MissingConstraints"></FrameLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@drawable/floor_candle"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/wallet_normal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
-        tools:ignore="MissingConstraints"></FrameLayout>
-
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_height="0dp">
+    </FrameLayout>
 
     <FrameLayout
         android:id="@+id/Score"
@@ -106,6 +99,7 @@
         android:imeActionId="@android:integer/config_mediumAnimTime"
         android:imeOptions="actionNext"
         android:inputType="textShortMessage"
+        android:translationY="-60px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"

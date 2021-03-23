@@ -1,87 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="900px"
     android:layout_height="1500px"
     android:background="#FEC8A7"
-
-    >
-
+    tools:context=".popup2">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginTop="14dp"
         android:fontFamily="@font/aldrich"
         android:text="How to Play"
+        android:textSize="40dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="40dp" />
+        android:textColor="@color/black" />
 
     <TextView
-        android:layout_width="700px"
-        android:layout_height="100dp"
+        android:layout_width="262dp"
+        android:layout_height="276dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="73dp"
-        android:layout_marginEnd="7dp"
-        android:fontFamily="@font/aldrich"
-        android:text="  Welcome to Keyboard Warriors! You are a Knight destined to type and defeat enemies.
-        ----------------------------"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20dp" />
-
-    <TextView
-        android:layout_width="700px"
-        android:layout_height="183dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="177dp"
         android:fontFamily="@font/aldrich"
-        android:text="Type out the displayed word correctly within the time frame to defeat each enemy!
-
-                                    If you don’t type fast enough, or type the word incorrectly, the enemy will attack you!
-                                    ------------------------------"
+        android:text=" Each enemy attack will take away your heart, keep typing before you lose 3 hearts or it’s GAME OVER! There will me bosses who want you to fail. "
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp" />
 
     <TextView
-        android:layout_width="600px"
+        android:layout_width="254dp"
         android:layout_height="109dp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-
-        android:layout_centerInParent="true"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="377dp"
-        android:layout_marginEnd="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:layout_marginBottom="182dp"
         android:fontFamily="@font/aldrich"
-        android:text="You only have 3         so be
-wary. "
+        android:text="Now give it a try, type in 3 words correctly."
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp" />
-
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/heart1"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:src="@drawable/pixelheart"
-        android:translationX="525px"
-        android:translationY="1000px" />
 
     <ImageButton
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -89,9 +59,8 @@ wary. "
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="113dp"
         android:layout_marginBottom="9dp"
-        android:background="@drawable/butnext"
-         />
-
+        android:background="@drawable/butclose"
+        tools:ignore="MissingConstraints" />
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="500px"
@@ -151,6 +120,9 @@ wary. "
         android:scaleX="2"
         android:translationX="-225px"
         android:translationY="900px" />
+
+
+
 
 
 </RelativeLayout>

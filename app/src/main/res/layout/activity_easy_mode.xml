@@ -105,6 +105,7 @@
         android:imeActionId="@android:integer/config_mediumAnimTime"
         android:imeOptions="actionNext"
         android:inputType="textShortMessage"
+        android:translationY="-60px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +142,7 @@
         app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/submit"
+        app:srcCompat="@drawable/easy"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -170,7 +171,6 @@
         android:text=" "
         android:textColor="#FFFFFF"
         android:textSize="40sp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
