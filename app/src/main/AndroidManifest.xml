@@ -17,8 +17,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name=".OnToEasyMode"
-            android:label="@string/title_activity_on_to_easy_mode"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/PopMe"></activity>
         <activity
             android:name=".popup2"
             android:theme="@style/PopMe" />
