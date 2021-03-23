@@ -20,9 +20,7 @@ public class TutorialPopup extends Activity {
         setContentView(R.layout.activity_tutorial_popup);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-
-        //script = (TextView) findViewById(R.id.tutscript);
-
+        
        btn_close  = (ImageButton) findViewById(R.id.btn_close);
        btn_close.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -31,6 +29,7 @@ public class TutorialPopup extends Activity {
            }
        });
 
+        script = (TextView) findViewById(R.id.tutscript);
 
 
         DisplayMetrics dm = new DisplayMetrics();

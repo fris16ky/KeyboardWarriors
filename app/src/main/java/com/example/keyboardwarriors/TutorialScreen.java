@@ -156,7 +156,6 @@ public class TutorialScreen extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
 
 
@@ -177,7 +176,6 @@ public class TutorialScreen extends AppCompatActivity {
             startActivity(i);
         }
     });
-
 
         r = new Random();
         tutorial_game();
