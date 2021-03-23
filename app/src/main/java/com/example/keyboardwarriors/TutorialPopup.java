@@ -21,6 +21,7 @@ public class TutorialPopup extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
 
+        //script = (TextView) findViewById(R.id.tutscript);
 
        btn_close  = (ImageButton) findViewById(R.id.btn_close);
        btn_close.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +32,7 @@ public class TutorialPopup extends Activity {
        });
 
 
+
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
@@ -38,12 +40,14 @@ public class TutorialPopup extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
+
         getWindow().setLayout((int)(width*.8),(int)(height*.7));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
         params.x = 0;
         params.y = -20;
+
         getWindow().setAttributes(params);
 
 
