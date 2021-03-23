@@ -142,7 +142,7 @@
         app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/submit"
+        app:srcCompat="@drawable/easy"
         tools:ignore="MissingConstraints" />
 
     <TextView
