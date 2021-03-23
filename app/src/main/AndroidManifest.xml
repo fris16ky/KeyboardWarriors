@@ -16,9 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".popup2"
+            android:theme="@style/PopMe"></activity>
+        <activity
             android:name=".TutorialPopup"
-            android:theme="@style/PopMe"
-            />
+            android:theme="@style/PopMe" ></activity>
         <activity android:name=".GameOver" />
         <activity android:name=".TutorialScreen" />
         <activity android:name=".SplashScreen">
@@ -30,8 +32,7 @@
         </activity>
         <activity
             android:name=".EasyMode"
-            android:theme="@style/NoTitleBar">
-        </activity>
+            android:theme="@style/NoTitleBar"></activity>
         <activity android:name=".OptionScreen" />
         <activity android:name=".GameScreen" />
         <activity android:name=".TitleScreen" />
