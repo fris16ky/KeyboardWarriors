@@ -197,7 +197,7 @@ public class TutorialScreen extends AppCompatActivity {
                     tv_score.setText("SCORE: " + score);
 
                     if(score == 3){
-                        startActivity(new Intent(getApplicationContext(), EasyMode.class));
+                        startActivity(new Intent(getApplicationContext(), OnToEasyMode.class));
                         finish();
                     }
 

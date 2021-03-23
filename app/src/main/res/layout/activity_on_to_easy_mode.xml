@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".OnToEasyMode">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:text="Great Job. Now you will be sent to Easy Mode. Are you up for the challenge?"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/aldrich"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/easy"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="141dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.536"
+        app:srcCompat="@drawable/easy"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/easy"
+        android:layout_alignStart="@+id/easy"
+        android:layout_alignLeft="@+id/easy"
+        android:layout_alignTop="@+id/easy"
+        android:layout_alignEnd="@+id/easy"
+        android:layout_alignRight="@+id/back"
+        android:fontFamily="@font/aldrich"
+        android:text="        Yes!"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/easy"
+        app:layout_constraintEnd_toEndOf="@+id/easy"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/easy"
+        app:layout_constraintTop_toTopOf="@+id/easy"
+        app:layout_constraintVertical_bias="0.444"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
