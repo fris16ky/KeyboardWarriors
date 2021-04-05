@@ -18,6 +18,7 @@ public class GameScreen extends AppCompatActivity {
     ImageButton easy;
     ImageButton medium;
     ImageButton hard;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Song = MediaPlayer.create(GameScreen.this, R.raw.loopsong);
