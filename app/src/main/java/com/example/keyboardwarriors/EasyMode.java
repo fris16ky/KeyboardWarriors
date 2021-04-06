@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
@@ -33,7 +34,7 @@ public class EasyMode extends AppCompatActivity {
     EditText user_input;
     ImageButton s_check;
     GifImageView heart1, heart2, heart3;
-    GifImageView enemies;
+    GifImageView enemies, enemies2, enemies3;
 
 
     String currentWord;
@@ -157,7 +158,47 @@ public class EasyMode extends AppCompatActivity {
             R.drawable.golem5idle,
             R.drawable.golem6idle,
     };
+
+    private Integer attack[] = {
+            R.drawable.goblin1attack,
+            R.drawable.goblin2attack,
+            R.drawable.goblin3attack,
+            R.drawable.reaper1attack,
+            R.drawable.reaper2attack,
+            R.drawable.reaper3attack,
+            R.drawable.angel1attack,
+            R.drawable.angel2attack,
+            R.drawable.angel3attack,
+            R.drawable.satyr1attack,
+            R.drawable.satyr2attack,
+            R.drawable.satyr3attack,
+            R.drawable.wraith1attack,
+            R.drawable.wraith2attack,
+            R.drawable.wraith3attack,
+            R.drawable.golem1attack,
+            R.drawable.golem2attack,
+            R.drawable.golem3attack,
+            R.drawable.golem4attack,
+            R.drawable.golem5attack,
+            R.drawable.golem6attack,
+    };
+
+
+    private Integer death[] = {
+            R.drawable.goblin1death,
+            R.drawable.goblin1death,
+
+
+
+
+
+    };
+
+
     private int currImage = 0;
+    private int currAttack = 0;
+    private int currDeath = 0;
+
 
 
 
@@ -180,11 +221,14 @@ public class EasyMode extends AppCompatActivity {
         heart2 = (GifImageView) findViewById(R.id.heart2);
         heart3 = (GifImageView) findViewById(R.id.heart3);
         enemies = (GifImageView) findViewById(R.id.enemy);
+        enemies2 = (GifImageView) findViewById(R.id.enemy2);
+        enemies3 = (GifImageView) findViewById(R.id.enemy3);
 
 
         r = new Random();
         tutorial_game();
         setInitialImage();
+        setAttackingImage();
         final TextView Timer = findViewById(R.id.Timer);
         counter = 10;
         new CountDownTimer(1000000000, 1000) {
@@ -214,7 +258,6 @@ public class EasyMode extends AppCompatActivity {
                         error.start();
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
                     }
-
                 }
                 s_check.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -223,14 +266,40 @@ public class EasyMode extends AppCompatActivity {
                             user_input.getText().clear();
                             counter = 10;
 
-                            currImage = r.nextInt(21);
-                            if (currImage == 21) {
-                                currImage = r.nextInt(21);;
+                            currImage = r.nextInt(1);
+                            if (currImage == 1) {
+                                currImage = r.nextInt(1);;
                             }
                             setCurrentImage();
                             tutorial_game();
                             score++;
                             tv_score.setText("SCORE: " + score);
+
+                            setRealADeathImage();
+
+                            if(currDeath == 0){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies3.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies3.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+                            }
+
+
+
+
+
+
+
+
+
+
 
                         }
                         else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
@@ -238,6 +307,302 @@ public class EasyMode extends AppCompatActivity {
                             MediaPlayer error;
                             error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                             error.start();
+                            setRealAttackingImage();
+
+
+
+                            if(currImage == 0){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }
+                            if(currImage == 1){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 2){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 3){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 4){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 5){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 6){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 7){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 8){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 9){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 10){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 11){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 12){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 13){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 14){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 15){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 16){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 17){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 18){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 19){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 20){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }if(currImage == 21){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies2.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies2.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+
+                            }
+
+
+
+
                         }
                         if (health == 2) {
                             heart3.setVisibility(View.INVISIBLE);
@@ -288,5 +653,24 @@ public class EasyMode extends AppCompatActivity {
     private void setCurrentImage() {
         final GifImageView imageView = (GifImageView) findViewById(R.id.enemy);
         imageView.setImageResource(spawn[currImage]);
+
+    }
+    private void setAttackingImage(){
+        setRealAttackingImage();
+    }
+
+    private void setRealAttackingImage() {
+        final GifImageView imageView2 = (GifImageView) findViewById(R.id.enemy2);
+        imageView2.setImageResource(attack[currAttack = currImage]);
+
+    }
+    private void setDeathImage(){
+        setRealAttackingImage();
+    }
+
+    private void setRealADeathImage() {
+        final GifImageView imageView2 = (GifImageView) findViewById(R.id.enemy3);
+        imageView2.setImageResource(death[currDeath = currImage]);
+
     }
 }
