@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.keyboardwarriors" >
+    package="com.example.keyboardwarriors">
 
     <supports-screens
         android:largeScreens="true"
@@ -14,9 +14,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        <activity android:name=".HardMode" >
-        </activity>
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".BossScreen"></activity>
+        <activity android:name=".HardMode"></activity>
         <activity android:name=".MediumMode" />
         <activity
             android:name=".OnToEasyMode"
@@ -29,7 +29,7 @@
             android:theme="@style/PopMe" />
         <activity android:name=".GameOver" />
         <activity android:name=".TutorialScreen" />
-        <activity android:name=".SplashScreen" >
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
