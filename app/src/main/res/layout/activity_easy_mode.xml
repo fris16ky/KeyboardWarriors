@@ -106,6 +106,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/enemy3"
+        android:visibility="invisible"
+        android:layout_width="250px"
+        android:layout_height="250px"
+        android:layout_gravity="center"
+        android:layout_marginTop="324dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="@+id/Score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/input_text"

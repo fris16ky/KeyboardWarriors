@@ -34,7 +34,7 @@ public class EasyMode extends AppCompatActivity {
     EditText user_input;
     ImageButton s_check;
     GifImageView heart1, heart2, heart3;
-    GifImageView enemies, enemies2;
+    GifImageView enemies, enemies2, enemies3;
 
 
     String currentWord;
@@ -181,14 +181,24 @@ public class EasyMode extends AppCompatActivity {
             R.drawable.golem4attack,
             R.drawable.golem5attack,
             R.drawable.golem6attack,
+    };
+
+
+    private Integer death[] = {
+            R.drawable.goblin1death,
+            R.drawable.goblin1death,
+
+
+
 
 
     };
 
 
-
     private int currImage = 0;
     private int currAttack = 0;
+    private int currDeath = 0;
+
 
 
 
@@ -212,6 +222,7 @@ public class EasyMode extends AppCompatActivity {
         heart3 = (GifImageView) findViewById(R.id.heart3);
         enemies = (GifImageView) findViewById(R.id.enemy);
         enemies2 = (GifImageView) findViewById(R.id.enemy2);
+        enemies3 = (GifImageView) findViewById(R.id.enemy3);
 
 
         r = new Random();
@@ -247,7 +258,6 @@ public class EasyMode extends AppCompatActivity {
                         error.start();
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
                     }
-
                 }
                 s_check.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -256,14 +266,40 @@ public class EasyMode extends AppCompatActivity {
                             user_input.getText().clear();
                             counter = 10;
 
-                            currImage = r.nextInt(21);
-                            if (currImage == 21) {
-                                currImage = r.nextInt(21);;
+                            currImage = r.nextInt(1);
+                            if (currImage == 1) {
+                                currImage = r.nextInt(1);;
                             }
                             setCurrentImage();
                             tutorial_game();
                             score++;
                             tv_score.setText("SCORE: " + score);
+
+                            setRealADeathImage();
+
+                            if(currDeath == 0){
+                                enemies.setVisibility(View.INVISIBLE);
+                                enemies3.setVisibility(View.VISIBLE);
+
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies3.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+                            }
+
+
+
+
+
+
+
+
+
+
 
                         }
                         else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
@@ -626,6 +662,15 @@ public class EasyMode extends AppCompatActivity {
     private void setRealAttackingImage() {
         final GifImageView imageView2 = (GifImageView) findViewById(R.id.enemy2);
         imageView2.setImageResource(attack[currAttack = currImage]);
+
+    }
+    private void setDeathImage(){
+        setRealAttackingImage();
+    }
+
+    private void setRealADeathImage() {
+        final GifImageView imageView2 = (GifImageView) findViewById(R.id.enemy3);
+        imageView2.setImageResource(death[currDeath = currImage]);
 
     }
 }
