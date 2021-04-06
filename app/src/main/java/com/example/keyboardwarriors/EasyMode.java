@@ -163,6 +163,25 @@ public class EasyMode extends AppCompatActivity {
             R.drawable.goblin1attack,
             R.drawable.goblin2attack,
             R.drawable.goblin3attack,
+            R.drawable.reaper1attack,
+            R.drawable.reaper2attack,
+            R.drawable.reaper3attack,
+            R.drawable.angel1attack,
+            R.drawable.angel2attack,
+            R.drawable.angel3attack,
+            R.drawable.satyr1attack,
+            R.drawable.satyr2attack,
+            R.drawable.satyr3attack,
+            R.drawable.wraith1attack,
+            R.drawable.wraith2attack,
+            R.drawable.wraith3attack,
+            R.drawable.golem1attack,
+            R.drawable.golem2attack,
+            R.drawable.golem3attack,
+            R.drawable.golem4attack,
+            R.drawable.golem5attack,
+            R.drawable.golem6attack,
+
 
     };
 
@@ -237,9 +256,9 @@ public class EasyMode extends AppCompatActivity {
                             user_input.getText().clear();
                             counter = 10;
 
-                            currImage = r.nextInt(3);
-                            if (currImage == 3) {
-                                currImage = r.nextInt(3);;
+                            currImage = r.nextInt(21);
+                            if (currImage == 21) {
+                                currImage = r.nextInt(21);;
                             }
                             setCurrentImage();
                             tutorial_game();
