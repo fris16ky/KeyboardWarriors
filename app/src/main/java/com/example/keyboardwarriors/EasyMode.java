@@ -16,20 +16,17 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 import pl.droidsonroids.gif.GifImageView;
 
 
-
 public class EasyMode extends AppCompatActivity {
 
+    // defined variables being used
     TextView tv_score;
     int score = 0;
     int health = 3;
-
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
     TextView d_text;
@@ -38,12 +35,11 @@ public class EasyMode extends AppCompatActivity {
     ImageButton s_check;
     GifImageView heart1, heart2, heart3;
     GifImageView enemies, enemies2, enemies3;
-
-
     String currentWord;
-
     Random r;
-    //s
+
+
+    //word list to be displayed
     String[] words_list = {"all",
             "am",
             "and",
@@ -137,7 +133,7 @@ public class EasyMode extends AppCompatActivity {
             "yes",
             "you"};
 
-
+    // idle animation array for enemy.
     private final Integer[] spawn = {
             R.drawable.goblin1idle,
             R.drawable.goblin2idle,
@@ -161,7 +157,7 @@ public class EasyMode extends AppCompatActivity {
             R.drawable.golem5idle,
             R.drawable.golem6idle,
     };
-
+    // attack animation array fro enemy.
     private final Integer[] attack = {
             R.drawable.goblin1attack,
             R.drawable.goblin2attack,
@@ -186,7 +182,7 @@ public class EasyMode extends AppCompatActivity {
             R.drawable.golem6attack,
     };
 
-
+    //death animation array for enemy
     private final Integer[] death = {
             R.drawable.goblin1death,
             R.drawable.goblin2death,
@@ -225,7 +221,7 @@ public class EasyMode extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
-
+       // variables linked to the XML counterparts.
         d_text = findViewById(R.id.display_text);
         tv_score = findViewById(R.id.tv_score);
         user_input = findViewById(R.id.input_text);
@@ -236,15 +232,17 @@ public class EasyMode extends AppCompatActivity {
         enemies = findViewById(R.id.enemy);
         enemies2 = findViewById(R.id.enemy2);
         enemies3 = findViewById(R.id.enemy3);
-
-
         r = new Random();
+
+
         tutorial_game();
         setDeathImage();
         setInitialImage();
         setAttackingImage();
         final TextView Timer = findViewById(R.id.Timer);
         counter = 10;
+
+        //timer system resets if hits zero and takes away heart
         new CountDownTimer(1000000000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -253,6 +251,7 @@ public class EasyMode extends AppCompatActivity {
                     counter = 11;
                     health--;
 
+                    //health system associated with the timer running out
                     if (health == 2) {
                         heart3.setVisibility(View.INVISIBLE);
                         MediaPlayer error;
@@ -273,7 +272,7 @@ public class EasyMode extends AppCompatActivity {
                 }
 
 
-
+                // checks if the user input is correct
                 s_check.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -286,10 +285,12 @@ public class EasyMode extends AppCompatActivity {
                             score++;
                             tv_score.setText("SCORE: " + score);
 
+                            //transition into boss screen
                             if(score == 1) {
                                 startActivity(new Intent(getApplicationContext(), EasyModeBoss.class));
                                 finish();
                             }
+                            //makes the enemy play a death animation
                             if (currDeath == currImage) {
                                 enemies.setVisibility(View.INVISIBLE);
                                 enemies3.setVisibility(View.VISIBLE);
@@ -303,21 +304,22 @@ public class EasyMode extends AppCompatActivity {
                                     }
                                 }, 500);
                             }
+                            //randomises the enemy that is being displayed
                             currImage = r.nextInt(21);
                             if (currImage == 21) {
                                 currImage = r.nextInt(21);
                             }
                             setCurrentImage();
-
-
-                        } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
+                        }
+                        //checking if the user input is wrong
+                        else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                             health--;
                             MediaPlayer error;
                             error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                             error.start();
                             setRealAttackingImage();
 
-
+                            // plays attack animation is imputed word is wrong
                             if (currAttack == currImage) {
                                 enemies.setVisibility(View.INVISIBLE);
                                 enemies2.setVisibility(View.VISIBLE);
@@ -335,6 +337,7 @@ public class EasyMode extends AppCompatActivity {
 
 
                         }
+                       // gets rid of the heart of the user and if all hearts are gone it's displays game over screen
                         if (health == 2) {
                             heart3.setVisibility(View.INVISIBLE);
                         } else if (health == 1) {
@@ -347,19 +350,16 @@ public class EasyMode extends AppCompatActivity {
                     }
                 });
                 counter--;
-                //but this must also take away a heart. it already does check line 232
             }
 
             @Override
             public void onFinish() {
-                //Timer2.setText("Help");
-                //Timer2.start();
             }
         }.start();
 
-
     }
 
+    //takes a word from the array list and randomises it to be displayed to the user.
     private String Display(String word) {
         String[] letters = word.split("");
         String display = "";
@@ -367,29 +367,27 @@ public class EasyMode extends AppCompatActivity {
             display += letter;
         }
         return display;
-
     }
-
     private void tutorial_game() {
         currentWord = words_list[r.nextInt(words_list.length)];
         d_text.setText(Display(currentWord));
         user_input.getText().clear();
     }
 
+
+
+    //sets enemy form array and randomises the enemy
     private void setInitialImage() {
         setCurrentImage();
     }
-
     private void setCurrentImage() {
         final GifImageView imageView = findViewById(R.id.enemy);
         imageView.setImageResource(spawn[currImage]);
-
     }
 
     private void setDeathImage() {
         setRealAttackingImage();
     }
-
     private void setRealADeathImage() {
         final GifImageView imageView2 = findViewById(R.id.enemy3);
         imageView2.setImageResource(death[currDeath = currImage]);
@@ -398,7 +396,6 @@ public class EasyMode extends AppCompatActivity {
     private void setAttackingImage() {
         setRealAttackingImage();
     }
-
     private void setRealAttackingImage() {
         final GifImageView imageView2 = findViewById(R.id.enemy2);
         imageView2.setImageResource(attack[currAttack = currImage]);

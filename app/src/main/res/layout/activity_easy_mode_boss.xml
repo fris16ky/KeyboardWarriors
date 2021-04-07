@@ -14,7 +14,6 @@
         tools:ignore="MissingConstraints">
     </FrameLayout>
 
-
     <FrameLayout
         android:id="@+id/Score"
         android:layout_width="match_parent"
@@ -254,5 +253,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/Bar1"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/bosshealtheasy"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar2"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/bosshealtheasy2"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar3"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/bosshealtheasy3"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar4"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/bosshealtheasy4"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar5"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/bosshealtheasy5"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
