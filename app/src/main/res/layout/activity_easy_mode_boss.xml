@@ -31,11 +31,12 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/heart3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="72dp"
         android:src="@drawable/pixelheart"
-        android:translationX="-301px"
+        android:translationX="-180px"
+        android:translationY="-30px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,11 +45,12 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/heart2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="72dp"
         android:src="@drawable/pixelheart"
-        android:translationX="-150px"
+        android:translationX="-90px"
+        android:translationY="-30px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,10 +60,11 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/heart1"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="72dp"
         android:src="@drawable/pixelheart"
+        android:translationY="-30px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
