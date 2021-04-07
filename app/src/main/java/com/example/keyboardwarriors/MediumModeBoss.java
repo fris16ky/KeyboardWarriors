@@ -364,7 +364,7 @@ public class MediumModeBoss extends AppCompatActivity {
                             }
 
                             //boss health system
-                            else if(bossHealth == 6){
+                            if(bossHealth == 6){
                                 healthBar1.setVisibility(View.INVISIBLE);
                             }
                             else if(bossHealth == 5){

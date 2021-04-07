@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".EasyModeBoss"></activity>
+        <activity android:name=".MediumModeBoss"></activity>
         <activity android:name=".HardMode" />
         <activity android:name=".MediumMode" />
         <activity
