@@ -11,6 +11,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.textclassifier.TextClassifierEvent;
 import android.widget.ImageButton;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -268,6 +269,9 @@ public class EasyMode extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
                     }
                 }
+
+
+
                 s_check.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -280,7 +284,10 @@ public class EasyMode extends AppCompatActivity {
                             score++;
                             tv_score.setText("SCORE: " + score);
 
-
+                            if(score == 1) {
+                                startActivity(new Intent(getApplicationContext(), EasyModeBoss.class));
+                                finish();
+                            }
                             if (currDeath == 0) {
                                 enemies.setVisibility(View.INVISIBLE);
                                 enemies3.setVisibility(View.VISIBLE);
