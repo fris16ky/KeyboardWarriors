@@ -28,7 +28,7 @@ public class MediumMode extends AppCompatActivity {
     int score = 0;
     int health = 3;
 
-    public int counter = 10;
+    public int counter = 7;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
     TextView d_text;
     TextView countText;
