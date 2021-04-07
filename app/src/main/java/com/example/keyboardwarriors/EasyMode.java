@@ -254,17 +254,17 @@ public class EasyMode extends AppCompatActivity {
                     if (health == 2) {
                         heart3.setVisibility(View.INVISIBLE);
                         MediaPlayer error;
-                        error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
+                        error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                         error.start();
                     } else if (health == 1) {
                         heart2.setVisibility(View.INVISIBLE);
                         MediaPlayer error;
-                        error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
+                        error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                         error.start();
                     } else if (health == 0) {
                         heart1.setVisibility(View.INVISIBLE);
                         MediaPlayer error;
-                        error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
+                        error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                         error.start();
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
                     }
@@ -586,7 +586,7 @@ public class EasyMode extends AppCompatActivity {
                         } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                             health--;
                             MediaPlayer error;
-                            error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
+                            error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                             error.start();
                             setRealAttackingImage();
 
