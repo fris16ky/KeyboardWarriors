@@ -14,6 +14,8 @@ import android.widget.ImageButton;
 public class OptionScreen extends AppCompatActivity {
     MediaPlayer Song;
     ImageButton back2;
+    ImageButton Credits;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Song = MediaPlayer.create(OptionScreen.this, R.raw.loopsong);
@@ -26,15 +28,24 @@ public class OptionScreen extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
 
 
-
         back2 = (ImageButton) findViewById(R.id.back2);
-        back2.setOnClickListener(new View.OnClickListener(){
+        back2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public  void onClick(View view){
+            public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), TitleScreen.class));
                 finish();
             }
         });
+        Credits = (ImageButton) findViewById(R.id.Credits);
+        Credits.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Credits.class));
+                finish();
+            }
+        });
+
+
     }
     public void onPause(){
         super.onPause();
