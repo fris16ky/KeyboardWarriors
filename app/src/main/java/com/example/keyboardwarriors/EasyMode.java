@@ -254,17 +254,17 @@ public class EasyMode extends AppCompatActivity {
                     if (health == 2) {
                         heart3.setVisibility(View.INVISIBLE);
                         MediaPlayer error;
-                        error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
+                        error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
                         error.start();
                     } else if (health == 1) {
                         heart2.setVisibility(View.INVISIBLE);
                         MediaPlayer error;
-                        error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
+                        error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
                         error.start();
                     } else if (health == 0) {
                         heart1.setVisibility(View.INVISIBLE);
                         MediaPlayer error;
-                        error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
+                        error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
                         error.start();
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
                     }
@@ -284,10 +284,10 @@ public class EasyMode extends AppCompatActivity {
                             score++;
                             tv_score.setText("SCORE: " + score);
 
-                            if(score == 1) {
-                                startActivity(new Intent(getApplicationContext(), EasyModeBoss.class));
-                                finish();
-                            }
+                           // if(score == 1) {
+                               // startActivity(new Intent(getApplicationContext(), EasyModeBoss.class));
+                               // finish();
+                           // }
                             if (currDeath == 0) {
                                 enemies.setVisibility(View.INVISIBLE);
                                 enemies3.setVisibility(View.VISIBLE);
@@ -586,7 +586,7 @@ public class EasyMode extends AppCompatActivity {
                         } else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
                             health--;
                             MediaPlayer error;
-                            error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
+                            error = MediaPlayer.create(getApplicationContext(), R.raw.errornoise);
                             error.start();
                             setRealAttackingImage();
 
