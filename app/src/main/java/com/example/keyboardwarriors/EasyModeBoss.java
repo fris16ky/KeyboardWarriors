@@ -40,7 +40,7 @@ public class EasyModeBoss extends AppCompatActivity {
     ImageButton s_check;
     ImageView  healthBar1, healthBar2, healthBar3, healthBar4, healthBar5;
     GifImageView heart1, heart2, heart3;
-    GifImageView enemies, enemies2, enemies3;
+    GifImageView enemies, enemies2, enemies3, enemies4;
     String currentWord;
 
     Random r;
@@ -212,6 +212,10 @@ public class EasyModeBoss extends AppCompatActivity {
             R.drawable.golem6death,
     };
 
+    private final Integer[] hurtBoss = {
+            R.drawable.golem6hurt
+    };
+
 
 
 
@@ -219,6 +223,7 @@ public class EasyModeBoss extends AppCompatActivity {
     private final int currImage = 20;
     private int currAttack = 20;
     private int currDeath = 20;
+    private final int currHurt = 0;
 
 
     @Override
@@ -240,6 +245,7 @@ public class EasyModeBoss extends AppCompatActivity {
         enemies = findViewById(R.id.enemy);
         enemies2 = findViewById(R.id.enemy2);
         enemies3 = findViewById(R.id.enemy3);
+        enemies4 = findViewById(R.id.enemy4);
         healthBar1 = findViewById(R.id.Bar1);
         healthBar2 = findViewById(R.id.Bar2);
         healthBar3 = findViewById(R.id.Bar3);
@@ -252,6 +258,7 @@ public class EasyModeBoss extends AppCompatActivity {
         setDeathImage();
         setInitialImage();
         setAttackingImage();
+        setHurtImage();
         final TextView Timer = findViewById(R.id.Timer);
         counter = 10;
         new CountDownTimer(1000000000, 1000) {
@@ -291,16 +298,16 @@ public class EasyModeBoss extends AppCompatActivity {
                             bossHealth--;
 
 
-                            if (currDeath == 0) {
+                            if (currHurt == 0) {
                                 enemies.setVisibility(View.INVISIBLE);
-                                enemies3.setVisibility(View.VISIBLE);
+                                enemies4.setVisibility(View.VISIBLE);
 
                                 final Handler handler = new Handler();
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
                                         enemies.setVisibility(View.VISIBLE);
-                                        enemies3.setVisibility(View.INVISIBLE);
+                                        enemies4.setVisibility(View.INVISIBLE);
                                     }
                                 }, 500);
                             }
@@ -318,11 +325,24 @@ public class EasyModeBoss extends AppCompatActivity {
                             else if(bossHealth == 1){
                                 healthBar4.setVisibility(View.INVISIBLE);
                             }
-                            //else if (bossHealth == 0) {
-                                // game win transition goes here
-                            //}
+                            else if (bossHealth == 0) {
+                                 //game win transition goes here
 
+                                    if (currDeath == 0) {
+                                        enemies.setVisibility(View.INVISIBLE);
+                                    enemies3.setVisibility(View.VISIBLE);
+                                    final Handler handler = new Handler();
+                                    handler.postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                        enemies.setVisibility(View.VISIBLE);
+                                        enemies3.setVisibility(View.INVISIBLE);
+                                    }
+                                }, 500);
+                            }
+                            }
 
+                            setRealHurtImage();
                             setRealADeathImage();
                             tutorial_game();
                             score++;
@@ -420,6 +440,16 @@ public class EasyModeBoss extends AppCompatActivity {
     private void setRealAttackingImage() {
         final GifImageView imageView2 = findViewById(R.id.enemy2);
         imageView2.setImageResource(attack[currAttack = currImage]);
+
+    }
+
+    private void setHurtImage() {
+        setRealHurtImage();
+    }
+
+    private void setRealHurtImage() {
+        final GifImageView imageView2 = findViewById(R.id.enemy4);
+        imageView2.setImageResource(hurtBoss[currHurt]);
 
     }
 }
