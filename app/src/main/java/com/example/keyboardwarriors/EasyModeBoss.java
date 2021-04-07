@@ -216,9 +216,9 @@ public class EasyModeBoss extends AppCompatActivity {
 
 
 
-    private final int currImage = 13;
-    private int currAttack = 13;
-    private int currDeath = 13;
+    private final int currImage = 20;
+    private int currAttack = 20;
+    private int currDeath = 20;
 
 
     @Override
