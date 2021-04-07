@@ -367,7 +367,7 @@ public class MediumMode extends AppCompatActivity {
                             setRealAttackingImage();
 
 
-                            if (currImage == currImage) {
+                            if (currAttack == currImage) {
                                 enemies.setVisibility(View.INVISIBLE);
                                 enemies2.setVisibility(View.VISIBLE);
 
