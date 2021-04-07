@@ -1,7 +1,7 @@
 package com.example.keyboardwarriors;
 
 
-import android.annotation.SuppressLint;
+
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -14,9 +14,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Random;
+
 import pl.droidsonroids.gif.GifImageView;
 
 
@@ -34,8 +38,9 @@ public class EasyModeBoss extends AppCompatActivity {
     TextView countText;
     EditText user_input;
     ImageButton s_check;
+    ImageView  healthBar1, healthBar2, healthBar3, healthBar4, healthBar5;
     GifImageView heart1, heart2, heart3;
-    GifImageView enemies, enemies2, enemies3, healthBar1, healthBar2, healthBar3, healthBar4, healthBar5;
+    GifImageView enemies, enemies2, enemies3;
     String currentWord;
 
     Random r;
@@ -216,7 +221,6 @@ public class EasyModeBoss extends AppCompatActivity {
     private int currDeath = 13;
 
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -276,21 +280,6 @@ public class EasyModeBoss extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
                     }
 
-                    //boss health system
-                    if(bossHealth == 4){
-                        healthBar1.setVisibility(View.INVISIBLE);
-                    }
-                    else if(bossHealth == 3){
-                        healthBar1.setVisibility(View.INVISIBLE);
-                    }
-                    else if(bossHealth == 2){
-                        healthBar1.setVisibility(View.INVISIBLE);
-                    }
-                    else if(bossHealth == 1){
-                        healthBar1.setVisibility(View.INVISIBLE);
-                    }
-                    // game over transition goes here
-
                 }
 
                 s_check.setOnClickListener(new View.OnClickListener() {
@@ -315,6 +304,24 @@ public class EasyModeBoss extends AppCompatActivity {
                                     }
                                 }, 500);
                             }
+
+                            //boss health system
+                            if(bossHealth == 4){
+                                healthBar1.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 3){
+                                healthBar2.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 2){
+                                healthBar3.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 1){
+                                healthBar4.setVisibility(View.INVISIBLE);
+                            }
+                            //else if (bossHealth == 0) {
+                                // game win transition goes here
+                            //}
+
 
                             setRealADeathImage();
                             tutorial_game();

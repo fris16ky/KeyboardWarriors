@@ -286,7 +286,7 @@ public class EasyMode extends AppCompatActivity {
                             tv_score.setText("SCORE: " + score);
 
                             //transition into boss screen
-                            if(score == 1) {
+                            if(score == 4) {
                                 startActivity(new Intent(getApplicationContext(), EasyModeBoss.class));
                                 finish();
                             }
