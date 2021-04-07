@@ -328,7 +328,7 @@ public class EasyModeBoss extends AppCompatActivity {
                             else if (bossHealth == 0) {
                                  //game win transition goes here
 
-                                    if (currDeath == 0) {
+                                    if (currDeath == 20) {
                                         enemies.setVisibility(View.INVISIBLE);
                                     enemies3.setVisibility(View.VISIBLE);
                                     final Handler handler = new Handler();

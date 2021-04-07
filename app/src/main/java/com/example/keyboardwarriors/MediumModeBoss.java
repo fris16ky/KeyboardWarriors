@@ -14,127 +14,178 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Random;
-
 import pl.droidsonroids.gif.GifImageView;
-
-
-
 public class MediumModeBoss extends AppCompatActivity {
 
 
     int health =3;
     int score =0;
     TextView tv_score;
-    int bossHealth = 5;
+    int bossHealth = 7;
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
     TextView d_text;
     TextView countText;
     EditText user_input;
     ImageButton s_check;
-    ImageView  healthBar1, healthBar2, healthBar3, healthBar4, healthBar5;
+    ImageView  healthBar1, healthBar2, healthBar3, healthBar4, healthBar5, healthBar6, healthBar7;
     GifImageView heart1, heart2, heart3;
     GifImageView enemies, enemies2, enemies3, enemies4;
     String currentWord;
 
     Random r;
     //s
-    String[] words_list = {"all",
-            "am",
-            "and",
-            "at",
-            "ball",
-            "be",
-            "bed",
-            "big",
-            "book",
-            "box",
-            "boy",
-            "but",
-            "came",
-            "can",
-            "car",
-            "cat",
-            "come",
-            "cow",
-            "dad",
-            "day",
-            "did",
-            "do",
-            "dog",
-            "fat",
-            "for",
-            "fun",
-            "get",
-            "go",
-            "good",
-            "got",
-            "had",
-            "hat",
-            "he",
-            "hen",
-            "here",
-            "him",
-            "his",
-            "home",
-            "hot",
-            "if",
-            "in",
-            "into",
-            "is",
-            "it",
-            "its",
-            "let",
-            "like",
-            "look",
-            "man",
-            "may",
-            "me",
-            "mom",
-            "my",
-            "no",
-            "not",
-            "of",
-            "oh",
-            "old",
-            "on",
-            "one",
-            "out",
-            "pan",
-            "pet",
-            "pig",
-            "play",
-            "ran",
-            "rat",
-            "red",
-            "ride",
-            "run",
-            "sat",
-            "see",
-            "she",
-            "sit",
-            "six",
-            "so",
-            "stop",
-            "sun",
-            "ten",
-            "the",
-            "this",
-            "to",
-            "top",
-            "toy",
-            "two",
-            "up",
-            "us",
-            "was",
-            "we",
-            "will",
-            "yes",
-            "you"};
+    String[] words_list = {"Above",
+            "Anger",
+            "Auntie",
+            "Actual",
+            "Admins",
+            "Awards",
+            "Badge",
+            "Bigot",
+            "Brand",
+            "Badger",
+            "Bended",
+            "Bygone",
+            "Cabin",
+            "Class",
+            "Cackle",
+            "Chores",
+            "Common",
+            "Daily",
+            "Debug",
+            "Dusty",
+            "Dagger",
+            "Dialog",
+            "Dough",
+            "Early",
+            "Elbow",
+            "Essay",
+            "Earned",
+            "Effort",
+            "Elites",
+            "Facts",
+            "Feral",
+            "Flame",
+            "Fabric",
+            "Fleece",
+            "Fumble",
+            "Gawks",
+            "Glued",
+            "Goose",
+            "Gamble",
+            "Gloomy",
+            "Graded",
+            "Hairy",
+            "Hills",
+            "Humor",
+            "Handed",
+            "Helmet",
+            "Hyping",
+            "Idols",
+            "Intro",
+            "Ionic",
+            "Icings",
+            "Impure",
+            "Itself",
+            "Jazzy",
+            "Joked",
+            "Judge",
+            "Jailed",
+            "Judged",
+            "Jumped",
+            "Karma",
+            "Kevin",
+            "Kudos",
+            "Kelvin",
+            "Killer",
+            "Kitted",
+            "Laced",
+            "Limes",
+            "Logic",
+            "Ladder",
+            "Lifted",
+            "Login",
+            "Magic",
+            "Melee",
+            "Mount",
+            "Madman",
+            "Matrix",
+            "Mighty",
+            "Needy",
+            "Nitrous",
+            "Nukes",
+            "Napkin",
+            "Nerves",
+            "Notion",
+            "Odors",
+            "Ogres",
+            "Orbit",
+            "Object",
+            "Offset",
+            "Outcry",
+            "Pacts",
+            "Panda",
+            "Pixel",
+            "Pallet",
+            "Period",
+            "Piracy",
+            "Quick",
+            "Quack",
+            "Queen",
+            "Quails",
+            "Quirks",
+            "Qwerty",
+            "Radio",
+            "Rhyme",
+            "Risks",
+            "Radish",
+            "Random",
+            "Ripoff",
+            "Saggy",
+            "Scrap",
+            "Short",
+            "Safety",
+            "Scheme",
+            "Slides",
+            "Taste",
+            "Texts",
+            "Troop",
+            "Teabag",
+            "Thirst",
+            "Tutors",
+            "Urban",
+            "Uncut",
+            "Usual",
+            "Uglier",
+            "Unfold",
+            "Usable",
+            "Value",
+            "Vivid",
+            "Vogue",
+            "Valor",
+            "Viewed",
+            "Vocals",
+            "Wacky",
+            "Wings",
+            "Wreck",
+            "Waffle",
+            "Weather",
+            "Wretch",
+            "Xerox",
+            "Yards",
+            "Yikes",
+            "Youth",
+            "Yellow",
+            "Yogurt",
+            "Zappy",
+            "Zebra",
+            "Zones",
+            "Zeroes",
+            "Zipped" ,
+            "Zoomed"};
 
 
     private final Integer[] spawn = {
@@ -249,6 +300,8 @@ public class MediumModeBoss extends AppCompatActivity {
         healthBar3 = findViewById(R.id.Bar3);
         healthBar4 = findViewById(R.id.Bar4);
         healthBar5 = findViewById(R.id.Bar5);
+        healthBar6 = findViewById(R.id.Bar6);
+        healthBar7 = findViewById(R.id.Bar7);
 
 
         r = new Random();
@@ -311,22 +364,28 @@ public class MediumModeBoss extends AppCompatActivity {
                             }
 
                             //boss health system
-                            if(bossHealth == 4){
+                            else if(bossHealth == 6){
                                 healthBar1.setVisibility(View.INVISIBLE);
                             }
-                            else if(bossHealth == 3){
+                            else if(bossHealth == 5){
                                 healthBar2.setVisibility(View.INVISIBLE);
                             }
-                            else if(bossHealth == 2){
+                            else if(bossHealth == 4){
                                 healthBar3.setVisibility(View.INVISIBLE);
                             }
-                            else if(bossHealth == 1){
+                            else if(bossHealth == 3){
                                 healthBar4.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 2){
+                                healthBar5.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 1){
+                                healthBar6.setVisibility(View.INVISIBLE);
                             }
                             else if (bossHealth == 0) {
                                 //game win transition goes here
 
-                                if (currDeath == 0) {
+                                if (currDeath == 8) {
                                     enemies.setVisibility(View.INVISIBLE);
                                     enemies3.setVisibility(View.VISIBLE);
                                     final Handler handler = new Handler();
