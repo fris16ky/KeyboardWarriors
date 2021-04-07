@@ -40,4 +40,38 @@
         app:layout_constraintVertical_bias="0.437"
         tools:ignore="MissingConstraints" />
 
+    <ImageButton
+        android:id="@+id/Credits"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285"
+        app:srcCompat="@drawable/finalbutton2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/option"
+        android:layout_alignLeft="@+id/option"
+        android:layout_alignEnd="@+id/option"
+        android:layout_alignRight="@+id/option"
+        android:layout_alignBottom="@+id/option"
+        android:fontFamily="@font/aldrich"
+        android:text="    Credits"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/Credits"
+        app:layout_constraintEnd_toEndOf="@+id/Credits"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="@+id/Credits"
+        app:layout_constraintTop_toTopOf="@+id/Credits"
+        app:layout_constraintVertical_bias="0.437"
+        tools:ignore="MissingConstraints" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
