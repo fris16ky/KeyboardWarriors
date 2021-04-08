@@ -12,32 +12,27 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Random;
-
 import pl.droidsonroids.gif.GifImageView;
+public class MediumModeBoss extends AppCompatActivity {
 
 
-
-public class MediumMode extends AppCompatActivity {
-
+    int health =3;
+    int score =0;
     TextView tv_score;
-    int score = 0;
-    int health = 3;
-
-    public int counter = 7;
+    int bossHealth = 7;
+    public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
     TextView d_text;
     TextView countText;
     EditText user_input;
     ImageButton s_check;
+    ImageView  healthBar1, healthBar2, healthBar3, healthBar4, healthBar5, healthBar6, healthBar7;
     GifImageView heart1, heart2, heart3;
-    GifImageView enemies, enemies2, enemies3;
-
-
+    GifImageView enemies, enemies2, enemies3, enemies4;
     String currentWord;
 
     Random r;
@@ -266,16 +261,24 @@ public class MediumMode extends AppCompatActivity {
             R.drawable.golem6death,
     };
 
+    private final Integer[] hurtBoss = {
+            R.drawable.angel3hurt,
+    };
 
-    private int currImage = 5 ;
-    private int currAttack = 5;
-    private int currDeath = 5;
+
+
+
+
+    private final int currImage = 8;
+    private int currAttack = 8;
+    private int currDeath = 8;
+    private final int currHurt = 0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medium_mode);
+        setContentView(R.layout.activity_medium_mode_boss);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
@@ -291,6 +294,14 @@ public class MediumMode extends AppCompatActivity {
         enemies = findViewById(R.id.enemy);
         enemies2 = findViewById(R.id.enemy2);
         enemies3 = findViewById(R.id.enemy3);
+        enemies4 = findViewById(R.id.enemy4);
+        healthBar1 = findViewById(R.id.Bar1);
+        healthBar2 = findViewById(R.id.Bar2);
+        healthBar3 = findViewById(R.id.Bar3);
+        healthBar4 = findViewById(R.id.Bar4);
+        healthBar5 = findViewById(R.id.Bar5);
+        healthBar6 = findViewById(R.id.Bar6);
+        healthBar7 = findViewById(R.id.Bar7);
 
 
         r = new Random();
@@ -298,8 +309,9 @@ public class MediumMode extends AppCompatActivity {
         setDeathImage();
         setInitialImage();
         setAttackingImage();
+        setHurtImage();
         final TextView Timer = findViewById(R.id.Timer);
-        counter = 7;
+        counter = 10;
         new CountDownTimer(1000000000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -325,42 +337,73 @@ public class MediumMode extends AppCompatActivity {
                         error.start();
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
                     }
+
                 }
+
                 s_check.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                             user_input.getText().clear();
                             counter = 7;
-
-                            setRealADeathImage();
-                            tutorial_game();
-                            score++;
-                            tv_score.setText("SCORE: " + score);
-
-                            if(score == 1) {
-                                startActivity(new Intent(getApplicationContext(), MediumModeBoss.class));
-                                finish();
-                            }
+                            bossHealth--;
 
 
-                            if (currDeath == currImage) {
+                            if (currHurt == 0) {
                                 enemies.setVisibility(View.INVISIBLE);
-                                enemies3.setVisibility(View.VISIBLE);
+                                enemies4.setVisibility(View.VISIBLE);
 
                                 final Handler handler = new Handler();
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
                                         enemies.setVisibility(View.VISIBLE);
-                                        enemies3.setVisibility(View.INVISIBLE);
+                                        enemies4.setVisibility(View.INVISIBLE);
                                     }
                                 }, 500);
                             }
-                            currImage = r.nextInt(21);
-                            if (currImage == 21) {
-                                currImage = r.nextInt(21);
+
+                            //boss health system
+                            if(bossHealth == 6){
+                                healthBar1.setVisibility(View.INVISIBLE);
                             }
+                            else if(bossHealth == 5){
+                                healthBar2.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 4){
+                                healthBar3.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 3){
+                                healthBar4.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 2){
+                                healthBar5.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 1){
+                                healthBar6.setVisibility(View.INVISIBLE);
+                            }
+                            else if (bossHealth == 0) {
+                                //game win transition goes here
+
+                                if (currDeath == 8) {
+                                    enemies.setVisibility(View.INVISIBLE);
+                                    enemies3.setVisibility(View.VISIBLE);
+                                    final Handler handler = new Handler();
+                                    handler.postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            enemies.setVisibility(View.VISIBLE);
+                                            enemies3.setVisibility(View.INVISIBLE);
+                                        }
+                                    }, 500);
+                                }
+                            }
+
+                            setRealHurtImage();
+                            setRealADeathImage();
+                            tutorial_game();
+                            score++;
+                            tv_score.setText("SCORE: " + score);
                             setCurrentImage();
 
 
@@ -370,7 +413,6 @@ public class MediumMode extends AppCompatActivity {
                             error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                             error.start();
                             setRealAttackingImage();
-
 
                             if (currAttack == currImage) {
                                 enemies.setVisibility(View.INVISIBLE);
@@ -386,7 +428,6 @@ public class MediumMode extends AppCompatActivity {
                                 }, 500);
 
                             }
-
 
                         }
                         if (health == 2) {
@@ -456,6 +497,16 @@ public class MediumMode extends AppCompatActivity {
     private void setRealAttackingImage() {
         final GifImageView imageView2 = findViewById(R.id.enemy2);
         imageView2.setImageResource(attack[currAttack = currImage]);
+
+    }
+
+    private void setHurtImage() {
+        setRealHurtImage();
+    }
+
+    private void setRealHurtImage() {
+        final GifImageView imageView2 = findViewById(R.id.enemy4);
+        imageView2.setImageResource(hurtBoss[currHurt]);
 
     }
 }

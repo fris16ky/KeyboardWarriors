@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MediumMode">
+    tools:context=".MediumModeBoss">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:background="@drawable/b_wallet_normal"
+        android:background="@drawable/g_wallet_normal"
         android:translationY="375dp"
         tools:ignore="MissingConstraints">
     </FrameLayout>
-
 
     <FrameLayout
         android:id="@+id/Score"
         android:layout_width="match_parent"
         android:layout_height="475dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/b_wallet_normal"
+        android:background="@drawable/g_wallet_normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,10 +30,12 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/heart3"
-        android:layout_width="76dp"
-        android:layout_height="74dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="72dp"
         android:src="@drawable/pixelheart"
+        android:translationX="-180px"
+        android:translationY="-30px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,10 +44,12 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/heart2"
-        android:layout_width="76dp"
-        android:layout_height="74dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="72dp"
         android:src="@drawable/pixelheart"
+        android:translationX="-90px"
+        android:translationY="-30px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,10 +59,11 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/heart1"
-        android:layout_width="76dp"
-        android:layout_height="74dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="72dp"
         android:src="@drawable/pixelheart"
+        android:translationY="-30px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,12 +72,13 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/enemy"
-        android:layout_width="250px"
-        android:layout_height="250px"
+        android:layout_width="500px"
+        android:layout_height="500px"
+        android:translationY="-115px"
         android:layout_gravity="center"
         android:layout_marginTop="324dp"
-        android:scaleX="2"
-        android:scaleY="2"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
         app:layout_constraintBottom_toBottomOf="@+id/Score"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,13 +87,14 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/enemy2"
-        android:visibility="invisible"
-        android:layout_width="250px"
-        android:layout_height="250px"
+        android:layout_width="500px"
+        android:layout_height="500px"
+        android:translationY="-115px"
         android:layout_gravity="center"
         android:layout_marginTop="324dp"
-        android:scaleX="2"
-        android:scaleY="2"
+        android:visibility="invisible"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
         app:layout_constraintBottom_toBottomOf="@+id/Score"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,12 +103,29 @@
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/enemy3"
         android:visibility="invisible"
-        android:layout_width="250px"
-        android:layout_height="250px"
+        android:layout_width="500px"
+        android:layout_height="500px"
+        android:translationY="-115px"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
         android:layout_gravity="center"
         android:layout_marginTop="324dp"
-        android:scaleX="2"
-        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="@+id/Score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/enemy4"
+        android:visibility="invisible"
+        android:layout_width="500px"
+        android:layout_height="500px"
+        android:translationY="-115px"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
+        android:layout_gravity="center"
+        android:layout_marginTop="324dp"
         app:layout_constraintBottom_toBottomOf="@+id/Score"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -122,7 +145,7 @@
         android:imeActionId="@android:integer/config_mediumAnimTime"
         android:imeOptions="actionNext"
         android:inputType="textShortMessage"
-        android:translationY="-60px"
+        android:translationY="-160px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -143,6 +166,7 @@
         android:textAllCaps="true"
         android:textColor="#FEC8A7"
         android:textSize="50dp"
+        android:translationY="-100px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -160,7 +184,7 @@
         app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/medium"
+        app:srcCompat="@drawable/easy"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -221,7 +245,7 @@
         android:gravity="center"
         android:scaleType="fitXY"
         android:scaleX="2"
-        android:translationY="2dp"
+        android:translationY="-100px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.587"
         app:layout_constraintStart_toStartOf="parent"
@@ -239,12 +263,89 @@
         android:gravity="center"
         android:scaleType="fitXY"
         android:scaleX="2"
+        android:translationY="-100px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.587"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-
+    <ImageView
+        android:id="@+id/Bar1"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/bosshealtheasy"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar2"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/healthbarmedium2"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar3"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/healthbarmedium3"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar4"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/healthbarmedium4"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar5"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/healthbarmedium5"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar6"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/healthbarmedium6"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar7"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/healthbarmedium7"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
