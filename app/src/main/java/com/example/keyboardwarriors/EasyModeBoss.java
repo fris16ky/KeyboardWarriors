@@ -285,6 +285,7 @@ public class EasyModeBoss extends AppCompatActivity {
                         error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                         error.start();
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
+                        finish();
                     }
 
                 }
@@ -326,20 +327,9 @@ public class EasyModeBoss extends AppCompatActivity {
                                 healthBar4.setVisibility(View.INVISIBLE);
                             }
                             else if (bossHealth == 0) {
-                                 //game win transition goes here
 
-                                    if (currDeath == 20) {
-                                        enemies.setVisibility(View.INVISIBLE);
-                                    enemies3.setVisibility(View.VISIBLE);
-                                    final Handler handler = new Handler();
-                                    handler.postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                        enemies.setVisibility(View.VISIBLE);
-                                        enemies3.setVisibility(View.INVISIBLE);
-                                    }
-                                }, 500);
-                            }
+                                startActivity(new Intent(getApplicationContext(), VictoryScreen.class));
+                                finish();
                             }
 
                             setRealHurtImage();
@@ -357,6 +347,16 @@ public class EasyModeBoss extends AppCompatActivity {
                             error.start();
                             setRealAttackingImage();
 
+                            if (health == 2) {
+                                heart3.setVisibility(View.INVISIBLE);
+                            } else if (health == 1) {
+                                heart2.setVisibility(View.INVISIBLE);
+                            } else if (health == 0) {
+                                heart1.setVisibility(View.INVISIBLE);
+                                startActivity(new Intent(getApplicationContext(), GameOver.class));
+                                finish();
+                            }
+
                             if (currAttack == currImage) {
                                 enemies.setVisibility(View.INVISIBLE);
                                 enemies2.setVisibility(View.VISIBLE);
@@ -372,15 +372,6 @@ public class EasyModeBoss extends AppCompatActivity {
 
                             }
 
-                        }
-                        if (health == 2) {
-                            heart3.setVisibility(View.INVISIBLE);
-                        } else if (health == 1) {
-                            heart2.setVisibility(View.INVISIBLE);
-                        } else if (health == 0) {
-                            heart1.setVisibility(View.INVISIBLE);
-
-                            startActivity(new Intent(getApplicationContext(), GameOver.class));
                         }
                     }
                 });

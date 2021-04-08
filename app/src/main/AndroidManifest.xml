@@ -44,6 +44,9 @@
             android:name=".EasyMode"
             android:theme="@style/NoTitleBar" />
         <activity android:name=".OptionScreen" />
+        <activity android:name=".BossTransition" />
+        <activity android:name=".Credits" />
+        <activity android:name=".VictoryScreen" />
         <activity android:name=".GameScreen" />
         <activity android:name=".TitleScreen" />
 

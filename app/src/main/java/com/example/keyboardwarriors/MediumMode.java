@@ -324,6 +324,7 @@ public class MediumMode extends AppCompatActivity {
                         error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                         error.start();
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
+                        finish();
                     }
                 }
                 s_check.setOnClickListener(new View.OnClickListener() {
@@ -397,6 +398,7 @@ public class MediumMode extends AppCompatActivity {
                             heart1.setVisibility(View.INVISIBLE);
 
                             startActivity(new Intent(getApplicationContext(), GameOver.class));
+                            finish();
                         }
                     }
                 });

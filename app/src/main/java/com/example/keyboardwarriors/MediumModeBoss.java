@@ -36,7 +36,7 @@ public class MediumModeBoss extends AppCompatActivity {
     String currentWord;
 
     Random r;
-    //s
+
     String[] words_list = {"Above",
             "Anger",
             "Auntie",
@@ -261,11 +261,10 @@ public class MediumModeBoss extends AppCompatActivity {
             R.drawable.golem6death,
     };
 
+
     private final Integer[] hurtBoss = {
             R.drawable.angel3hurt,
     };
-
-
 
 
 
@@ -336,6 +335,7 @@ public class MediumModeBoss extends AppCompatActivity {
                         error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
                         error.start();
                         startActivity(new Intent(getApplicationContext(), GameOver.class));
+                        finish();
                     }
 
                 }
@@ -414,6 +414,18 @@ public class MediumModeBoss extends AppCompatActivity {
                             error.start();
                             setRealAttackingImage();
 
+                            if (health == 2) {
+                                heart3.setVisibility(View.INVISIBLE);
+                            } else if (health == 1) {
+                                heart2.setVisibility(View.INVISIBLE);
+                            } else if (health == 0) {
+                                heart1.setVisibility(View.INVISIBLE);
+
+                                startActivity(new Intent(getApplicationContext(), GameOver.class));
+                                finish();
+
+                            }
+
                             if (currAttack == currImage) {
                                 enemies.setVisibility(View.INVISIBLE);
                                 enemies2.setVisibility(View.VISIBLE);
@@ -430,15 +442,7 @@ public class MediumModeBoss extends AppCompatActivity {
                             }
 
                         }
-                        if (health == 2) {
-                            heart3.setVisibility(View.INVISIBLE);
-                        } else if (health == 1) {
-                            heart2.setVisibility(View.INVISIBLE);
-                        } else if (health == 0) {
-                            heart1.setVisibility(View.INVISIBLE);
 
-                            startActivity(new Intent(getApplicationContext(), GameOver.class));
-                        }
                     }
                 });
                 counter--;
