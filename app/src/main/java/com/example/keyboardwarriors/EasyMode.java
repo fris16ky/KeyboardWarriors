@@ -287,7 +287,7 @@ public class EasyMode extends AppCompatActivity {
 
                             //transition into boss screen
                             if(score == 4) {
-                                startActivity(new Intent(getApplicationContext(), EasyModeBoss.class));
+                                startActivity(new Intent(getApplicationContext(), BossTransition.class));
                                 finish();
                             }
                             //makes the enemy play a death animation
