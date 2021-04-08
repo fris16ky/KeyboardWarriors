@@ -338,7 +338,7 @@ public class MediumMode extends AppCompatActivity {
                             score++;
                             tv_score.setText("SCORE: " + score);
 
-                            if(score == 1) {
+                            if(score == 4) {
                                 startActivity(new Intent(getApplicationContext(), MediumModeBoss.class));
                                 finish();
                             }
