@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".EasyModeBoss"></activity>
+        <activity android:name=".BossTransitionMedium"></activity>
+        <activity android:name=".EasyModeBoss" />
         <activity android:name=".HardMode" />
         <activity android:name=".MediumMode" />
         <activity
