@@ -21,12 +21,14 @@ import java.util.Random;
 import pl.droidsonroids.gif.GifImageView;
 
 
+
+
 public class EasyMode extends AppCompatActivity {
 
     // defined variables being used
     TextView tv_score;
     int score = 0;
-    int health = 3;
+    int health = 5;
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
     TextView d_text;
@@ -37,6 +39,7 @@ public class EasyMode extends AppCompatActivity {
     GifImageView enemies, enemies2, enemies3;
     String currentWord;
     Random r;
+    int count = 1;
 
 
     //word list to be displayed
@@ -242,122 +245,127 @@ public class EasyMode extends AppCompatActivity {
         final TextView Timer = findViewById(R.id.Timer);
         counter = 10;
 
-        //timer system resets if hits zero and takes away heart
-        new CountDownTimer(1000000000, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                Timer.setText(String.valueOf(counter));
-                if (counter == 0) {
-                    counter = 11;
-                    health--;
-
-                    //health system associated with the timer running out
-                    if (health == 2) {
-                        heart3.setVisibility(View.INVISIBLE);
-                        MediaPlayer error;
-                        error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
-                        error.start();
-                    } else if (health == 1) {
-                        heart2.setVisibility(View.INVISIBLE);
-                        MediaPlayer error;
-                        error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
-                        error.start();
-                    } else if (health == 0) {
-                        heart1.setVisibility(View.INVISIBLE);
-                        MediaPlayer error;
-                        error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
-                        error.start();
-                        startActivity(new Intent(getApplicationContext(), GameOver.class));
-                    }
-                }
-
-
-                // checks if the user input is correct
-                s_check.setOnClickListener(new View.OnClickListener() {
+                //timer system resets if hits zero and takes away heart
+                new CountDownTimer(1000000000, 1000) {
                     @Override
-                    public void onClick(View v) {
-                        if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
-                            user_input.getText().clear();
-                            counter = 10;
-
-                            setRealADeathImage();
-                            tutorial_game();
-                            score++;
-                            tv_score.setText("SCORE: " + score);
-
-                            //transition into boss screen
-                            if(score == 4) {
-                                startActivity(new Intent(getApplicationContext(), BossTransitionEasy.class));
-                                System.exit(0);
-                            }
-                            //makes the enemy play a death animation
-                            if (currDeath == currImage) {
-                                enemies.setVisibility(View.INVISIBLE);
-                                enemies3.setVisibility(View.VISIBLE);
-
-                                final Handler handler = new Handler();
-                                handler.postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        enemies.setVisibility(View.VISIBLE);
-                                        enemies3.setVisibility(View.INVISIBLE);
-                                    }
-                                }, 500);
-                            }
-                            //randomises the enemy that is being displayed
-                            currImage = r.nextInt(21);
-                            if (currImage == 21) {
-                                currImage = r.nextInt(21);
-                            }
-                            setCurrentImage();
-                        }
-                        //checking if the user input is wrong
-                        else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
+                    public void onTick(long millisUntilFinished) {
+                        Timer.setText(String.valueOf(counter));
+                        if (counter == 0) {
+                            counter = 11;
                             health--;
-                            MediaPlayer error;
-                            error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
-                            error.start();
-                            setRealAttackingImage();
 
-                            // plays attack animation is imputed word is wrong
-                            if (currAttack == currImage) {
-                                enemies.setVisibility(View.INVISIBLE);
-                                enemies2.setVisibility(View.VISIBLE);
 
-                                final Handler handler = new Handler();
-                                handler.postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        enemies.setVisibility(View.VISIBLE);
-                                        enemies2.setVisibility(View.INVISIBLE);
-                                    }
-                                }, 500);
-
-                            }
-
+                            //health system associated with the timer running out
+                            if (health == 4) {
+                                heart3.setVisibility(View.INVISIBLE);
+                                MediaPlayer error;
+                                error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
+                                error.start();
+                            } else if (health == 3) {
+                                heart2.setVisibility(View.INVISIBLE);
+                                MediaPlayer error;
+                                error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
+                                error.start();
+                            } else if (health == 2) {
+                                count--;
+                                heart1.setVisibility(View.INVISIBLE);
+                                MediaPlayer error;
+                                error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
+                                error.start();
+                                startActivity(new Intent(getApplicationContext(), GameOver.class));
+                                finish();
+                                }
 
                         }
-                       // gets rid of the heart of the user and if all hearts are gone it's displays game over screen
-                        if (health == 2) {
-                            heart3.setVisibility(View.INVISIBLE);
-                        } else if (health == 1) {
-                            heart2.setVisibility(View.INVISIBLE);
-                        } else if (health == 0) {
-                            heart1.setVisibility(View.INVISIBLE);
 
-                            startActivity(new Intent(getApplicationContext(), GameOver.class));
+
+                        // checks if the user input is correct
+                        s_check.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
+                                    user_input.getText().clear();
+                                    counter = 10;
+
+                                    setRealADeathImage();
+                                    tutorial_game();
+                                    score++;
+                                    tv_score.setText("SCORE: " + score);
+
+                                    //transition into boss screen and stops count
+                                    if (score == 4) {
+                                        startActivity(new Intent(getApplicationContext(), BossTransitionEasy.class));
+                                        finish();
+                                        count--;
+                                    }
+                                    //makes the enemy play a death animation
+                                    if (currDeath == currImage) {
+                                        enemies.setVisibility(View.INVISIBLE);
+                                        enemies3.setVisibility(View.VISIBLE);
+
+                                        final Handler handler = new Handler();
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                enemies.setVisibility(View.VISIBLE);
+                                                enemies3.setVisibility(View.INVISIBLE);
+                                            }
+                                        }, 500);
+                                    }
+                                    //randomises the enemy that is being displayed
+                                    currImage = r.nextInt(21);
+                                    if (currImage == 21) {
+                                        currImage = r.nextInt(21);
+                                    }
+                                    setCurrentImage();
+                                }
+                                //checking if the user input is wrong
+                                else if (!(user_input.getText().toString().equalsIgnoreCase(currentWord))) {
+                                    health--;
+                                    MediaPlayer error;
+                                    error = MediaPlayer.create(getApplicationContext(), R.raw.newerrornoise);
+                                    error.start();
+                                    setRealAttackingImage();
+
+                                    // plays attack animation is imputed word is wrong
+                                    if (currAttack == currImage) {
+                                        enemies.setVisibility(View.INVISIBLE);
+                                        enemies2.setVisibility(View.VISIBLE);
+
+                                        final Handler handler = new Handler();
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                enemies.setVisibility(View.VISIBLE);
+                                                enemies2.setVisibility(View.INVISIBLE);
+                                            }
+                                        }, 500);
+                                    }
+                                }
+                                // gets rid of the heart of the user and if all hearts are gone it's displays game over screen
+                                if (health == 4) {
+                                    heart3.setVisibility(View.INVISIBLE);
+                                } else if (health == 3) {
+                                    heart2.setVisibility(View.INVISIBLE);
+                                } else if (health == 2) {
+                                    heart1.setVisibility(View.INVISIBLE);
+                                    startActivity(new Intent(getApplicationContext(), GameOver.class));
+                                    finish();
+                                }
+                            }
+                        });
+                        if(count != 0){
+                           counter--;
                         }
                     }
-                });
-                counter--;
+                    @Override
+                    public void onFinish() {
+                    }
+                }.start();
+
+
             }
 
-            @Override
-            public void onFinish() {
-            }
-        }.start();
-
-    }
 
     //takes a word from the array list and randomises it to be displayed to the user.
     private String Display(String word) {
@@ -401,4 +409,5 @@ public class EasyMode extends AppCompatActivity {
         imageView2.setImageResource(attack[currAttack = currImage]);
 
     }
+
 }

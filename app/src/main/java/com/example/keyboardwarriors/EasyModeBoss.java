@@ -42,6 +42,7 @@ public class EasyModeBoss extends AppCompatActivity {
     GifImageView heart1, heart2, heart3;
     GifImageView enemies, enemies2, enemies3, enemies4;
     String currentWord;
+    int count = 1;
 
     Random r;
     //s
@@ -329,7 +330,7 @@ public class EasyModeBoss extends AppCompatActivity {
                             else if (bossHealth == 0) {
 
                                 startActivity(new Intent(getApplicationContext(), VictoryScreen.class));
-                                System.exit(0);
+                                finish();
                             }
 
                             setRealHurtImage();
@@ -375,17 +376,16 @@ public class EasyModeBoss extends AppCompatActivity {
                         }
                     }
                 });
-                counter--;
+                if(count !=0){
+                    counter--;
+                }
+
                 //but this must also take away a heart. it already does check line 232
             }
-
             @Override
             public void onFinish() {
-                //Timer2.setText("Help");
-                //Timer2.start();
             }
         }.start();
-
 
     }
 

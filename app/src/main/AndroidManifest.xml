@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.keyboardwarriors">
 
     <supports-screens
@@ -43,8 +44,13 @@
         <activity
             android:name=".EasyMode"
             android:theme="@style/NoTitleBar" />
+        <activity android:name=".BossTransitionEasy"
+            tools:ignore="DuplicateActivity" />
+        <activity android:name=".BossTransitionMedium"
+            tools:ignore="DuplicateActivity" />
+        <activity android:name=".BossTransitionHard"
+            tools:ignore="DuplicateActivity" />
         <activity android:name=".OptionScreen" />
-        <activity android:name=".BossTransition" />
         <activity android:name=".Credits" />
         <activity android:name=".VictoryScreen" />
         <activity android:name=".GameScreen" />
