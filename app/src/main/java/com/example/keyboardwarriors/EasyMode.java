@@ -293,7 +293,7 @@ public class EasyMode extends AppCompatActivity {
                                     tv_score.setText("SCORE: " + score);
 
                                     //transition into boss screen and stops count
-                                    if (score == 4) {
+                                    if (score == 25) {
                                             startActivity(new Intent(getApplicationContext(), BossTransitionEasy.class));
                                             finish();
                                             count--;

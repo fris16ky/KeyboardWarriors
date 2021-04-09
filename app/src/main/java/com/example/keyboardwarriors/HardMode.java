@@ -283,7 +283,7 @@ public class HardMode extends AppCompatActivity {
                             score++;
                             tv_score.setText("SCORE: " + score);
 
-                            if(score == 1) {
+                            if(score == 25) {
                                 count--;
                                 startActivity(new Intent(getApplicationContext(), BossTransitionHard.class));
                                 finish();
