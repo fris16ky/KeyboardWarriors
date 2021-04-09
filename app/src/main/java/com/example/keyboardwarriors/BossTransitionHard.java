@@ -1,9 +1,9 @@
 package com.example.keyboardwarriors;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class BossTransitionHard extends AppCompatActivity {
 
@@ -17,7 +17,7 @@ public class BossTransitionHard extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(2000);
-                    //startActivity(new Intent(getApplicationContext(), HardModeBoss.class));
+                    startActivity(new Intent(getApplicationContext(), HardModeBoss.class));
                     finish();
                 } catch (InterruptedException e) {
                     e.printStackTrace();

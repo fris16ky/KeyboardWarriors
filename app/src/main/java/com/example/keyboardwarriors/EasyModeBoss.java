@@ -232,8 +232,7 @@ public class EasyModeBoss extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy_mode_boss);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 
         d_text = findViewById(R.id.display_text);
@@ -328,9 +327,10 @@ public class EasyModeBoss extends AppCompatActivity {
                                 healthBar4.setVisibility(View.INVISIBLE);
                             }
                             else if (bossHealth == 0) {
-
+                                count--;
                                 startActivity(new Intent(getApplicationContext(), VictoryScreen.class));
                                 finish();
+
                             }
 
                             setRealHurtImage();

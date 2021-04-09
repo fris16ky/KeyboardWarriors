@@ -17,175 +17,123 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 import pl.droidsonroids.gif.GifImageView;
-public class MediumModeBoss extends AppCompatActivity {
+
+public class HardModeBoss extends AppCompatActivity {
 
 
     int health =3;
     int score =0;
     TextView tv_score;
-    int bossHealth = 7;
+    int bossHealth = 10;
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
     TextView d_text;
     TextView countText;
     EditText user_input;
     ImageButton s_check;
-    ImageView  healthBar1, healthBar2, healthBar3, healthBar4, healthBar5, healthBar6, healthBar7;
+    ImageView  healthBar1, healthBar2, healthBar3, healthBar4, healthBar5, healthBar6, healthBar7, healthBar8,healthBar9,healthBar10;
     GifImageView heart1, heart2, heart3;
     GifImageView enemies, enemies2, enemies3, enemies4;
     String currentWord;
     int count = 1;
     Random r;
 
-    String[] words_list = {"Above",
-            "Anger",
-            "Auntie",
-            "Actual",
-            "Admins",
-            "Awards",
-            "Badge",
-            "Bigot",
-            "Brand",
-            "Badger",
-            "Bended",
-            "Bygone",
-            "Cabin",
-            "Class",
-            "Cackle",
-            "Chores",
-            "Common",
-            "Daily",
-            "Debug",
-            "Dusty",
-            "Dagger",
-            "Dialog",
-            "Dough",
-            "Early",
-            "Elbow",
-            "Essay",
-            "Earned",
-            "Effort",
-            "Elites",
-            "Facts",
-            "Feral",
-            "Flame",
-            "Fabric",
-            "Fleece",
-            "Fumble",
-            "Gawks",
-            "Glued",
-            "Goose",
-            "Gamble",
-            "Gloomy",
-            "Graded",
-            "Hairy",
-            "Hills",
-            "Humor",
-            "Handed",
-            "Helmet",
-            "Hyping",
-            "Idols",
-            "Intro",
-            "Ionic",
-            "Icings",
-            "Impure",
-            "Itself",
-            "Jazzy",
-            "Joked",
-            "Judge",
-            "Jailed",
-            "Judged",
-            "Jumped",
-            "Karma",
-            "Kevin",
-            "Kudos",
-            "Kelvin",
-            "Killer",
-            "Kitted",
-            "Laced",
-            "Limes",
-            "Logic",
-            "Ladder",
-            "Lifted",
-            "Login",
-            "Magic",
-            "Melee",
-            "Mount",
-            "Madman",
-            "Matrix",
-            "Mighty",
-            "Needy",
-            "Nitrous",
-            "Nukes",
-            "Napkin",
-            "Nerves",
-            "Notion",
-            "Odors",
-            "Ogres",
-            "Orbit",
-            "Object",
-            "Offset",
-            "Outcry",
-            "Pacts",
-            "Panda",
-            "Pixel",
-            "Pallet",
-            "Period",
-            "Piracy",
-            "Quick",
-            "Quack",
-            "Queen",
-            "Quails",
-            "Quirks",
-            "Qwerty",
-            "Radio",
-            "Rhyme",
-            "Risks",
-            "Radish",
-            "Random",
-            "Ripoff",
-            "Saggy",
-            "Scrap",
-            "Short",
-            "Safety",
-            "Scheme",
-            "Slides",
-            "Taste",
-            "Texts",
-            "Troop",
-            "Teabag",
-            "Thirst",
-            "Tutors",
-            "Urban",
-            "Uncut",
-            "Usual",
-            "Uglier",
-            "Unfold",
-            "Usable",
-            "Value",
-            "Vivid",
-            "Vogue",
-            "Valor",
-            "Viewed",
-            "Vocals",
-            "Wacky",
-            "Wings",
-            "Wreck",
-            "Waffle",
-            "Weather",
-            "Wretch",
-            "Xerox",
-            "Yards",
-            "Yikes",
-            "Youth",
-            "Yellow",
-            "Yogurt",
-            "Zappy",
-            "Zebra",
-            "Zones",
-            "Zeroes",
-            "Zipped" ,
-            "Zoomed"};
+    String[] words_list = {
+            "Sphinx",
+            "Absence",
+            "Aluminum",
+            "Alcohol",
+            "Academy",
+            "Cabinet",
+            "Chamber",
+            "Centric",
+            "Chronic",
+            "Metaphor",
+            "Compact",
+            "Convert",
+            "Culture",
+            "Digital",
+            "Defence",
+            "Diverse",
+            "Dynamic",
+            "Disease",
+            "Economy",
+            "Eastern",
+            "Enhance",
+            "Exhibit",
+            "Expense",
+            "Faculty",
+            "Finance",
+            "Federal",
+            "Fashion",
+            "Failure",
+            "Freedom",
+            "Foreign",
+            "Genuine",
+            "Genetic",
+            "Gigabit",
+            "Healthy",
+            "Hundred",
+            "Inquiry",
+            "Interim",
+            "Journal",
+            "Kingdom",
+            "Zombie",
+            "Liberal",
+            "License",
+            "Loyalty",
+            "Maximum",
+            "Measure",
+            "Alphabet",
+            "Mission",
+            "Mixture",
+            "Mystery",
+            "Nervous",
+            "Network",
+            "Optical",
+            "Operation",
+            "Pacific",
+            "Partial",
+            "Passion",
+            "Phoenix",
+            "Pioneer",
+            "Quarter",
+            "Quantify",
+            "Radical",
+            "Radial",
+            "Receipts",
+            "Revenue",
+            "Venues",
+            "Science",
+            "Segment",
+            "Seventh",
+            "Sponsor",
+            "Surgery",
+            "Thereby",
+            "Telecast",
+            "Tension",
+            "Therapy",
+            "Traffic",
+            "Upscale",
+            "Unusual",
+            "Utility",
+            "Weakest",
+            "Wedding",
+            "Welfare",
+            "Witness",
+            "Jacuzzi",
+            "Burnout",
+            "Puzzling",
+            "Embezzle",
+            "Autonomy",
+            "Bachelor",
+            "Bulletin",
+            "Campaign",
+            "Capacity",
+            "Category",
+            "Cellular",
+            "Champion",
+            "Civilian"};
 
 
     private final Integer[] spawn = {
@@ -263,21 +211,21 @@ public class MediumModeBoss extends AppCompatActivity {
 
 
     private final Integer[] hurtBoss = {
-            R.drawable.angel3hurt,
+            R.drawable.golem2hurt,
     };
 
 
 
-    private final int currImage = 8;
-    private int currAttack = 8;
-    private int currDeath = 8;
+    private final int currImage = 16;
+    private int currAttack = 16;
+    private int currDeath = 16;
     private final int currHurt = 0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medium_mode_boss);
+        setContentView(R.layout.activity_hard_mode_boss);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -301,6 +249,9 @@ public class MediumModeBoss extends AppCompatActivity {
         healthBar5 = findViewById(R.id.Bar5);
         healthBar6 = findViewById(R.id.Bar6);
         healthBar7 = findViewById(R.id.Bar7);
+        healthBar8 = findViewById(R.id.Bar8);
+        healthBar9 = findViewById(R.id.Bar9);
+        healthBar10 = findViewById(R.id.Bar10);
 
 
         r = new Random();
@@ -316,7 +267,7 @@ public class MediumModeBoss extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 Timer.setText(String.valueOf(counter));
                 if (counter == 0) {
-                    counter = 8;
+                    counter = 6;
                     health--;
 
                     if (health == 2) {
@@ -345,7 +296,7 @@ public class MediumModeBoss extends AppCompatActivity {
                     public void onClick(View v) {
                         if (user_input.getText().toString().equalsIgnoreCase(currentWord)) {
                             user_input.getText().clear();
-                            counter = 7;
+                            counter = 5;
                             bossHealth--;
 
 
@@ -364,29 +315,38 @@ public class MediumModeBoss extends AppCompatActivity {
                             }
 
                             //boss health system
-                            if(bossHealth == 6){
+                            if(bossHealth == 9){
                                 healthBar1.setVisibility(View.INVISIBLE);
                             }
-                            else if(bossHealth == 5){
+                            else if(bossHealth == 8){
                                 healthBar2.setVisibility(View.INVISIBLE);
                             }
-                            else if(bossHealth == 4){
+                            else if(bossHealth == 7){
                                 healthBar3.setVisibility(View.INVISIBLE);
                             }
-                            else if(bossHealth == 3){
+                            else if(bossHealth == 6){
                                 healthBar4.setVisibility(View.INVISIBLE);
                             }
-                            else if(bossHealth == 2){
+                            else if(bossHealth == 5){
                                 healthBar5.setVisibility(View.INVISIBLE);
                             }
-                            else if(bossHealth == 1){
+                            else if(bossHealth == 4){
                                 healthBar6.setVisibility(View.INVISIBLE);
                             }
+                            else if(bossHealth == 3){
+                                healthBar7.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 2){
+                                healthBar8.setVisibility(View.INVISIBLE);
+                            }
+                            else if(bossHealth == 1){
+                                healthBar9.setVisibility(View.INVISIBLE);
+                            }
                             else if (bossHealth == 0) {
-                                //game win transition goes here
-
+                                 startActivity(new Intent(getApplicationContext(), VictoryScreen.class));
+                                    finish();
                                 count--;
-                                if (currDeath == 8) {
+                                if (currDeath == 16) {
                                     enemies.setVisibility(View.INVISIBLE);
                                     enemies3.setVisibility(View.VISIBLE);
                                     final Handler handler = new Handler();

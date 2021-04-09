@@ -221,8 +221,8 @@ public class EasyMode extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy_mode);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
 
        // variables linked to the XML counterparts.
         d_text = findViewById(R.id.display_text);
@@ -294,9 +294,9 @@ public class EasyMode extends AppCompatActivity {
 
                                     //transition into boss screen and stops count
                                     if (score == 4) {
-                                        startActivity(new Intent(getApplicationContext(), BossTransitionEasy.class));
-                                        finish();
-                                        count--;
+                                            startActivity(new Intent(getApplicationContext(), BossTransitionEasy.class));
+                                            finish();
+                                            count--;
                                     }
                                     //makes the enemy play a death animation
                                     if (currDeath == currImage) {

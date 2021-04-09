@@ -36,10 +36,8 @@ public class HardMode extends AppCompatActivity {
     ImageButton s_check;
     GifImageView heart1, heart2, heart3;
     GifImageView enemies, enemies2, enemies3;
-
-
+    int count = 1;
     String currentWord;
-
     Random r;
     //s
     String[] words_list = {
@@ -224,8 +222,8 @@ public class HardMode extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hard_mode);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
 
 
         d_text = findViewById(R.id.display_text);
@@ -285,10 +283,11 @@ public class HardMode extends AppCompatActivity {
                             score++;
                             tv_score.setText("SCORE: " + score);
 
-                          //  if(score == 1) {
-                              //  startActivity(new Intent(getApplicationContext(), MediumModeBoss.class));
-                              //  finish();
-                          //  }
+                            if(score == 1) {
+                                count--;
+                                startActivity(new Intent(getApplicationContext(), BossTransitionHard.class));
+                                finish();
+                            }
 
 
                             if (currDeath == currImage) {
@@ -348,7 +347,9 @@ public class HardMode extends AppCompatActivity {
                         }
                     }
                 });
-                counter--;
+                if(count !=0) {
+                    counter--;
+                }
                 //but this must also take away a heart. it already does check line 232
             }
 

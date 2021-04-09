@@ -16,13 +16,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".BossTransitionHard"></activity>
+        <activity android:name=".HardModeBoss"></activity>
+        <activity android:name=".BossTransitionHard" />
         <activity android:name=".BossTransitionMedium" />
         <activity android:name=".BossTransitionEasy" />
         <activity android:name=".EasyModeBoss" />
         <activity android:name=".HardMode" />
         <activity android:name=".MediumMode" />
         <activity android:name=".MediumModeBoss" />
+        <activity android:name=".HardModeBoss"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".OnToEasyMode"
             android:theme="@style/PopMe" />
@@ -44,11 +47,14 @@
         <activity
             android:name=".EasyMode"
             android:theme="@style/NoTitleBar" />
-        <activity android:name=".BossTransitionEasy"
+        <activity
+            android:name=".BossTransitionEasy"
             tools:ignore="DuplicateActivity" />
-        <activity android:name=".BossTransitionMedium"
+        <activity
+            android:name=".BossTransitionMedium"
             tools:ignore="DuplicateActivity" />
-        <activity android:name=".BossTransitionHard"
+        <activity
+            android:name=".BossTransitionHard"
             tools:ignore="DuplicateActivity" />
         <activity android:name=".OptionScreen" />
         <activity android:name=".Credits" />

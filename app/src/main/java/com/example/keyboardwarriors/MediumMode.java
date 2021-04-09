@@ -36,6 +36,7 @@ public class MediumMode extends AppCompatActivity {
     ImageButton s_check;
     GifImageView heart1, heart2, heart3;
     GifImageView enemies, enemies2, enemies3;
+    int count =1;
 
 
     String currentWord;
@@ -277,8 +278,8 @@ public class MediumMode extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medium_mode);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
 
 
         d_text = findViewById(R.id.display_text);
@@ -342,6 +343,7 @@ public class MediumMode extends AppCompatActivity {
                             if(score == 4) {
                                 startActivity(new Intent(getApplicationContext(), BossTransitionMedium.class));
                                 finish();
+                                count--;
                             }
 
 
@@ -402,7 +404,9 @@ public class MediumMode extends AppCompatActivity {
                         }
                     }
                 });
-                counter--;
+                if(count !=0){
+                    counter--;
+                }
                 //but this must also take away a heart. it already does check line 232
             }
 

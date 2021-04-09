@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MediumModeBoss">
+    tools:context=".HardModeBoss">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:background="@drawable/b_wallet_normal"
+        android:background="@drawable/p_wallet_normal"
         android:translationY="375dp"
         tools:ignore="MissingConstraints">
     </FrameLayout>
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="475dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/b_wallet_normal"
+        android:background="@drawable/p_wallet_normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -184,7 +184,7 @@
         app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/medium"
+        app:srcCompat="@drawable/hard"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -285,7 +285,7 @@
         android:id="@+id/Bar2"
         android:layout_width="300px"
         android:layout_height="300px"
-        android:background="@drawable/healthbarmedium2"
+        android:background="@drawable/bosshelathhard2"
         android:translationX="-300px"
         android:translationY="800px"
         app:layout_constraintEnd_toEndOf="parent"
@@ -296,7 +296,7 @@
         android:id="@+id/Bar3"
         android:layout_width="300px"
         android:layout_height="300px"
-        android:background="@drawable/healthbarmedium3"
+        android:background="@drawable/bosshealthhard3"
         android:translationX="-300px"
         android:translationY="800px"
         app:layout_constraintEnd_toEndOf="parent"
@@ -307,7 +307,7 @@
         android:id="@+id/Bar4"
         android:layout_width="300px"
         android:layout_height="300px"
-        android:background="@drawable/healthbarmedium4"
+        android:background="@drawable/bosshealthhard4"
         android:translationX="-300px"
         android:translationY="800px"
         app:layout_constraintEnd_toEndOf="parent"
@@ -318,7 +318,7 @@
         android:id="@+id/Bar5"
         android:layout_width="300px"
         android:layout_height="300px"
-        android:background="@drawable/healthbarmedium5"
+        android:background="@drawable/bosshealthhard5"
         android:translationX="-300px"
         android:translationY="800px"
         app:layout_constraintEnd_toEndOf="parent"
@@ -329,7 +329,7 @@
         android:id="@+id/Bar6"
         android:layout_width="300px"
         android:layout_height="300px"
-        android:background="@drawable/healthbarmedium6"
+        android:background="@drawable/bosshealthhard6"
         android:translationX="-300px"
         android:translationY="800px"
         app:layout_constraintEnd_toEndOf="parent"
@@ -340,12 +340,44 @@
         android:id="@+id/Bar7"
         android:layout_width="300px"
         android:layout_height="300px"
-        android:background="@drawable/healthbarmedium7"
+        android:background="@drawable/bosshealthhard7"
         android:translationX="-300px"
         android:translationY="800px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/Score"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
-
+    <ImageView
+        android:id="@+id/Bar8"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/bosshealthhard8"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar9"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/bosshealthhard9"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/Bar10"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:background="@drawable/bosshealthhard10"
+        android:translationX="-300px"
+        android:translationY="800px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
