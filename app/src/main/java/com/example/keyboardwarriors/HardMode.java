@@ -27,7 +27,6 @@ public class HardMode extends AppCompatActivity {
     TextView tv_score;
     int score = 0;
     int health = 3;
-
     public int counter = 5;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
     TextView d_text;
@@ -39,7 +38,6 @@ public class HardMode extends AppCompatActivity {
     int count = 1;
     String currentWord;
     Random r;
-    //s
     String[] words_list = {
             "Sphinx",
             "Absence",
@@ -85,7 +83,7 @@ public class HardMode extends AppCompatActivity {
             "License",
             "Loyalty",
             "Maximum",
-            "Measurement",
+            "Measure",
             "Alphabet",
             "Mission",
             "Mixture",
