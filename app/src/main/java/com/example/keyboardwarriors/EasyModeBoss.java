@@ -329,7 +329,7 @@ public class EasyModeBoss extends AppCompatActivity {
                             else if (bossHealth == 0) {
 
                                 startActivity(new Intent(getApplicationContext(), VictoryScreen.class));
-                                finish();
+                                System.exit(0);
                             }
 
                             setRealHurtImage();
