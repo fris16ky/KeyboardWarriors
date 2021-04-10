@@ -38,6 +38,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_enemy"
+            android:layout_width="278dp"
+            android:layout_height="67dp"
+            android:fontFamily="@font/aldrich"
+            android:text="Enemies Remaining:"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+
+            tools:ignore="MissingConstraints" />
     </FrameLayout>
 
 
@@ -204,21 +215,6 @@
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.882"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/tv_score"
-        android:layout_width="343dp"
-        android:layout_height="73dp"
-        android:fontFamily="@font/aldrich"
-        android:text="SCORE: "
-        android:textColor="#FFFFFF"
-        android:textSize="40sp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />

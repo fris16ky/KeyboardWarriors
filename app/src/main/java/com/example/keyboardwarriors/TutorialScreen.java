@@ -160,7 +160,7 @@ public class TutorialScreen extends AppCompatActivity {
 
 
         d_text = (TextView) findViewById(R.id.display_text);
-        tv_score = (TextView) findViewById(R.id.tv_score);
+        tv_score = (TextView) findViewById(R.id.tv_enemy);
         user_input = (EditText) findViewById(R.id.input_text);
         s_check = (ImageButton) findViewById(R.id.submit);
         btn_tut = (ImageButton) findViewById(R.id.tut_script);

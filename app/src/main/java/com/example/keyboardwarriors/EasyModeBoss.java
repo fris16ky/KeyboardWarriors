@@ -236,7 +236,7 @@ public class EasyModeBoss extends AppCompatActivity {
 
 
         d_text = findViewById(R.id.display_text);
-        tv_score = findViewById(R.id.tv_score);
+        tv_score = findViewById(R.id.tv_enemy);
         user_input = findViewById(R.id.input_text);
         s_check = findViewById(R.id.submit);
         heart1 = findViewById(R.id.heart1);

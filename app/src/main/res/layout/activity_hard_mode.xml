@@ -197,13 +197,13 @@
       tools:ignore="MissingConstraints" />
 
   <TextView
-      android:id="@+id/tv_score"
-      android:layout_width="343dp"
-      android:layout_height="73dp"
+      android:id="@+id/tv_enemy"
+      android:layout_width="295dp"
+      android:layout_height="71dp"
       android:fontFamily="@font/aldrich"
-      android:text="SCORE: "
+      android:text="Enemies Remaining:"
       android:textColor="#FFFFFF"
-      android:textSize="40sp"
+      android:textSize="30sp"
 
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"

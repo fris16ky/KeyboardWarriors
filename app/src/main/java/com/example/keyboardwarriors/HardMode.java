@@ -24,8 +24,8 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class HardMode extends AppCompatActivity {
 
-    TextView tv_score;
-    int score = 0;
+    TextView tv_enemy;
+    int enemycount = 25;
     int health = 3;
     public int counter = 5;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
@@ -225,7 +225,7 @@ public class HardMode extends AppCompatActivity {
 
 
         d_text = findViewById(R.id.display_text);
-        tv_score = findViewById(R.id.tv_score);
+        tv_enemy = findViewById(R.id.tv_enemy);
         user_input = findViewById(R.id.input_text);
         s_check = findViewById(R.id.submit);
         heart1 = findViewById(R.id.heart1);
@@ -278,10 +278,10 @@ public class HardMode extends AppCompatActivity {
 
                             setRealADeathImage();
                             tutorial_game();
-                            score++;
-                            tv_score.setText("SCORE: " + score);
+                            enemycount--;
+                            tv_enemy.setText("Enemies Remaining: " + enemycount);
 
-                            if(score == 25) {
+                            if(enemycount == 0) {
                                 count--;
                                 startActivity(new Intent(getApplicationContext(), BossTransitionHard.class));
                                 finish();

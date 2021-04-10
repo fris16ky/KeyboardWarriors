@@ -24,8 +24,8 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class MediumMode extends AppCompatActivity {
 
-    TextView tv_score;
-    int score = 0;
+    TextView tv_enemy;
+    int enemycount = 25;
     int health = 3;
 
     public int counter = 7;
@@ -283,7 +283,7 @@ public class MediumMode extends AppCompatActivity {
 
 
         d_text = findViewById(R.id.display_text);
-        tv_score = findViewById(R.id.tv_score);
+        tv_enemy = findViewById(R.id.tv_enemy);
         user_input = findViewById(R.id.input_text);
         s_check = findViewById(R.id.submit);
         heart1 = findViewById(R.id.heart1);
@@ -337,10 +337,10 @@ public class MediumMode extends AppCompatActivity {
 
                             setRealADeathImage();
                             tutorial_game();
-                            score++;
-                            tv_score.setText("SCORE: " + score);
+                            enemycount--;
+                            tv_enemy.setText("Enemies Remaining: " + enemycount);
 
-                            if(score == 25) {
+                            if(enemycount == 0) {
                                 startActivity(new Intent(getApplicationContext(), BossTransitionMedium.class));
                                 finish();
                                 count--;
