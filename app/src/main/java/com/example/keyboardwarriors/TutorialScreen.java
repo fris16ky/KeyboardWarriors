@@ -1,22 +1,24 @@
 package com.example.keyboardwarriors;
 
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
-import android.os.Bundle;
-import android.annotation.TargetApi;
 import android.os.Build;
+import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+
 import pl.droidsonroids.gif.GifImageView;
 
 public class TutorialScreen extends AppCompatActivity {
@@ -136,7 +138,7 @@ public class TutorialScreen extends AppCompatActivity {
             "you"};
 
 
-    private Integer spawn[] = {R.drawable.goblin1idle,
+    private final Integer[] spawn = {R.drawable.goblin1idle,
             R.drawable.wraith1idle,
             R.drawable.golem1idle,
             R.drawable.golem2idle,
@@ -159,15 +161,15 @@ public class TutorialScreen extends AppCompatActivity {
 
 
 
-        d_text = (TextView) findViewById(R.id.display_text);
-        tv_score = (TextView) findViewById(R.id.tv_enemy);
-        user_input = (EditText) findViewById(R.id.input_text);
-        s_check = (ImageButton) findViewById(R.id.submit);
-        btn_tut = (ImageButton) findViewById(R.id.tut_script);
-        heart1 = (GifImageView) findViewById(R.id.heart1);
-        heart2 = (GifImageView) findViewById(R.id.heart2);
-        heart3 = (GifImageView) findViewById(R.id.heart3);
-        enemies = (GifImageView) findViewById(R.id.enemy);
+        d_text = findViewById(R.id.display_text);
+        tv_score = findViewById(R.id.tv_enemy);
+        user_input = findViewById(R.id.input_text);
+        s_check = findViewById(R.id.submit);
+        btn_tut = findViewById(R.id.tut_script);
+        heart1 = findViewById(R.id.heart1);
+        heart2 = findViewById(R.id.heart2);
+        heart3 = findViewById(R.id.heart3);
+        enemies = findViewById(R.id.enemy);
 
     btn_tut.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -189,13 +191,11 @@ public class TutorialScreen extends AppCompatActivity {
                     user_input.getText().clear();
                         currImage = r.nextInt(1);
                         if (currImage == 1) {
-                            currImage = r.nextInt(1);;
+                            currImage = r.nextInt(1);
                         }
                         setCurrentImage();
                         tutorial_game();
                     score++;
-                    tv_score.setText("SCORE: " + score);
-
                     if(score == 3){
                         startActivity(new Intent(getApplicationContext(), OnToEasyMode.class));
                         finish();
@@ -228,7 +228,7 @@ public class TutorialScreen extends AppCompatActivity {
     }
 
     private String Display(String word) {
-        List<String> letters = Arrays.asList(word.split(""));
+        String[] letters = word.split("");
         String display = "";
         for (String letter : letters) {
             display += letter;
@@ -248,7 +248,7 @@ public class TutorialScreen extends AppCompatActivity {
     }
 
         private void setCurrentImage() {
-            final GifImageView imageView = (GifImageView) findViewById(R.id.enemy);
+            final GifImageView imageView = findViewById(R.id.enemy);
             imageView.setImageResource(spawn[currImage]);
         }
 

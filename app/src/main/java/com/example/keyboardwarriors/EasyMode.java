@@ -382,8 +382,6 @@ public class EasyMode extends AppCompatActivity {
         user_input.getText().clear();
     }
 
-
-
     //sets enemy form array and randomises the enemy
     private void setInitialImage() {
         setCurrentImage();
