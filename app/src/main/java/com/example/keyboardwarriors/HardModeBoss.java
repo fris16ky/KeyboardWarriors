@@ -22,6 +22,7 @@ public class HardModeBoss extends AppCompatActivity {
 
 
     int health =3;
+    MediaPlayer Song;
     int score =0;
     TextView tv_score;
     int bossHealth = 10;
@@ -224,6 +225,10 @@ public class HardModeBoss extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Song = MediaPlayer.create(HardModeBoss.this, R.raw.bossmode);
+        Song.start();
+        Song.setLooping(true);
+        Song.start();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hard_mode_boss);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -420,6 +425,11 @@ public class HardModeBoss extends AppCompatActivity {
         }.start();
 
 
+    }
+    public void onPause(){
+        super.onPause();
+        Song.release();
+        finish();
     }
 
     private String Display(String word) {

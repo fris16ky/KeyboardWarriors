@@ -26,6 +26,7 @@ public class EasyModeBoss extends AppCompatActivity {
 
 
     int health =3;
+    MediaPlayer Song;
     int bossHealth = 5;
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
@@ -224,6 +225,10 @@ public class EasyModeBoss extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Song = MediaPlayer.create(EasyModeBoss.this, R.raw.bossmode);
+        Song.start();
+        Song.setLooping(true);
+        Song.start();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy_mode_boss);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -379,6 +384,11 @@ public class EasyModeBoss extends AppCompatActivity {
             }
         }.start();
 
+    }
+    public void onPause(){
+        super.onPause();
+        Song.release();
+        finish();
     }
 
     private String Display(String word) {

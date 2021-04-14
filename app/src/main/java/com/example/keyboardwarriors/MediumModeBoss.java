@@ -21,6 +21,7 @@ public class MediumModeBoss extends AppCompatActivity {
 
 
     int health =3;
+    MediaPlayer Song;
     int bossHealth = 7;
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
@@ -274,6 +275,10 @@ public class MediumModeBoss extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Song = MediaPlayer.create(MediumModeBoss.this, R.raw.bossmode);
+        Song.start();
+        Song.setLooping(true);
+        Song.start();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medium_mode_boss);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -455,6 +460,11 @@ public class MediumModeBoss extends AppCompatActivity {
         }.start();
 
 
+    }
+    public void onPause(){
+        super.onPause();
+        Song.release();
+        finish();
     }
 
     private String Display(String word) {
