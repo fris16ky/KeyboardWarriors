@@ -25,6 +25,7 @@ import pl.droidsonroids.gif.GifImageView;
 public class MediumMode extends AppCompatActivity {
 
     TextView tv_enemy;
+    MediaPlayer Song;
     int enemycount = 25;
     int health = 3;
 
@@ -275,6 +276,10 @@ public class MediumMode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Song = MediaPlayer.create(MediumMode.this, R.raw.mediummode);
+        Song.start();
+        Song.setLooping(true);
+        Song.start();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medium_mode);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -418,6 +423,11 @@ public class MediumMode extends AppCompatActivity {
         }.start();
 
 
+    }
+    public void onPause() {
+        super.onPause();
+        Song.release();
+        finish();
     }
 
     private String Display(String word) {
