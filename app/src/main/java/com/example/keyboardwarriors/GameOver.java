@@ -20,6 +20,8 @@ public class GameOver extends AppCompatActivity {
 
 
 
+
+
         Thread thread = new Thread() {
             @Override
             public void run() {
@@ -34,4 +36,6 @@ public class GameOver extends AppCompatActivity {
         };
         thread.start();
     }
+
+
 }

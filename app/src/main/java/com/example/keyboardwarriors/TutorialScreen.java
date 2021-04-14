@@ -15,8 +15,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -27,8 +25,6 @@ public class TutorialScreen extends AppCompatActivity {
     TextView tv_score;
     int score = 0;
     int health = 3;
-    MediaPlayer Song;
-
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
     TextView d_text;
@@ -152,13 +148,8 @@ public class TutorialScreen extends AppCompatActivity {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Song = MediaPlayer.create(TutorialScreen.this, R.raw.tutmusic);
-        Song.start();
-        Song.setLooping(true);
-        Song.start();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -167,7 +158,6 @@ public class TutorialScreen extends AppCompatActivity {
 
 
         d_text = findViewById(R.id.display_text);
-        tv_score = findViewById(R.id.tv_enemy);
         user_input = findViewById(R.id.input_text);
         s_check = findViewById(R.id.submit);
         btn_tut = findViewById(R.id.tut_script);
@@ -230,11 +220,6 @@ public class TutorialScreen extends AppCompatActivity {
             }
         });
 
-    }
-    public void onPause(){
-        super.onPause();
-        Song.release();
-        finish();
     }
 
     private String Display(String word) {
