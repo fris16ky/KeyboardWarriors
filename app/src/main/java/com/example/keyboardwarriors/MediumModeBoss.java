@@ -385,7 +385,8 @@ public class MediumModeBoss extends AppCompatActivity {
                                 healthBar6.setVisibility(View.INVISIBLE);
                             }
                             else if (bossHealth == 0) {
-                                //game win transition goes here
+                                startActivity(new Intent(getApplicationContext(), VictoryScreen.class));
+                                finish();
 
                                 count--;
                                 if (currDeath == 8) {

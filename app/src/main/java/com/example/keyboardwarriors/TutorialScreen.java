@@ -156,7 +156,6 @@ public class TutorialScreen extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
 
 
-
         d_text = findViewById(R.id.display_text);
         user_input = findViewById(R.id.input_text);
         s_check = findViewById(R.id.submit);
