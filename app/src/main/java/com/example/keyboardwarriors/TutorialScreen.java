@@ -27,6 +27,7 @@ public class TutorialScreen extends AppCompatActivity {
     TextView tv_score;
     int score = 0;
     int health = 3;
+    MediaPlayer Song;
 
     public int counter = 10;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
@@ -154,6 +155,10 @@ public class TutorialScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Song = MediaPlayer.create(TutorialScreen.this, R.raw.tutmusic);
+        Song.start();
+        Song.setLooping(true);
+        Song.start();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -225,6 +230,11 @@ public class TutorialScreen extends AppCompatActivity {
             }
         });
 
+    }
+    public void onPause(){
+        super.onPause();
+        Song.release();
+        finish();
     }
 
     private String Display(String word) {

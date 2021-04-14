@@ -24,6 +24,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 
 public class EasyMode extends AppCompatActivity {
+    MediaPlayer Song;
 
     // defined variables being used
     TextView tv_enemy;
@@ -218,6 +219,10 @@ public class EasyMode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Song = MediaPlayer.create(EasyMode.this, R.raw.easymodev2);
+        Song.start();
+        Song.setLooping(true);
+        Song.start();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy_mode);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -365,6 +370,11 @@ public class EasyMode extends AppCompatActivity {
 
 
             }
+    public void onPause(){
+        super.onPause();
+        Song.release();
+        finish();
+    }
 
 
     //takes a word from the array list and randomises it to be displayed to the user.
