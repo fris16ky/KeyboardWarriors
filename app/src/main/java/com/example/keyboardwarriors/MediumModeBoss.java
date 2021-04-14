@@ -23,7 +23,7 @@ public class MediumModeBoss extends AppCompatActivity {
     int health =3;
     MediaPlayer Song;
     int bossHealth = 7;
-    public int counter = 10;
+    public int counter = 7;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
     TextView d_text;
     TextView countText;
@@ -387,8 +387,8 @@ public class MediumModeBoss extends AppCompatActivity {
                             else if (bossHealth == 0) {
                                 startActivity(new Intent(getApplicationContext(), VictoryScreen.class));
                                 finish();
-
                                 count--;
+
                                 if (currDeath == 8) {
                                     enemies.setVisibility(View.INVISIBLE);
                                     enemies3.setVisibility(View.VISIBLE);

@@ -26,7 +26,7 @@ public class MediumMode extends AppCompatActivity {
 
     TextView tv_enemy;
     MediaPlayer Song;
-    int enemycount = 1;
+    int enemycount = 25;
     int health = 3;
     public int counter = 7;
     @TargetApi(Build.VERSION_CODES.ECLAIR_0_1)
