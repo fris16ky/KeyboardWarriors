@@ -25,6 +25,7 @@ import pl.droidsonroids.gif.GifImageView;
 public class HardMode extends AppCompatActivity {
 
     TextView tv_enemy;
+    MediaPlayer Song;
     int enemycount = 25;
     int health = 3;
     public int counter = 5;
@@ -217,6 +218,10 @@ public class HardMode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Song = MediaPlayer.create(HardMode.this, R.raw.hardmode);
+        Song.start();
+        Song.setLooping(true);
+        Song.start();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hard_mode);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -359,6 +364,11 @@ public class HardMode extends AppCompatActivity {
         }.start();
 
 
+    }
+    public void onPause(){
+        super.onPause();
+        Song.release();
+        finish();
     }
 
     private String Display(String word) {
